@@ -1,0 +1,170 @@
+{
+  "experiment": "lid",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-204003-noprompt",
+  "timestamp": "2026-10-14T20:40:03",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "dataset": "mteb/fleurs",
+  "languages": [
+    "amh",
+    "gaz",
+    "ibo",
+    "yor",
+    "hau",
+    "swh",
+    "xho",
+    "zul",
+    "afr",
+    "som",
+    "wol",
+    "lug",
+    "lin",
+    "sna",
+    "nso",
+    "nya",
+    "umb",
+    "fuv",
+    "luo",
+    "kam",
+    "kea"
+  ],
+  "per_lang": 80,
+  "k": 5,
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": false,
+    "prompts": {
+      "query": "",
+      "document": "",
+      "classification": "",
+      "clustering": "",
+      "sts": "",
+      "bitext": ""
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656
+  },
+  "audio": {
+    "knn_accuracy": 0.6699266503667481,
+    "nmi": 0.7062544408424019,
+    "ari": 0.5701023621229574,
+    "purity": 0.6992665036674817,
+    "n_clusters": 21,
+    "top_confusions": [
+      {
+        "true": "zul",
+        "pred": "xho",
+        "count": 44
+      },
+      {
+        "true": "swh",
+        "pred": "sna",
+        "count": 15
+      },
+      {
+        "true": "nya",
+        "pred": "sna",
+        "count": 13
+      },
+      {
+        "true": "yor",
+        "pred": "ibo",
+        "count": 12
+      },
+      {
+        "true": "lug",
+        "pred": "xho",
+        "count": 11
+      },
+      {
+        "true": "nso",
+        "pred": "ibo",
+        "count": 11
+      },
+      {
+        "true": "nya",
+        "pred": "xho",
+        "count": 10
+      },
+      {
+        "true": "wol",
+        "pred": "ibo",
+        "count": 9
+      }
+    ]
+  },
+  "text": {
+    "knn_accuracy": 0.6020782396088019,
+    "nmi": 0.6609997283047532,
+    "ari": 0.49666268212091674,
+    "purity": 0.6094132029339854,
+    "n_clusters": 21,
+    "top_confusions": [
+      {
+        "true": "xho",
+        "pred": "zul",
+        "count": 45
+      },
+      {
+        "true": "yor",
+        "pred": "ibo",
+        "count": 17
+      },
+      {
+        "true": "swh",
+        "pred": "ibo",
+        "count": 15
+      },
+      {
+        "true": "zul",
+        "pred": "xho",
+        "count": 15
+      },
+      {
+        "true": "luo",
+        "pred": "ibo",
+        "count": 11
+      },
+      {
+        "true": "kam",
+        "pred": "sna",
+        "count": 11
+      },
+      {
+        "true": "fuv",
+        "pred": "ibo",
+        "count": 10
+      },
+      {
+        "true": "kea",
+        "pred": "ibo",
+        "count": 10
+      }
+    ]
+  },
+  "chance": 0.047619047619047616
+}

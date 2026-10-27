@@ -1,0 +1,5 @@
+job B exit 1
+job A exit 1
+job D exit 1
+job C exit 1
+all jobs finished

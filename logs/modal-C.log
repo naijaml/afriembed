@@ -1,0 +1,1553 @@
+✓ Initialized. View run at 
+https://modal.com/apps/<workspace>/main/ap-3bHWxnTdNoeLUfD23aPY22
+✓ Created objects.
+├── ✓ Uploaded ./modal_app.py
+├── ✓ Uploaded ./configs
+├── ✓ Uploaded PythonPackage:afriembed
+├── ✓ Created Function run.
+└── ✓ Created Function report.
+
+=== afriembed finetune-text --langs lite --out checkpoints/text-lora --epochs 1 --batch-size 128 --mini-batch-size 32
+[10/14/26 21:25:50] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',)      
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/413 [00:00<?, ?it/s]
+[1ALoading weights:  41%|████▏     | 171/413 [00:00<00:00, 1614.88it/s]
+[1ALoading weights: 100%|██████████| 413/413 [00:00<00:00, 2110.36it/s]
+[10/14/26 21:25:54] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+
+[1AGenerating train split:   0%|          | 0/8091 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 8091/8091 [00:00<00:00, 81605.64 examples/s]
+[10/14/26 21:25:56] INFO     amh: 4000 AfriCaption pairs                        
+                    INFO     gaz: 0 AfriCaption pairs                           
+[10/14/26 21:25:58] INFO     ibo: 4000 AfriCaption pairs                        
+[10/14/26 21:25:59] INFO     yor: 4000 AfriCaption pairs                        
+[10/14/26 21:26:00] INFO     hau: 4000 AfriCaption pairs                        
+                    INFO     swh: 0 AfriCaption pairs                           
+[10/14/26 21:26:01] INFO     kin: 4000 AfriCaption pairs                        
+                    INFO     xho: 0 AfriCaption pairs                           
+                    INFO     zul: 0 AfriCaption pairs                           
+[10/14/26 21:26:19] INFO     Afri-Aya: 2464 pairs                               
+                    INFO     Total training pairs: 44928  (blocklist:           
+                             FloresBitextMining, NTREXBitextMining, SIB200 test,
+                             Belebele, AfriXNLI test, MasakhaNEWS test,         
+                             InjongoIntent test)                                
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 299, in finetune_text
+    E.train(
+    ~~~~~~~^
+        opts,
+        ^^^^^
+    ...<11 lines>...
+        extra_tsv=extra_tsv,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/finetune_text.py", line 104, in train
+    model = _lora_wrap(model, lora_r, lora_alpha, lora_dropout)
+  File "/root/afriembed/experiments/finetune_text.py", line 70, in _lora_wrap
+    tf.auto_model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'EmbeddingGemma2Model' object has no attribute 'print_trainable_parameters'
+
+
+=== afriembed afrimteb --suite lite --adapter checkpoints/text-lora/adapter --batch-size 128 --tag text-lora
+[10/14/26 21:26:22] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',)      
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/413 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 413/413 [00:00<00:00, 4591.25it/s]
+[10/14/26 21:26:25] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/text-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 151, in afrimteb
+    E.run(opts, suite=suite, tasks=task_list, languages=lang_list, overwrite=not no_overwrite, tag=tag)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/experiments/afrimteb.py", line 338, in run
+    emb = opts.load(("text",))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/text-lora/adapter'
+
+
+=== afriembed ciral --adapter checkpoints/text-lora/adapter --batch-size 256 --tag text-lora
+                    INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',)      
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/413 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 413/413 [00:00<00:00, 4896.69it/s]
+[10/14/26 21:26:28] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/text-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 35, in run
+    emb = opts.load(("text",))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/text-lora/adapter'
+
+
+=== afriembed finetune-audio --langs hau,yor,swh,amh,ibo,som --out checkpoints/audio-lora --epochs 1 --batch-size 32 --mini-batch-size 8
+                    INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  15%|█▌        | 176/1165 [00:00<00:00, 1759.55it/s]
+[1ALoading weights:  32%|███▏      | 367/1165 [00:00<00:00, 1846.02it/s]
+[1ALoading weights:  49%|████▉     | 571/1165 [00:00<00:00, 1909.97it/s]
+[1ALoading weights:  79%|███████▉  | 922/1165 [00:00<00:00, 2534.43it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 2594.85it/s]
+[10/14/26 21:26:31] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+[10/14/26 21:26:58] INFO     FLEURS hau/train: 1500 utterances (all)            
+[10/14/26 21:27:26] INFO     FLEURS yor/train: 1500 utterances (all)            
+[10/14/26 21:27:54] INFO     FLEURS swh/train: 1500 utterances (all)            
+[10/14/26 21:28:18] INFO     FLEURS amh/train: 1500 utterances (all)            
+[10/14/26 21:28:50] INFO     FLEURS ibo/train: 1500 utterances (all)            
+[10/14/26 21:29:19] INFO     FLEURS som/train: 1500 utterances (all)            
+                    INFO     9000 (audio, transcript) pairs                     
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 340, in finetune_audio
+    E.train(
+    ~~~~~~~^
+        opts,
+        ^^^^^
+    ...<10 lines>...
+        train_audio_tower=train_audio_tower,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/finetune_audio.py", line 80, in train
+    tf.auto_model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'EmbeddingGemma2Model' object has no attribute 'print_trainable_parameters'
+
+
+=== afriembed speech-text --langs fleurs_core --adapter checkpoints/audio-lora/adapter --batch-size 64 --tag audio-lora
+[10/14/26 21:29:26] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:   7%|▋         | 83/1165 [00:00<00:01, 828.66it/s]
+[1ALoading weights:  31%|███▏      | 365/1165 [00:00<00:00, 1659.57it/s]
+[1ALoading weights:  56%|█████▌    | 655/1165 [00:00<00:00, 2164.98it/s]
+[1ALoading weights:  75%|███████▍  | 873/1165 [00:00<00:00, 1809.51it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 1982.27it/s]
+[10/14/26 21:29:30] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/audio-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 43, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/audio-lora/adapter'
+
+
+=== afriembed speech-bitext --langs fleurs_core --pivot eng --adapter checkpoints/audio-lora/adapter --batch-size 64 --tag audio-lora
+                    INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  45%|████▌     | 530/1165 [00:00<00:00, 5296.73it/s]
+[1ALoading weights:  91%|█████████ | 1060/1165 [00:00<00:00, 4585.20it/s]Loading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5054.32it/s]
+[10/14/26 21:29:34] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/audio-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 212, in speech_bitext
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<6 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_bitext.py", line 31, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/audio-lora/adapter'
+
+
+=== afriembed finetune-audio --langs hau,yor,swh,amh,ibo,som --out checkpoints/audio-full --epochs 1 --batch-size 32 --mini-batch-size 8 --train-audio-tower
+                    INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  50%|████▉     | 577/1165 [00:00<00:00, 5768.84it/s]
+[1ALoading weights:  99%|█████████▉| 1154/1165 [00:00<00:00, 5105.54it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5229.98it/s]
+[10/14/26 21:29:38] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+[10/14/26 21:29:40] INFO     FLEURS hau/train: 1500 utterances (all)            
+[10/14/26 21:29:42] INFO     FLEURS yor/train: 1500 utterances (all)            
+[10/14/26 21:29:44] INFO     FLEURS swh/train: 1500 utterances (all)            
+[10/14/26 21:29:46] INFO     FLEURS amh/train: 1500 utterances (all)            
+[10/14/26 21:29:49] INFO     FLEURS ibo/train: 1500 utterances (all)            
+[10/14/26 21:29:51] INFO     FLEURS som/train: 1500 utterances (all)            
+                    INFO     9000 (audio, transcript) pairs                     
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 340, in finetune_audio
+    E.train(
+    ~~~~~~~^
+        opts,
+        ^^^^^
+    ...<10 lines>...
+        train_audio_tower=train_audio_tower,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/finetune_audio.py", line 80, in train
+    tf.auto_model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'EmbeddingGemma2Model' object has no attribute 'print_trainable_parameters'
+
+
+=== afriembed speech-text --langs fleurs_core --adapter checkpoints/audio-full/adapter --batch-size 64 --tag audio-full
+[10/14/26 21:29:52] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  49%|████▉     | 572/1165 [00:00<00:00, 5717.89it/s]
+[1ALoading weights:  98%|█████████▊| 1144/1165 [00:00<00:00, 5226.93it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5366.81it/s]
+[10/14/26 21:29:56] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/audio-full/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 43, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/audio-full/adapter'
+
+ERR finetune-text --langs lite --out checkpoints/text-lora --epochs 1 --batch-size 128 --mini-batch-size 32
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 299, in finetune_text
+    E.train(
+    ~~~~~~~^
+        opts,
+        ^^^^^
+    ...<11 lines>...
+        extra_tsv=extra_tsv,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/finetune_text.py", line 104, in train
+    model = _lora_wrap(model, lora_r, lora_alpha, lora_dropout)
+  File "/root/afriembed/experiments/finetune_text.py", line 70, in _lora_wrap
+    tf.auto_model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'EmbeddingGemma2Model' object has no attribute 'print_trainable_parameters'
+
+ERR afrimteb --suite lite --adapter checkpoints/text-lora/adapter --batch-size 128 --tag text-lora
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/text-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 151, in afrimteb
+    E.run(opts, suite=suite, tasks=task_list, languages=lang_list, overwrite=not no_overwrite, tag=tag)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/experiments/afrimteb.py", line 338, in run
+    emb = opts.load(("text",))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/text-lora/adapter'
+
+ERR ciral --adapter checkpoints/text-lora/adapter --batch-size 256 --tag text-lora
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/text-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 35, in run
+    emb = opts.load(("text",))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/text-lora/adapter'
+
+ERR finetune-audio --langs hau,yor,swh,amh,ibo,som --out checkpoints/audio-lora --epochs 1 --batch-size 32 --mini-batch-size 8
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 340, in finetune_audio
+    E.train(
+    ~~~~~~~^
+        opts,
+        ^^^^^
+    ...<10 lines>...
+        train_audio_tower=train_audio_tower,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/finetune_audio.py", line 80, in train
+    tf.auto_model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'EmbeddingGemma2Model' object has no attribute 'print_trainable_parameters'
+
+ERR speech-text --langs fleurs_core --adapter checkpoints/audio-lora/adapter --batch-size 64 --tag audio-lora
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/audio-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 43, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/audio-lora/adapter'
+
+ERR speech-bitext --langs fleurs_core --pivot eng --adapter checkpoints/audio-lora/adapter --batch-size 64 --tag audio-lora
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/audio-lora/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 212, in speech_bitext
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<6 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_bitext.py", line 31, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/audio-lora/adapter'
+
+ERR finetune-audio --langs hau,yor,swh,amh,ibo,som --out checkpoints/audio-full --epochs 1 --batch-size 32 --mini-batch-size 8 --train-audio-tower
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 340, in finetune_audio
+    E.train(
+    ~~~~~~~^
+        opts,
+        ^^^^^
+    ...<10 lines>...
+        train_audio_tower=train_audio_tower,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/finetune_audio.py", line 80, in train
+    tf.auto_model.print_trainable_parameters()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'EmbeddingGemma2Model' object has no attribute 'print_trainable_parameters'
+
+ERR speech-text --langs fleurs_core --adapter checkpoints/audio-full/adapter --batch-size 64 --tag audio-full
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 321, in _get_peft_type
+    config_file = hf_hub_download(
+        model_id,
+        CONFIG_NAME,
+        **hf_hub_download_kwargs,
+    )
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 85, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 133, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'checkpoints/audio-full/adapter'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 43, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 79, in load_embedder
+    _attach_adapter(model, adapter_path)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/registry.py", line 113, in _attach_adapter
+    tf_module.auto_model = PeftModel.from_pretrained(base, adapter_path)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/peft_model.py", line 492, in from_pretrained
+    config = PEFT_TYPE_TO_CONFIG_MAPPING[PeftConfig._get_peft_type(model_id, **hf_kwargs)].from_pretrained(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/peft/config.py", line 327, in _get_peft_type
+    raise ValueError(f"Can't find '{CONFIG_NAME}' at '{model_id}'")
+ValueError: Can't find 'adapter_config.json' at 'checkpoints/audio-full/adapter'
+
+# afriembed results
+
+## accent
+
+**embeddinggemma-2** (20261014-204458-noprompt) overall R@1=0.889 pool=1967
+
+| country | n | R@1 | R@10 | MRR |
+|---|---|---|---|---|
+| BW | 29 | 0.931 | 1.000 | 0.953 |
+| GH | 60 | 0.900 | 0.967 | 0.926 |
+| KE | 87 | 0.966 | 1.000 | 0.972 |
+| LS | 3 | 1.000 | 1.000 | 1.000 |
+| NG | 1513 | 0.877 | 0.947 | 0.902 |
+| RW | 15 | 0.933 | 1.000 | 0.942 |
+| UG | 30 | 0.900 | 0.933 | 0.908 |
+| US | 1 | 1.000 | 1.000 | 1.000 |
+| ZA | 225 | 0.924 | 0.960 | 0.937 |
+| ZW | 4 | 1.000 | 1.000 | 1.000 |
+
+| domain | n | R@1 | MRR |
+|---|---|---|---|
+| clinical | 1185 | 0.889 | 0.914 |
+| general | 782 | 0.889 | 0.906 |
+
+**embeddinggemma-2** (20261014-211518) overall R@1=0.888 pool=1967
+
+| country | n | R@1 | R@10 | MRR |
+|---|---|---|---|---|
+| BW | 29 | 0.931 | 1.000 | 0.966 |
+| GH | 60 | 0.850 | 0.983 | 0.912 |
+| KE | 87 | 0.977 | 0.989 | 0.983 |
+| LS | 3 | 1.000 | 1.000 | 1.000 |
+| NG | 1513 | 0.876 | 0.942 | 0.901 |
+| RW | 15 | 0.867 | 0.933 | 0.891 |
+| UG | 30 | 0.933 | 0.967 | 0.938 |
+| US | 1 | 1.000 | 1.000 | 1.000 |
+| ZA | 225 | 0.929 | 0.960 | 0.943 |
+| ZW | 4 | 1.000 | 1.000 | 1.000 |
+
+| domain | n | R@1 | MRR |
+|---|---|---|---|
+| clinical | 1185 | 0.892 | 0.917 |
+| general | 782 | 0.882 | 0.903 |
+
+## afrimteb-lite
+
+| model | run | prompts | dim | macro avg | amh | gaz | hau | ibo | kin | swh | xho | yor | zul |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| afrie5-large-instruct | 20261014-204557 | True | 1024 | 0.662 | 0.871 | 0.806 | 0.865 | 0.858 | 0.834 | 0.918 | 0.880 | 0.834 | 0.882 |
+| bge-m3 | 20261014-202704 | True | 1024 | 0.575 | 0.774 | 0.657 | 0.787 | 0.709 | 0.700 | 0.847 | 0.779 | 0.667 | 0.784 |
+| embeddinggemma-2 | 20261014-211333-d128 | True | 128 | 0.405 | 0.349 | 0.235 | 0.365 | 0.373 | 0.328 | 0.421 | 0.380 | 0.347 | 0.368 |
+| embeddinggemma-2 | 20261014-210431-d256 | True | 256 | 0.435 | 0.415 | 0.285 | 0.409 | 0.415 | 0.367 | 0.483 | 0.427 | 0.389 | 0.415 |
+| embeddinggemma-2 | 20261014-205527-d512 | True | 512 | 0.445 | 0.440 | 0.310 | 0.427 | 0.432 | 0.382 | 0.506 | 0.447 | 0.405 | 0.435 |
+| embeddinggemma-2 | 20261014-195245-fullctx | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-2 | 20261014-212504-trimmed | True | 768 | 0.396 | 0.357 | 0.245 | 0.321 | 0.322 | 0.315 | 0.428 | 0.328 | 0.296 | 0.316 |
+| embeddinggemma-2 | 20261014-185051-noprompt | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-300m | 20261014-195419-fullctx | True | 768 | 0.453 | 0.447 | 0.337 | 0.462 | 0.451 | 0.420 | 0.524 | 0.471 | 0.424 | 0.461 |
+| embeddinggemma-300m | 20261014-185418-noprompt | False | 768 | 0.434 | 0.396 | 0.282 | 0.433 | 0.426 | 0.389 | 0.493 | 0.439 | 0.405 | 0.430 |
+| me5-base | 20261014-200425 | True | 768 | 0.573 | 0.795 | 0.653 | 0.792 | 0.779 | 0.748 | 0.857 | 0.812 | 0.744 | 0.821 |
+| me5-large-instruct | 20261014-203641 | True | 1024 | 0.647 | 0.858 | 0.795 | 0.861 | 0.854 | 0.827 | 0.919 | 0.877 | 0.828 | 0.880 |
+| me5-small | 20261014-201244 | True | 384 | 0.535 | 0.739 | 0.503 | 0.715 | 0.719 | 0.701 | 0.812 | 0.761 | 0.658 | 0.774 |
+
+| task | afrie5-large-instruct:204557 | bge-m3:202704 | embeddinggemma-2:3-d128 | embeddinggemma-2:1-d256 | embeddinggemma-2:7-d512 | embeddinggemma-2:ullctx | embeddinggemma-2:rimmed | embeddinggemma-2:prompt | embeddinggemma-300m:ullctx | embeddinggemma-300m:prompt | me5-base:200425 | me5-large-instruct:203641 | me5-small:201244 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AfriHateClassification | 0.509 | 0.495 | 0.466 | 0.473 | 0.478 | 0.495 | 0.476 | 0.495 | 0.481 | 0.490 | 0.490 | 0.511 | 0.472 |
+| AfriSentiClassification | 0.551 | 0.512 | 0.498 | 0.494 | 0.495 | 0.530 | 0.445 | 0.530 | 0.442 | 0.467 | 0.513 | 0.497 | 0.469 |
+| AfriXNLI | 0.688 | 0.683 | 0.597 | 0.599 | 0.597 | 0.564 | 0.572 | 0.564 | 0.592 | 0.570 | 0.635 | 0.642 | 0.621 |
+| BelebeleRetrieval | 0.764 | 0.699 | 0.433 | 0.486 | 0.513 | 0.505 | 0.409 | 0.505 | 0.549 | 0.454 | 0.629 | 0.760 | 0.530 |
+| EmotionAnalysisPlus | 0.313 | 0.280 | 0.274 | 0.279 | 0.280 | 0.274 | 0.256 | 0.274 | 0.265 | 0.266 | 0.293 | 0.296 | 0.280 |
+| FloresBitextMining | 0.979 | 0.850 | 0.307 | 0.365 | 0.390 | 0.353 | 0.292 | 0.353 | 0.421 | 0.383 | 0.913 | 0.978 | 0.828 |
+| InjongoIntent | 0.750 | 0.748 | 0.495 | 0.533 | 0.558 | 0.575 | 0.610 | 0.575 | 0.595 | 0.593 | 0.750 | 0.755 | 0.650 |
+| KinNewsClassification | 0.575 | 0.504 | 0.396 | 0.436 | 0.442 | 0.441 | 0.387 | 0.439 | 0.434 | 0.415 | 0.503 | 0.561 | 0.533 |
+| MasakhaNEWSClassification | 0.835 | 0.768 | 0.699 | 0.745 | 0.750 | 0.730 | 0.672 | 0.728 | 0.750 | 0.738 | 0.749 | 0.829 | 0.734 |
+| NTREXBitextMining | 0.948 | 0.828 | 0.386 | 0.442 | 0.466 | 0.442 | 0.257 | 0.442 | 0.490 | 0.456 | 0.886 | 0.944 | 0.817 |
+| SIB200Classification | 0.719 | 0.556 | 0.380 | 0.423 | 0.434 | 0.426 | 0.413 | 0.426 | 0.442 | 0.424 | 0.549 | 0.710 | 0.525 |
+| SIB200Classification.v2 | 0.523 | 0.343 | 0.210 | 0.244 | 0.246 | 0.248 | 0.232 | 0.248 | 0.262 | 0.242 | 0.341 | 0.491 | 0.316 |
+| SIB200ClusteringS2S | 0.457 | 0.211 | 0.121 | 0.141 | 0.141 | 0.127 | 0.124 | 0.127 | 0.166 | 0.143 | 0.200 | 0.437 | 0.183 |
+## ciral
+
+| model | run | split | hau nDCG@20 | som nDCG@20 | swh nDCG@20 | yor nDCG@20 | hau R@100 | som R@100 | swh R@100 | yor R@100 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-205251 | test-a | 0.352 | 0.363 | 0.452 | 0.355 | 0.636 | 0.631 | 0.859 | 0.690 |
+| embeddinggemma-300m | 20261014-210822 | test-a | 0.387 | 0.357 | 0.486 | 0.373 | 0.698 | 0.602 | 0.866 | 0.724 |
+| me5-base | 20261014-210128 | test-a | 0.384 | 0.357 | 0.400 | 0.377 | 0.678 | 0.603 | 0.786 | 0.744 |
+
+## fertility
+
+| lang | tier | script | gemma-4 (EmbeddingGemma 2) tok/word | gemma-3 (EmbeddingGemma 1) tok/word | xlm-roberta (mE5 / bge-m3) tok/word | nllb-200 tok/word | gemma-4 (EmbeddingGemma 2) ×eng | gemma-3 (EmbeddingGemma 1) ×eng | xlm-roberta (mE5 / bge-m3) ×eng | nllb-200 ×eng |
+|---|---|---|---|---|---|---|---|---|---|---|
+| eng | anchor | Latn | 1.245 | 1.245 | 1.394 | 1.383 | 1.000 | 1.000 | 1.000 | 1.000 |
+| fra | anchor | Latn | 1.535 | 1.535 | 1.589 | 1.670 | 1.233 | 1.233 | 1.140 | 1.207 |
+| arb | anchor | Arab | 2.041 | 2.041 | 1.818 | 2.185 | 1.639 | 1.639 | 1.304 | 1.580 |
+| amh | mid | Ethi | 3.011 | 3.011 | 2.343 | 2.306 | 2.419 | 2.419 | 1.681 | 1.667 |
+| gaz | low | Latn | 2.958 | 2.958 | 2.779 | 2.250 | 2.376 | 2.376 | 1.994 | 1.626 |
+| ibo | mid | Latn | 2.289 | 2.289 | 2.537 | 1.623 | 1.839 | 1.839 | 1.820 | 1.173 |
+| yor | mid | Latn | 2.515 | 2.515 | 2.630 | 1.793 | 2.020 | 2.020 | 1.887 | 1.296 |
+| hau | high | Latn | 1.853 | 1.853 | 1.672 | 1.415 | 1.488 | 1.488 | 1.199 | 1.023 |
+| swh | high | Latn | 2.058 | 2.058 | 1.656 | 1.605 | 1.653 | 1.653 | 1.188 | 1.160 |
+| kin | mid | Latn | 2.606 | 2.606 | 2.554 | 1.952 | 2.093 | 2.093 | 1.833 | 1.411 |
+| xho | mid | Latn | 3.239 | 3.239 | 2.924 | 2.369 | 2.602 | 2.602 | 2.098 | 1.712 |
+| zul | mid | Latn | 3.403 | 3.403 | 3.040 | 2.432 | 2.733 | 2.733 | 2.181 | 1.758 |
+| afr | high | Latn | 1.765 | 1.765 | 1.567 | 1.592 | 1.417 | 1.417 | 1.125 | 1.151 |
+| som | mid | Latn | 2.238 | 2.238 | 1.841 | 1.820 | 1.798 | 1.798 | 1.321 | 1.315 |
+| wol | low | Latn | 1.887 | 1.887 | 1.904 | 1.603 | 1.516 | 1.516 | 1.366 | 1.159 |
+| lug | low | Latn | 2.738 | 2.738 | 2.621 | 2.146 | 2.199 | 2.199 | 1.881 | 1.551 |
+| lin | low | Latn | 1.920 | 1.920 | 1.911 | 1.432 | 1.542 | 1.542 | 1.371 | 1.035 |
+| sna | mid | Latn | 2.896 | 2.896 | 2.863 | 2.175 | 2.326 | 2.326 | 2.054 | 1.572 |
+| nso | low | Latn | 1.844 | 1.844 | 1.830 | 1.440 | 1.482 | 1.482 | 1.313 | 1.041 |
+| nya | low | Latn | 2.568 | 2.568 | 2.442 | 1.786 | 2.063 | 2.063 | 1.752 | 1.291 |
+| umb | low | Latn | 2.803 | 2.803 | 2.673 | 2.199 | 2.251 | 2.251 | 1.918 | 1.590 |
+| fuv | low | Latn | 1.945 | 1.945 | 1.929 | 1.658 | 1.562 | 1.562 | 1.384 | 1.198 |
+| luo | low | Latn | 1.870 | 1.870 | 1.870 | 1.540 | 1.502 | 1.502 | 1.342 | 1.114 |
+| kam | low | Latn | 2.382 | 2.382 | 2.344 | 1.843 | 1.914 | 1.914 | 1.682 | 1.332 |
+| kea | low | Latn | 1.826 | 1.826 | 1.775 | 1.687 | 1.467 | 1.467 | 1.274 | 1.220 |
+| ewe | low | Latn | 2.334 | 2.334 | 2.396 | 1.544 | 1.875 | 1.875 | 1.719 | 1.116 |
+| twi | low | Latn | 1.987 | 1.987 | 2.183 | 1.443 | 1.596 | 1.596 | 1.566 | 1.043 |
+| tir | low | Ethi | 3.404 | 3.404 | 3.028 | 2.274 | 2.734 | 2.734 | 2.173 | 1.644 |
+| kik | low | Latn | 2.920 | 2.920 | 3.011 | 1.942 | 2.346 | 2.346 | 2.161 | 1.404 |
+| bem | low | Latn | 2.360 | 2.360 | 2.285 | 1.830 | 1.896 | 1.896 | 1.639 | 1.323 |
+
+## lid
+
+| model | run | langs | audio kNN | audio NMI | audio purity | text kNN | text NMI | chance |
+|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-204003-noprompt | 21 | 0.670 | 0.706 | 0.699 | 0.602 | 0.661 | 0.048 |
+| embeddinggemma-2 | 20261014-212241 | 21 | 0.670 | 0.706 | 0.699 | 0.708 | 0.616 | 0.048 |
+
+## speech-bitext
+
+**embeddinggemma-2** (20261014-203832-allpairs, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| hau->yor | 321 | 0.305 | 0.330 | 0.477 | 0.380 | 0.358 |
+| hau->swh | 294 | 0.289 | 0.354 | 0.469 | 0.435 | 0.401 |
+| hau->amh | 278 | 0.338 | 0.353 | 0.442 | 0.457 | 0.374 |
+| hau->ibo | 331 | 0.290 | 0.299 | 0.480 | 0.353 | 0.393 |
+| hau->som | 331 | 0.284 | 0.293 | 0.523 | 0.335 | 0.350 |
+| yor->hau | 321 | 0.293 | 0.321 | 0.461 | 0.349 | 0.368 |
+| yor->swh | 304 | 0.303 | 0.355 | 0.467 | 0.428 | 0.405 |
+| yor->amh | 289 | 0.356 | 0.367 | 0.474 | 0.443 | 0.419 |
+| yor->ibo | 340 | 0.306 | 0.324 | 0.450 | 0.347 | 0.394 |
+| yor->som | 340 | 0.291 | 0.265 | 0.444 | 0.309 | 0.353 |
+| swh->hau | 294 | 0.405 | 0.384 | 0.469 | 0.408 | 0.452 |
+| swh->yor | 304 | 0.405 | 0.339 | 0.497 | 0.428 | 0.457 |
+| swh->amh | 265 | 0.630 | 0.540 | 0.853 | 0.577 | 0.702 |
+| swh->ibo | 312 | 0.388 | 0.340 | 0.532 | 0.401 | 0.468 |
+| swh->som | 312 | 0.369 | 0.381 | 0.490 | 0.433 | 0.458 |
+| amh->hau | 278 | 0.432 | 0.414 | 0.457 | 0.403 | 0.496 |
+| amh->yor | 289 | 0.426 | 0.446 | 0.478 | 0.426 | 0.464 |
+| amh->swh | 265 | 0.536 | 0.543 | 0.849 | 0.675 | 0.592 |
+| amh->ibo | 296 | 0.453 | 0.392 | 0.510 | 0.365 | 0.544 |
+| amh->som | 296 | 0.392 | 0.409 | 0.459 | 0.389 | 0.449 |
+| ibo->hau | 331 | 0.218 | 0.287 | 0.468 | 0.378 | 0.326 |
+| ibo->yor | 340 | 0.262 | 0.344 | 0.444 | 0.403 | 0.324 |
+| ibo->swh | 312 | 0.266 | 0.327 | 0.478 | 0.442 | 0.359 |
+| ibo->amh | 296 | 0.331 | 0.345 | 0.483 | 0.480 | 0.402 |
+| ibo->som | 350 | 0.240 | 0.260 | 0.454 | 0.331 | 0.314 |
+| som->hau | 331 | 0.233 | 0.278 | 0.462 | 0.323 | 0.332 |
+| som->yor | 340 | 0.274 | 0.265 | 0.412 | 0.356 | 0.321 |
+| som->swh | 312 | 0.330 | 0.349 | 0.455 | 0.391 | 0.436 |
+| som->amh | 296 | 0.345 | 0.348 | 0.459 | 0.405 | 0.416 |
+| som->ibo | 350 | 0.274 | 0.269 | 0.443 | 0.303 | 0.360 |
+
+**embeddinggemma-2** (20261014-203716, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| amh->eng | 296 | 0.625 | 0.605 | 0.909 | 0.841 | 0.696 |
+| gaz->eng | 36 | 0.417 | 0.389 | 0.389 | 0.417 | 0.444 |
+| ibo->eng | 350 | 0.337 | 0.314 | 0.543 | 0.483 | 0.426 |
+| yor->eng | 340 | 0.382 | 0.347 | 0.547 | 0.497 | 0.476 |
+| hau->eng | 331 | 0.338 | 0.302 | 0.547 | 0.489 | 0.432 |
+| swh->eng | 312 | 0.718 | 0.670 | 0.968 | 0.955 | 0.833 |
+| xho->eng | 350 | 0.443 | 0.454 | 0.571 | 0.537 | 0.529 |
+| zul->eng | 346 | 0.355 | 0.358 | 0.491 | 0.457 | 0.448 |
+| som->eng | 350 | 0.369 | 0.357 | 0.480 | 0.463 | 0.454 |
+| wol->eng | 239 | 0.498 | 0.490 | 0.632 | 0.569 | 0.590 |
+| lug->eng | 339 | 0.348 | 0.330 | 0.525 | 0.437 | 0.422 |
+| lin->eng | 285 | 0.382 | 0.316 | 0.628 | 0.551 | 0.540 |
+| sna->eng | 348 | 0.425 | 0.388 | 0.532 | 0.511 | 0.523 |
+
+## speech-text
+
+**embeddinggemma-2** (20261014-203326-texttask-none, text_task=none)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.777 | 0.774 | 0.764 | 0.642 | 0.723 | 0.831 |
+| gaz | low | 36 | 1.000 | 1.000 | 0.944 | 0.833 | 0.972 | 1.000 |
+| ibo | mid | 350 | 0.660 | 0.657 | 0.620 | 0.471 | 0.663 | 0.736 |
+| yor | mid | 340 | 0.885 | 0.888 | 0.859 | 0.732 | 0.968 | 0.923 |
+| hau | high | 331 | 0.849 | 0.837 | 0.825 | 0.710 | 0.946 | 0.888 |
+| swh | high | 312 | 0.929 | 0.920 | 0.904 | 0.792 | 0.949 | 0.952 |
+| xho | mid | 350 | 0.877 | 0.883 | 0.826 | 0.729 | 0.877 | 0.914 |
+| zul | mid | 346 | 0.893 | 0.879 | 0.835 | 0.699 | 0.812 | 0.925 |
+| afr | high | 233 | 0.987 | 0.979 | 0.970 | 0.927 | 0.974 | 0.993 |
+| som | mid | 350 | 0.643 | 0.643 | 0.614 | 0.417 | 0.806 | 0.728 |
+| wol | low | 239 | 0.933 | 0.908 | 0.887 | 0.841 | 0.971 | 0.950 |
+| lug | low | 339 | 0.861 | 0.847 | 0.826 | 0.726 | 0.920 | 0.896 |
+| lin | low | 285 | 0.912 | 0.905 | 0.877 | 0.793 | 0.933 | 0.940 |
+| sna | mid | 348 | 0.862 | 0.856 | 0.830 | 0.701 | 0.856 | 0.902 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.862 | 1.000 |
+| 512 | 0.855 | 0.992 |
+| 256 | 0.827 | 0.960 |
+| 128 | 0.715 | 0.830 |
+
+**embeddinggemma-2** (20261014-203006, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.882 | 0.855 | 0.824 | 0.666 | 0.831 | 0.916 |
+| gaz | low | 36 | 1.000 | 1.000 | 1.000 | 0.889 | 1.000 | 1.000 |
+| ibo | mid | 350 | 0.786 | 0.760 | 0.714 | 0.569 | 0.791 | 0.840 |
+| yor | mid | 340 | 0.953 | 0.944 | 0.912 | 0.685 | 0.974 | 0.969 |
+| hau | high | 331 | 0.949 | 0.937 | 0.894 | 0.752 | 0.973 | 0.964 |
+| swh | high | 312 | 0.971 | 0.965 | 0.962 | 0.878 | 0.981 | 0.983 |
+| xho | mid | 350 | 0.937 | 0.931 | 0.909 | 0.780 | 0.946 | 0.958 |
+| zul | mid | 346 | 0.965 | 0.957 | 0.910 | 0.757 | 0.902 | 0.976 |
+| afr | high | 233 | 0.991 | 0.987 | 0.987 | 0.923 | 0.991 | 0.996 |
+| som | mid | 350 | 0.871 | 0.860 | 0.794 | 0.600 | 0.874 | 0.910 |
+| wol | low | 239 | 0.962 | 0.967 | 0.925 | 0.904 | 0.987 | 0.975 |
+| lug | low | 339 | 0.956 | 0.956 | 0.909 | 0.737 | 0.985 | 0.967 |
+| lin | low | 285 | 0.958 | 0.951 | 0.923 | 0.793 | 0.958 | 0.973 |
+| sna | mid | 348 | 0.945 | 0.937 | 0.905 | 0.790 | 0.960 | 0.961 |
+| nso | low | 341 | 0.933 | 0.918 | 0.894 | 0.730 | 0.941 | 0.953 |
+| nya | low | 334 | 0.937 | 0.940 | 0.898 | 0.725 | 0.946 | 0.956 |
+| umb | low | 258 | 0.806 | 0.798 | 0.748 | 0.554 | 0.849 | 0.838 |
+| fuv | low | 330 | 0.964 | 0.961 | 0.939 | 0.818 | 0.973 | 0.970 |
+| luo | low | 194 | 0.974 | 0.979 | 0.954 | 0.881 | 0.990 | 0.984 |
+| kam | low | 346 | 0.879 | 0.850 | 0.803 | 0.659 | 0.916 | 0.914 |
+| kea | low | 344 | 0.985 | 0.985 | 0.974 | 0.901 | 0.974 | 0.992 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.934 | 1.000 |
+| 512 | 0.926 | 0.991 |
+| 256 | 0.894 | 0.958 |
+| 128 | 0.762 | 0.816 |
+
+## vision
+
+**embeddinggemma-2** (20261014-195414, afri-aya)
+
+| language | n | image→local R@1 | image→english R@1 | local→image R@1 | local↔english text R@1 | gap (en−local cos) |
+|---|---|---|---|---|---|---|
+| Kinyarwanda | 300 | 0.097 | 0.803 | 0.027 | 0.107 | 0.151 |
+| Luganda (Ganda) | 300 | 0.083 | 0.760 | 0.043 | 0.073 | 0.160 |
+| Twi | 279 | 0.057 | 0.670 | 0.036 | 0.143 | 0.153 |
+| Nyankore | 239 | 0.096 | 0.883 | 0.059 | 0.138 | 0.179 |
+| Hausa | 208 | 0.101 | 0.793 | 0.082 | 0.120 | 0.156 |
+| Egyptian Arabic | 207 | 0.517 | 0.754 | 0.512 | 0.961 | 0.084 |
+| Yoruba | 186 | 0.043 | 0.478 | 0.032 | 0.086 | 0.137 |
+| Kirundi | 183 | 0.087 | 0.852 | 0.049 | 0.104 | 0.164 |
+| Zulu | 161 | 0.075 | 0.770 | 0.056 | 0.118 | 0.140 |
+| Krio | 75 | 0.373 | 0.947 | 0.387 | 0.840 | 0.096 |
+| Gishu | 70 | 0.229 | 0.829 | 0.157 | 0.186 | 0.142 |
+| Igbo | 48 | 0.229 | 0.917 | 0.250 | 0.375 | 0.143 |
+
+## vocab-trim
+
+| model | run | languages | kept | vocab | MB saved (bf16) | held-out coverage |
+|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-211531-build | amh,gaz,ibo,yor,hau,swh,kin,xho,zul,eng | 23238 | 262144 | 244.640 | 0.978 |
+
+Stopping app - uncaught exception raised locally: SystemExit(1).
+Runner terminated.

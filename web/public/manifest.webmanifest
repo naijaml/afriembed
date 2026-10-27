@@ -1,0 +1,12 @@
+{
+  "name": "afriembed search",
+  "short_name": "afriembed",
+  "description": "Voice and text search in African languages, on your own machine.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#b4461c",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

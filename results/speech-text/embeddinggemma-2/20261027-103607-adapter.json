@@ -1,0 +1,1253 @@
+{
+  "experiment": "speech-text",
+  "model": "embeddinggemma-2",
+  "run_id": "20261027-103607-adapter",
+  "timestamp": "2026-10-27T10:36:07",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "a213b2a",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "dataset": "mteb/fleurs",
+  "split": "test",
+  "shuffle_control": false,
+  "text_task": "document",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "causal_attention": false,
+    "source": "google/embeddinggemma-2",
+    "adapter": "artifacts/audio-lora",
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "dims": [
+    768,
+    512,
+    256,
+    128
+  ],
+  "per_language": {
+    "amh": {
+      "tier": "mid",
+      "script": "Ethi",
+      "n": 296,
+      "mean_duration_s": 11.57837837837838,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9864864864864865,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9923986486486487,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.9966216216216216,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9983108108108109,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.6915356516838074
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.9864864864864865,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9922297297297297,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.9898648648648649,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9949324324324325,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.7009199261665344
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9864864864864865,
+            "recall@5": 0.9966216216216216,
+            "recall@10": 0.9966216216216216,
+            "mrr": 0.9905968468468468,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.9864864864864865,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9932432432432432,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.7196832895278931
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.956081081081081,
+            "recall@5": 0.9898648648648649,
+            "recall@10": 0.9932432432432432,
+            "mrr": 0.9711869493119492,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.9358108108108109,
+            "recall@5": 0.9831081081081081,
+            "recall@10": 0.9966216216216216,
+            "mrr": 0.9598616473616473,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.7510518431663513
+        }
+      }
+    },
+    "gaz": {
+      "tier": "low",
+      "script": "Latn",
+      "n": 36,
+      "mean_duration_s": 11.904999999999998,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "diag_cos_mean": 0.7206686735153198
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "diag_cos_mean": 0.7261068820953369
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "diag_cos_mean": 0.7405126094818115
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 36,
+            "pool": 36
+          },
+          "diag_cos_mean": 0.776361882686615
+        }
+      }
+    },
+    "ibo": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 350,
+      "mean_duration_s": 17.614114285714283,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9828571428571429,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9971428571428571,
+            "mrr": 0.9874761904761905,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9657142857142857,
+            "recall@5": 0.98,
+            "recall@10": 0.9914285714285714,
+            "mrr": 0.9738811755060528,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.6690049767494202
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.98,
+            "recall@5": 0.9914285714285714,
+            "recall@10": 0.9914285714285714,
+            "mrr": 0.9858051378446115,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9685714285714285,
+            "recall@5": 0.9771428571428571,
+            "recall@10": 0.9914285714285714,
+            "mrr": 0.9742692743764172,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.6731430292129517
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9657142857142857,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9765725947521865,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9428571428571428,
+            "recall@5": 0.9742857142857143,
+            "recall@10": 0.9828571428571429,
+            "mrr": 0.9572009325261206,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.6953685283660889
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9371428571428572,
+            "recall@5": 0.9685714285714285,
+            "recall@10": 0.9771428571428571,
+            "mrr": 0.9532625772990736,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9028571428571428,
+            "recall@5": 0.9657142857142857,
+            "recall@10": 0.9714285714285714,
+            "mrr": 0.9295594852600103,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7309344410896301
+        }
+      }
+    },
+    "yor": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 340,
+      "mean_duration_s": 16.585058823529412,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 340,
+            "pool": 340
+          },
+          "text->audio": {
+            "recall@1": 0.9970588235294118,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985294117647059,
+            "n": 340,
+            "pool": 340
+          },
+          "diag_cos_mean": 0.7515303492546082
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 340,
+            "pool": 340
+          },
+          "text->audio": {
+            "recall@1": 0.9970588235294118,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985294117647059,
+            "n": 340,
+            "pool": 340
+          },
+          "diag_cos_mean": 0.7558531165122986
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 340,
+            "pool": 340
+          },
+          "text->audio": {
+            "recall@1": 0.9970588235294118,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985294117647059,
+            "n": 340,
+            "pool": 340
+          },
+          "diag_cos_mean": 0.7731992602348328
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9941176470588236,
+            "recall@5": 0.9970588235294118,
+            "recall@10": 0.9970588235294118,
+            "mrr": 0.995798319327731,
+            "n": 340,
+            "pool": 340
+          },
+          "text->audio": {
+            "recall@1": 0.9941176470588236,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9956862745098038,
+            "n": 340,
+            "pool": 340
+          },
+          "diag_cos_mean": 0.7931550741195679
+        }
+      }
+    },
+    "hau": {
+      "tier": "high",
+      "script": "Latn",
+      "n": 331,
+      "mean_duration_s": 19.474078549848944,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 331,
+            "pool": 331
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 331,
+            "pool": 331
+          },
+          "diag_cos_mean": 0.7353387475013733
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 331,
+            "pool": 331
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 331,
+            "pool": 331
+          },
+          "diag_cos_mean": 0.7428660988807678
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9969788519637462,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9984894259818731,
+            "n": 331,
+            "pool": 331
+          },
+          "text->audio": {
+            "recall@1": 0.9969788519637462,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9984894259818731,
+            "n": 331,
+            "pool": 331
+          },
+          "diag_cos_mean": 0.7589531540870667
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9969788519637462,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9984894259818731,
+            "n": 331,
+            "pool": 331
+          },
+          "text->audio": {
+            "recall@1": 0.9939577039274925,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9969788519637462,
+            "n": 331,
+            "pool": 331
+          },
+          "diag_cos_mean": 0.786603569984436
+        }
+      }
+    },
+    "swh": {
+      "tier": "high",
+      "script": "Latn",
+      "n": 312,
+      "mean_duration_s": 14.45673076923077,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9967948717948718,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9983974358974359,
+            "n": 312,
+            "pool": 312
+          },
+          "text->audio": {
+            "recall@1": 0.9967948717948718,
+            "recall@5": 0.9967948717948718,
+            "recall@10": 1.0,
+            "mrr": 0.9971509971509971,
+            "n": 312,
+            "pool": 312
+          },
+          "diag_cos_mean": 0.7269456386566162
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 312,
+            "pool": 312
+          },
+          "text->audio": {
+            "recall@1": 0.9967948717948718,
+            "recall@5": 0.9967948717948718,
+            "recall@10": 0.9967948717948718,
+            "mrr": 0.9970862470862472,
+            "n": 312,
+            "pool": 312
+          },
+          "diag_cos_mean": 0.7341699600219727
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9967948717948718,
+            "recall@5": 0.9967948717948718,
+            "recall@10": 1.0,
+            "mrr": 0.9972527472527472,
+            "n": 312,
+            "pool": 312
+          },
+          "text->audio": {
+            "recall@1": 0.9967948717948718,
+            "recall@5": 0.9967948717948718,
+            "recall@10": 0.9967948717948718,
+            "mrr": 0.9969635627530365,
+            "n": 312,
+            "pool": 312
+          },
+          "diag_cos_mean": 0.7498359680175781
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9935897435897436,
+            "recall@5": 0.9967948717948718,
+            "recall@10": 1.0,
+            "mrr": 0.995548433048433,
+            "n": 312,
+            "pool": 312
+          },
+          "text->audio": {
+            "recall@1": 0.9967948717948718,
+            "recall@5": 0.9967948717948718,
+            "recall@10": 0.9967948717948718,
+            "mrr": 0.9969551282051282,
+            "n": 312,
+            "pool": 312
+          },
+          "diag_cos_mean": 0.7736338973045349
+        }
+      }
+    },
+    "xho": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 350,
+      "mean_duration_s": 13.150114285714288,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7558035850524902
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7616397738456726
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9971428571428571,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985714285714286,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7817937135696411
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9942857142857143,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9971428571428571,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9885714285714285,
+            "recall@5": 0.9971428571428571,
+            "recall@10": 1.0,
+            "mrr": 0.9921904761904762,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.8007737398147583
+        }
+      }
+    },
+    "zul": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 346,
+      "mean_duration_s": 16.4521387283237,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 346,
+            "pool": 346
+          },
+          "text->audio": {
+            "recall@1": 0.9942196531791907,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9963872832369942,
+            "n": 346,
+            "pool": 346
+          },
+          "diag_cos_mean": 0.7568070292472839
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 346,
+            "pool": 346
+          },
+          "text->audio": {
+            "recall@1": 0.9971098265895953,
+            "recall@5": 0.9971098265895953,
+            "recall@10": 1.0,
+            "mrr": 0.9975915221579961,
+            "n": 346,
+            "pool": 346
+          },
+          "diag_cos_mean": 0.7625776529312134
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 346,
+            "pool": 346
+          },
+          "text->audio": {
+            "recall@1": 0.9971098265895953,
+            "recall@5": 0.9971098265895953,
+            "recall@10": 1.0,
+            "mrr": 0.9975915221579961,
+            "n": 346,
+            "pool": 346
+          },
+          "diag_cos_mean": 0.7833676934242249
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9942196531791907,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9957610789980731,
+            "n": 346,
+            "pool": 346
+          },
+          "text->audio": {
+            "recall@1": 0.9913294797687862,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9943159922928708,
+            "n": 346,
+            "pool": 346
+          },
+          "diag_cos_mean": 0.8021701574325562
+        }
+      }
+    },
+    "afr": {
+      "tier": "high",
+      "script": "Latn",
+      "n": 233,
+      "mean_duration_s": 10.405364806866954,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 233,
+            "pool": 233
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 233,
+            "pool": 233
+          },
+          "diag_cos_mean": 0.7272747755050659
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 233,
+            "pool": 233
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 233,
+            "pool": 233
+          },
+          "diag_cos_mean": 0.7329301834106445
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9957081545064378,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9978540772532188,
+            "n": 233,
+            "pool": 233
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 233,
+            "pool": 233
+          },
+          "diag_cos_mean": 0.752444326877594
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9742489270386266,
+            "recall@5": 0.9957081545064378,
+            "recall@10": 1.0,
+            "mrr": 0.9836909871244635,
+            "n": 233,
+            "pool": 233
+          },
+          "text->audio": {
+            "recall@1": 0.9957081545064378,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9978540772532188,
+            "n": 233,
+            "pool": 233
+          },
+          "diag_cos_mean": 0.7631301283836365
+        }
+      }
+    },
+    "som": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 350,
+      "mean_duration_s": 13.857257142857144,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9914285714285714,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9925050571319228,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9914285714285714,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9930163371391442,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7061729431152344
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.9914285714285714,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9922702757365335,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9914285714285714,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9929909221213569,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7123975157737732
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9914285714285714,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9922358728351898,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9857142857142858,
+            "recall@5": 0.9942857142857143,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9895936128663156,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7319563627243042
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9742857142857143,
+            "recall@5": 0.9857142857142858,
+            "recall@10": 0.9942857142857143,
+            "mrr": 0.9789192848856715,
+            "n": 350,
+            "pool": 350
+          },
+          "text->audio": {
+            "recall@1": 0.9571428571428572,
+            "recall@5": 0.9857142857142858,
+            "recall@10": 0.9914285714285714,
+            "mrr": 0.9696203574253676,
+            "n": 350,
+            "pool": 350
+          },
+          "diag_cos_mean": 0.7566475868225098
+        }
+      }
+    },
+    "wol": {
+      "tier": "low",
+      "script": "Latn",
+      "n": 239,
+      "mean_duration_s": 17.327698744769872,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "diag_cos_mean": 0.7523506879806519
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "diag_cos_mean": 0.7588084936141968
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "diag_cos_mean": 0.7770699858665466
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 239,
+            "pool": 239
+          },
+          "diag_cos_mean": 0.801645040512085
+        }
+      }
+    },
+    "lug": {
+      "tier": "low",
+      "script": "Latn",
+      "n": 339,
+      "mean_duration_s": 16.90053097345133,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9970501474926253,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985250737463127,
+            "n": 339,
+            "pool": 339
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 339,
+            "pool": 339
+          },
+          "diag_cos_mean": 0.756083071231842
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 339,
+            "pool": 339
+          },
+          "text->audio": {
+            "recall@1": 0.9970501474926253,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985250737463127,
+            "n": 339,
+            "pool": 339
+          },
+          "diag_cos_mean": 0.7607418894767761
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9941002949852508,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9970501474926253,
+            "n": 339,
+            "pool": 339
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 339,
+            "pool": 339
+          },
+          "diag_cos_mean": 0.7788315415382385
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9970501474926253,
+            "recall@5": 0.9970501474926253,
+            "recall@10": 1.0,
+            "mrr": 0.9974188790560472,
+            "n": 339,
+            "pool": 339
+          },
+          "text->audio": {
+            "recall@1": 0.9970501474926253,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9985250737463127,
+            "n": 339,
+            "pool": 339
+          },
+          "diag_cos_mean": 0.8031672835350037
+        }
+      }
+    },
+    "lin": {
+      "tier": "low",
+      "script": "Latn",
+      "n": 285,
+      "mean_duration_s": 20.15389473684211,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9964912280701754,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9982456140350877,
+            "n": 285,
+            "pool": 285
+          },
+          "text->audio": {
+            "recall@1": 0.9964912280701754,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9982456140350877,
+            "n": 285,
+            "pool": 285
+          },
+          "diag_cos_mean": 0.76496422290802
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.9964912280701754,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9982456140350877,
+            "n": 285,
+            "pool": 285
+          },
+          "text->audio": {
+            "recall@1": 0.9964912280701754,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9982456140350877,
+            "n": 285,
+            "pool": 285
+          },
+          "diag_cos_mean": 0.7718355655670166
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9964912280701754,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9982456140350877,
+            "n": 285,
+            "pool": 285
+          },
+          "text->audio": {
+            "recall@1": 0.9964912280701754,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9982456140350877,
+            "n": 285,
+            "pool": 285
+          },
+          "diag_cos_mean": 0.787962019443512
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9859649122807017,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9921052631578947,
+            "n": 285,
+            "pool": 285
+          },
+          "text->audio": {
+            "recall@1": 0.9824561403508771,
+            "recall@5": 0.9964912280701754,
+            "recall@10": 1.0,
+            "mrr": 0.9891812865497077,
+            "n": 285,
+            "pool": 285
+          },
+          "diag_cos_mean": 0.8106183409690857
+        }
+      }
+    },
+    "sna": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 348,
+      "mean_duration_s": 14.99706896551724,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 348,
+            "pool": 348
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 348,
+            "pool": 348
+          },
+          "diag_cos_mean": 0.7476378083229065
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 348,
+            "pool": 348
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 348,
+            "pool": 348
+          },
+          "diag_cos_mean": 0.7542545795440674
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 348,
+            "pool": 348
+          },
+          "text->audio": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 348,
+            "pool": 348
+          },
+          "diag_cos_mean": 0.774071455001831
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9913793103448276,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9956896551724138,
+            "n": 348,
+            "pool": 348
+          },
+          "text->audio": {
+            "recall@1": 0.9885057471264368,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9937739463601534,
+            "n": 348,
+            "pool": 348
+          },
+          "diag_cos_mean": 0.7897149324417114
+        }
+      }
+    }
+  },
+  "summary": {
+    "768": {
+      "mean_audio->text_recall@1": 0.9965077462949908,
+      "retention_vs_full": 1.0
+    },
+    "512": {
+      "mean_audio->text_recall@1": 0.9967433061418023,
+      "retention_vs_full": 1.0002363853644765
+    },
+    "256": {
+      "mean_audio->text_recall@1": 0.9945501960678447,
+      "retention_vs_full": 0.9980355895531928
+    },
+    "128": {
+      "mean_audio->text_recall@1": 0.9849531828388324,
+      "retention_vs_full": 0.9884049436653972
+    }
+  }
+}

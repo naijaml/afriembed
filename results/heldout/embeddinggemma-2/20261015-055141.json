@@ -1,0 +1,307 @@
+{
+  "experiment": "heldout",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-055141",
+  "timestamp": "2026-10-15T05:51:41",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA A10"
+  },
+  "sources": [
+    "bible-ewe",
+    "naija-hau",
+    "naija-ibo",
+    "naija-yor"
+  ],
+  "text_task": "document",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656
+  },
+  "per_source": {
+    "bible-ewe": {
+      "lang": "ewe",
+      "kind": "bible",
+      "n": 409,
+      "mean_duration_s": 11.435415138549308,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.882640586797066,
+            "recall@5": 0.9706601466992665,
+            "recall@10": 0.9853300733496333,
+            "mrr": 0.9198568736374053,
+            "n": 409,
+            "pool": 409
+          },
+          "text->audio": {
+            "recall@1": 0.8484107579462102,
+            "recall@5": 0.9462102689486552,
+            "recall@10": 0.9657701711491442,
+            "mrr": 0.8929796736315316,
+            "n": 409,
+            "pool": 409
+          },
+          "diag_cos_mean": 0.7998918890953064
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.8655256723716381,
+            "recall@5": 0.9657701711491442,
+            "recall@10": 0.9828850855745721,
+            "mrr": 0.9079834451019584,
+            "n": 409,
+            "pool": 409
+          },
+          "text->audio": {
+            "recall@1": 0.8361858190709046,
+            "recall@5": 0.941320293398533,
+            "recall@10": 0.9657701711491442,
+            "mrr": 0.8824919693460719,
+            "n": 409,
+            "pool": 409
+          },
+          "diag_cos_mean": 0.8038625717163086
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.7995110024449877,
+            "recall@5": 0.9242053789731052,
+            "recall@10": 0.9535452322738386,
+            "mrr": 0.8553161683344644,
+            "n": 409,
+            "pool": 409
+          },
+          "text->audio": {
+            "recall@1": 0.784841075794621,
+            "recall@5": 0.9070904645476773,
+            "recall@10": 0.941320293398533,
+            "mrr": 0.8414047962427413,
+            "n": 409,
+            "pool": 409
+          },
+          "diag_cos_mean": 0.8175738453865051
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.5916870415647921,
+            "recall@5": 0.7897310513447433,
+            "recall@10": 0.863080684596577,
+            "mrr": 0.6873864698323596,
+            "n": 409,
+            "pool": 409
+          },
+          "text->audio": {
+            "recall@1": 0.6821515892420538,
+            "recall@5": 0.8606356968215159,
+            "recall@10": 0.8997555012224939,
+            "mrr": 0.7562108874979212,
+            "n": 409,
+            "pool": 409
+          },
+          "diag_cos_mean": 0.86900794506073
+        }
+      }
+    },
+    "naija-hau": {
+      "lang": "hau",
+      "kind": "crowd",
+      "n": 1000,
+      "mean_duration_s": 3.11496,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.823,
+            "recall@5": 0.928,
+            "recall@10": 0.948,
+            "mrr": 0.8721995414450625,
+            "n": 1000,
+            "pool": 1000
+          },
+          "text->audio": {
+            "recall@1": 0.925,
+            "recall@5": 0.972,
+            "recall@10": 0.979,
+            "mrr": 0.9460361410077489,
+            "n": 1000,
+            "pool": 1000
+          },
+          "diag_cos_mean": 0.8128880858421326
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.821,
+            "recall@5": 0.924,
+            "recall@10": 0.946,
+            "mrr": 0.8676315990778395,
+            "n": 1000,
+            "pool": 1000
+          },
+          "text->audio": {
+            "recall@1": 0.921,
+            "recall@5": 0.968,
+            "recall@10": 0.978,
+            "mrr": 0.9421589360289757,
+            "n": 1000,
+            "pool": 1000
+          },
+          "diag_cos_mean": 0.8169053792953491
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.798,
+            "recall@5": 0.91,
+            "recall@10": 0.933,
+            "mrr": 0.8470992710070493,
+            "n": 1000,
+            "pool": 1000
+          },
+          "text->audio": {
+            "recall@1": 0.895,
+            "recall@5": 0.96,
+            "recall@10": 0.972,
+            "mrr": 0.924288515367688,
+            "n": 1000,
+            "pool": 1000
+          },
+          "diag_cos_mean": 0.8327008485794067
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.626,
+            "recall@5": 0.784,
+            "recall@10": 0.837,
+            "mrr": 0.6996294479044948,
+            "n": 1000,
+            "pool": 1000
+          },
+          "text->audio": {
+            "recall@1": 0.72,
+            "recall@5": 0.871,
+            "recall@10": 0.911,
+            "mrr": 0.7864606075914653,
+            "n": 1000,
+            "pool": 1000
+          },
+          "diag_cos_mean": 0.8735706806182861
+        }
+      }
+    },
+    "naija-ibo": {
+      "lang": "ibo",
+      "kind": "crowd",
+      "n": 998,
+      "mean_duration_s": 3.9742484969939875,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.5991983967935872,
+            "recall@5": 0.7535070140280561,
+            "recall@10": 0.8056112224448898,
+            "mrr": 0.6715113279451717,
+            "n": 998,
+            "pool": 998
+          },
+          "text->audio": {
+            "recall@1": 0.7334669338677354,
+            "recall@5": 0.8527054108216433,
+            "recall@10": 0.8907815631262525,
+            "mrr": 0.7891984038993956,
+            "n": 998,
+            "pool": 998
+          },
+          "diag_cos_mean": 0.7892208695411682
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.5971943887775552,
+            "recall@5": 0.7565130260521042,
+            "recall@10": 0.8086172344689379,
+            "mrr": 0.6700976028470301,
+            "n": 998,
+            "pool": 998
+          },
+          "text->audio": {
+            "recall@1": 0.7144288577154309,
+            "recall@5": 0.8587174348697395,
+            "recall@10": 0.8947895791583166,
+            "mrr": 0.7788035812070875,
+            "n": 998,
+            "pool": 998
+          },
+          "diag_cos_mean": 0.7943391799926758
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.5430861723446894,
+            "recall@5": 0.7244488977955912,
+            "recall@10": 0.7895791583166333,
+            "mrr": 0.6283577779001408,
+            "n": 998,
+            "pool": 998
+          },
+          "text->audio": {
+            "recall@1": 0.6643286573146293,
+            "recall@5": 0.8106212424849699,
+            "recall@10": 0.8537074148296593,
+            "mrr": 0.7339164764408008,
+            "n": 998,
+            "pool": 998
+          },
+          "diag_cos_mean": 0.8120445013046265
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.41382765531062127,
+            "recall@5": 0.5721442885771543,
+            "recall@10": 0.6432865731462926,
+            "mrr": 0.49333118617407856,
+            "n": 998,
+            "pool": 998
+          },
+          "text->audio": {
+            "recall@1": 0.5280561122244489,
+            "recall@5": 0.6943887775551102,
+            "recall@10": 0.7595190380761523,
+            "mrr": 0.6087168878135686,
+            "n": 998,
+            "pool": 998
+          },
+          "diag_cos_mean": 0.8613728880882263
+        }
+      }
+    }
+  },
+  "partial": true
+}

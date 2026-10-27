@@ -1,0 +1,167 @@
+✓ Initialized. View run at 
+https://modal.com/apps/<workspace>/main/ap-TVcFPFieXob0LJlArtHwOo
+✓ Created objects.
+├── ✓ Uploaded ./modal_app.py
+├── ✓ Uploaded ./configs
+├── ✓ Uploaded PythonPackage:afriembed
+├── ✓ Created Function run.
+└── ✓ Created Function report.
+
+=== afriembed heldout --max-items 1000 --batch-size 16
+[10/15/26 05:14:00] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+[10/15/26 05:14:01] INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  30%|███       | 355/1165 [00:00<00:00, 3329.59it/s]
+[1ALoading weights:  59%|█████▉    | 688/1165 [00:00<00:00, 3176.94it/s]
+[1ALoading weights:  86%|████████▋ | 1006/1165 [00:00<00:00, 2902.69it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 3168.31it/s]
+[10/15/26 05:14:06] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+[10/15/26 05:14:25] INFO     bible-hau: 998 unique utterances (7.2 s mean)      
+
+[1ABatches:   0%|          | 0/63 [00:00<?, ?it/s]
+[1ABatches:   2%|▏         | 1/63 [00:01<02:03,  2.00s/it]
+[1ABatches:   3%|▎         | 2/63 [00:02<01:11,  1.18s/it]
+[1ABatches:   5%|▍         | 3/63 [00:03<00:50,  1.20it/s]
+[1ABatches:   6%|▋         | 4/63 [00:03<00:44,  1.34it/s]
+[1ABatches:   8%|▊         | 5/63 [00:04<00:40,  1.42it/s]
+[1ABatches:  10%|▉         | 6/63 [00:04<00:37,  1.51it/s]
+[1ABatches:  11%|█         | 7/63 [00:05<00:34,  1.63it/s]
+[1ABatches:  13%|█▎        | 8/63 [00:05<00:32,  1.70it/s]
+[1ABatches:  14%|█▍        | 9/63 [00:06<00:29,  1.84it/s]
+[1ABatches:  16%|█▌        | 10/63 [00:06<00:25,  2.04it/s]
+[1ABatches:  17%|█▋        | 11/63 [00:07<00:24,  2.15it/s]
+[1ABatches:  19%|█▉        | 12/63 [00:07<00:25,  2.01it/s]
+[1ABatches:  21%|██        | 13/63 [00:08<00:27,  1.79it/s]
+[1ABatches:  22%|██▏       | 14/63 [00:09<00:33,  1.48it/s]
+[1ABatches:  24%|██▍       | 15/63 [00:09<00:28,  1.69it/s]
+[1ABatches:  25%|██▌       | 16/63 [00:10<00:27,  1.69it/s]
+[1ABatches:  27%|██▋       | 17/63 [00:11<00:28,  1.61it/s]
+[1ABatches:  29%|██▊       | 18/63 [00:11<00:27,  1.62it/s]
+[1ABatches:  30%|███       | 19/63 [00:12<00:26,  1.68it/s]
+[1ABatches:  32%|███▏      | 20/63 [00:12<00:26,  1.65it/s]
+[1ABatches:  33%|███▎      | 21/63 [00:13<00:25,  1.62it/s]
+[1ABatches:  35%|███▍      | 22/63 [00:14<00:27,  1.48it/s]
+[1ABatches:  37%|███▋      | 23/63 [00:15<00:28,  1.41it/s]
+[1ABatches:  38%|███▊      | 24/63 [00:15<00:29,  1.31it/s]
+[1ABatches:  40%|███▉      | 25/63 [00:16<00:26,  1.45it/s]
+[1ABatches:  41%|████▏     | 26/63 [00:16<00:23,  1.55it/s]
+[1ABatches:  43%|████▎     | 27/63 [00:17<00:22,  1.60it/s]
+[1ABatches:  44%|████▍     | 28/63 [00:17<00:19,  1.82it/s]
+[1ABatches:  46%|████▌     | 29/63 [00:18<00:20,  1.64it/s]
+[1ABatches:  48%|████▊     | 30/63 [00:19<00:23,  1.41it/s]
+[1ABatches:  49%|████▉     | 31/63 [00:20<00:19,  1.61it/s]
+[1ABatches:  51%|█████     | 32/63 [00:20<00:17,  1.76it/s]
+[1ABatches:  52%|█████▏    | 33/63 [00:21<00:16,  1.81it/s]
+[1ABatches:  54%|█████▍    | 34/63 [00:21<00:16,  1.72it/s]
+[1ABatches:  56%|█████▌    | 35/63 [00:22<00:19,  1.46it/s]
+[1ABatches:  57%|█████▋    | 36/63 [00:22<00:15,  1.72it/s]
+[1ABatches:  59%|█████▊    | 37/63 [00:23<00:14,  1.83it/s]
+[1ABatches:  60%|██████    | 38/63 [00:23<00:12,  1.97it/s]
+[1ABatches:  62%|██████▏   | 39/63 [00:24<00:13,  1.82it/s]
+[1ABatches:  63%|██████▎   | 40/63 [00:24<00:12,  1.88it/s]
+[1ABatches:  65%|██████▌   | 41/63 [00:25<00:12,  1.79it/s]
+[1ABatches:  67%|██████▋   | 42/63 [00:26<00:11,  1.86it/s]
+[1ABatches:  68%|██████▊   | 43/63 [00:26<00:11,  1.76it/s]
+[1ABatches:  70%|██████▉   | 44/63 [00:27<00:09,  1.91it/s]
+[1ABatches:  71%|███████▏  | 45/63 [00:27<00:09,  1.99it/s]
+[1ABatches:  73%|███████▎  | 46/63 [00:28<00:09,  1.79it/s]
+[1ABatches:  75%|███████▍  | 47/63 [00:29<00:09,  1.60it/s]
+[1ABatches:  76%|███████▌  | 48/63 [00:29<00:10,  1.45it/s]
+[1ABatches:  78%|███████▊  | 49/63 [00:30<00:08,  1.62it/s]
+[1ABatches:  79%|███████▉  | 50/63 [00:31<00:09,  1.40it/s]
+[1ABatches:  81%|████████  | 51/63 [00:31<00:08,  1.47it/s]
+[1ABatches:  83%|████████▎ | 52/63 [00:32<00:07,  1.57it/s]
+[1ABatches:  84%|████████▍ | 53/63 [00:32<00:06,  1.64it/s]
+[1ABatches:  86%|████████▌ | 54/63 [00:33<00:06,  1.47it/s]
+[1ABatches:  87%|████████▋ | 55/63 [00:34<00:04,  1.73it/s]
+[1ABatches:  89%|████████▉ | 56/63 [00:34<00:04,  1.70it/s]
+[1ABatches:  90%|█████████ | 57/63 [00:35<00:03,  1.75it/s]
+[1ABatches:  92%|█████████▏| 58/63 [00:35<00:02,  1.70it/s]
+[1ABatches:  94%|█████████▎| 59/63 [00:36<00:02,  1.93it/s]
+[1ABatches:  95%|█████████▌| 60/63 [00:36<00:01,  1.83it/s]
+[1ABatches:  97%|█████████▋| 61/63 [00:37<00:01,  1.94it/s]
+[1ABatches:  98%|█████████▊| 62/63 [00:37<00:00,  2.11it/s]
+[1ABatches: 100%|██████████| 63/63 [00:37<00:00,  2.65it/s]
+[1ABatches: 100%|██████████| 63/63 [00:37<00:00,  1.66it/s]
+[10/15/26 05:15:03] INFO     bible-hau: encode 998 audio took 37.9s             
+[10/15/26 05:15:05] INFO     bible-hau audio->text R@1 = 0.861 (pool 998)       
+[10/15/26 05:15:07] INFO     Saved                                              
+                             /vol/results/heldout/embeddinggemma-2/20261015-0515
+                             05.json                                            
+
+[1ADownloading data:   0%|          | 0/31 [00:00<?, ?files/s]
+[1ADownloading data:   3%|▎         | 1/31 [00:12<06:27, 12.91s/files]
+[1ADownloading data:   6%|▋         | 2/31 [00:21<05:10, 10.71s/files]
+[1ADownloading data:  10%|▉         | 3/31 [00:44<06:55, 14.84s/files]
+[1ADownloading data:  13%|█▎        | 4/31 [00:49<05:33, 12.34s/files]
+[1ADownloading data:  16%|█▌        | 5/31 [01:00<05:14, 12.11s/files]
+[1ADownloading data:  19%|█▉        | 6/31 [01:12<05:00, 12.03s/files]
+[1ADownloading data:  23%|██▎       | 7/31 [01:20<04:34, 11.44s/files]
+[1ADownloading data:  26%|██▌       | 8/31 [01:31<04:22, 11.42s/files]
+[1ADownloading data:  29%|██▉       | 9/31 [01:40<04:06, 11.19s/files][modal-client] 2026-10-15T05:16:50+0000 Received a cancellation signal while processing input ('in-01M4YZP100B66G00RJ2WN70KJK:1792041223169-0',)
+[10/15/26 05:16:50] WARNING  Received a cancellation signal while processing    
+                             input                                              
+                             ('in-01M4YZP100B66G00RJ2WN70KJK:1792041223169-0',) 
+
+[1ADownloading data:  32%|███▏      | 10/31 [01:41<03:32, 10.12s/files]
+[1ADownloading data:  97%|█████████▋| 30/31 [01:41<00:03,  3.37s/files]
+[modal-client] 2026-10-15T05:17:06+0000 Successfully canceled input ('in-01M4YZP100B66G00RJ2WN70KJK:1792041223169-0',)
+[10/15/26 05:17:06] WARNING  Successfully canceled input                        
+                             ('in-01M4YZP100B66G00RJ2WN70KJK:1792041223169-0',) 
+Stopping app - local client disconnected. Use `modal run --detach` to keep apps running even if your local client disconnects.
+Runner terminated.
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ ./modal_app.py:114 in main      │
+│                                                                              │
+│   113 │   │   return                                                         │
+│ ❱ 114 │   results = run.remote(commands)                                     │
+│   115 │   for r in results:                                                  │
+│                                                                              │
+│ ./.venv/lib/python3.13/site-pac │
+│ kages/modal/_object.py:49 in wrapped                                         │
+│                                                                              │
+│    48 │   │   await self.hydrate()                                           │
+│ ❱  49 │   │   return await method(self, *args, **kwargs)                     │
+│    50                                                                        │
+│                                                                              │
+│ ./.venv/lib/python3.13/site-pac │
+│ kages/modal/_functions.py:2067 in remote                                     │
+│                                                                              │
+│   2066 │   │                                                                 │
+│ ❱ 2067 │   │   return await self._call_function(args, kwargs)                │
+│   2068                                                                       │
+│                                                                              │
+│ ./.venv/lib/python3.13/site-pac │
+│ kages/modal/_functions.py:2004 in _call_function                             │
+│                                                                              │
+│   2003 │   │                                                                 │
+│ ❱ 2004 │   │   return await invocation.run_function()                        │
+│   2005                                                                       │
+│                                                                              │
+│ ./.venv/lib/python3.13/site-pac │
+│ kages/modal/_functions.py:496 in run_function                                │
+│                                                                              │
+│    495 │   │   │   if await_response.output.result.status in TERMINAL_STATUS │
+│ ❱  496 │   │   │   │   return await _process_result(                         │
+│    497 │   │   │   │   │   await_response.output.result, await_response.outp │
+│                                                                              │
+│ ./.venv/lib/python3.13/site-pac │
+│ kages/modal/_utils/function_utils.py:574 in _process_result                  │
+│                                                                              │
+│   573 │   │                                                                  │
+│ ❱ 574 │   │   raise RemoteError(result.exception)                            │
+│   575                                                                        │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RemoteError: Function call was cancelled by user or a failure.

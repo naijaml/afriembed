@@ -1,0 +1,1012 @@
+{
+  "experiment": "afrimteb-lite",
+  "model": "bge-m3",
+  "run_id": "20261015-103257-engpairs",
+  "timestamp": "2026-10-15T10:32:57",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "suite": "MTEB(Africa, v1, lite)",
+  "model_info": {
+    "name": "bge-m3",
+    "hf_id": "BAAI/bge-m3",
+    "family": "plain",
+    "modalities": [
+      "text"
+    ],
+    "dim": 1024,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "",
+      "document": "",
+      "classification": "",
+      "clustering": "",
+      "sts": "",
+      "bitext": ""
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "BAAI/bge-m3",
+    "adapter": null,
+    "max_seq_length": 1024,
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181"
+  },
+  "mteb_wrapper": "mteb-registry",
+  "task_patches": {},
+  "n_tasks": 2,
+  "macro_average": 0.8554091922963198,
+  "tasks": {
+    "FloresBitextMining": {
+      "main_score": 0.8636331146772518,
+      "subsets": {
+        "devtest/eng_Latn-kin_Latn": {
+          "precision": 0.8785408432147562,
+          "recall": 0.9130434782608695,
+          "f1": 0.8891633728590249,
+          "accuracy": 0.9130434782608695,
+          "main_score": 0.8891633728590249
+        },
+        "devtest/eng_Latn-ibo_Latn": {
+          "precision": 0.8486824769433465,
+          "recall": 0.8903162055335968,
+          "f1": 0.8616271409749671,
+          "accuracy": 0.8903162055335968,
+          "main_score": 0.8616271409749671
+        },
+        "devtest/eng_Latn-swh_Latn": {
+          "precision": 0.9955533596837944,
+          "recall": 0.9970355731225297,
+          "f1": 0.9960474308300395,
+          "accuracy": 0.9970355731225297,
+          "main_score": 0.9960474308300395
+        },
+        "devtest/eng_Latn-amh_Ethi": {
+          "precision": 0.9869894598155468,
+          "recall": 0.991106719367589,
+          "f1": 0.9883069828722002,
+          "accuracy": 0.991106719367589,
+          "main_score": 0.9883069828722002
+        },
+        "devtest/eng_Latn-xho_Latn": {
+          "precision": 0.9499341238471674,
+          "recall": 0.9654150197628458,
+          "f1": 0.9548748353096178,
+          "accuracy": 0.9654150197628458,
+          "main_score": 0.9548748353096178
+        },
+        "devtest/eng_Latn-gaz_Latn": {
+          "precision": 0.8424571805006587,
+          "recall": 0.8883399209486166,
+          "f1": 0.8570487483530962,
+          "accuracy": 0.8883399209486166,
+          "main_score": 0.8570487483530962
+        },
+        "devtest/eng_Latn-yor_Latn": {
+          "precision": 0.7347261434217957,
+          "recall": 0.8023715415019763,
+          "f1": 0.7551218708827405,
+          "accuracy": 0.8023715415019763,
+          "main_score": 0.7551218708827405
+        },
+        "devtest/eng_Latn-zul_Latn": {
+          "precision": 0.9594861660079052,
+          "recall": 0.9723320158102767,
+          "f1": 0.9636034255599473,
+          "accuracy": 0.9723320158102767,
+          "main_score": 0.9636034255599473
+        },
+        "devtest/eng_Latn-hau_Latn": {
+          "precision": 0.9594861660079052,
+          "recall": 0.9713438735177866,
+          "f1": 0.9632740447957838,
+          "accuracy": 0.9713438735177866,
+          "main_score": 0.9632740447957838
+        },
+        "devtest/kin_Latn-eng_Latn": {
+          "precision": 0.875691699604743,
+          "recall": 0.9100790513833992,
+          "f1": 0.8861660079051383,
+          "accuracy": 0.9100790513833992,
+          "main_score": 0.8861660079051383
+        },
+        "devtest/kin_Latn-ibo_Latn": {
+          "precision": 0.7790431488801054,
+          "recall": 0.8241106719367589,
+          "f1": 0.7921168203776898,
+          "accuracy": 0.8241106719367589,
+          "main_score": 0.7921168203776898
+        },
+        "devtest/kin_Latn-swh_Latn": {
+          "precision": 0.9018774703557313,
+          "recall": 0.9298418972332015,
+          "f1": 0.9104084321475625,
+          "accuracy": 0.9298418972332015,
+          "main_score": 0.9104084321475625
+        },
+        "devtest/kin_Latn-amh_Ethi": {
+          "precision": 0.8594285243741765,
+          "recall": 0.8972332015810277,
+          "f1": 0.8708058849363197,
+          "accuracy": 0.8972332015810277,
+          "main_score": 0.8708058849363197
+        },
+        "devtest/kin_Latn-xho_Latn": {
+          "precision": 0.8734189723320159,
+          "recall": 0.9061264822134387,
+          "f1": 0.8835168454733672,
+          "accuracy": 0.9061264822134387,
+          "main_score": 0.8835168454733672
+        },
+        "devtest/kin_Latn-gaz_Latn": {
+          "precision": 0.7735013175230566,
+          "recall": 0.83399209486166,
+          "f1": 0.7923254281949933,
+          "accuracy": 0.83399209486166,
+          "main_score": 0.7923254281949933
+        },
+        "devtest/kin_Latn-yor_Latn": {
+          "precision": 0.6672211242863416,
+          "recall": 0.7282608695652174,
+          "f1": 0.6848822784593536,
+          "accuracy": 0.7282608695652174,
+          "main_score": 0.6848822784593536
+        },
+        "devtest/kin_Latn-zul_Latn": {
+          "precision": 0.9015151515151515,
+          "recall": 0.9298418972332015,
+          "f1": 0.9105731225296443,
+          "accuracy": 0.9298418972332015,
+          "main_score": 0.9105731225296443
+        },
+        "devtest/kin_Latn-hau_Latn": {
+          "precision": 0.8747529644268774,
+          "recall": 0.9090909090909091,
+          "f1": 0.8856060606060606,
+          "accuracy": 0.9090909090909091,
+          "main_score": 0.8856060606060606
+        },
+        "devtest/ibo_Latn-eng_Latn": {
+          "precision": 0.8475296442687748,
+          "recall": 0.8883399209486166,
+          "f1": 0.8595379258422736,
+          "accuracy": 0.8883399209486166,
+          "main_score": 0.8595379258422736
+        },
+        "devtest/ibo_Latn-kin_Latn": {
+          "precision": 0.789361001317523,
+          "recall": 0.8409090909090909,
+          "f1": 0.8050583474496518,
+          "accuracy": 0.8409090909090909,
+          "main_score": 0.8050583474496518
+        },
+        "devtest/ibo_Latn-swh_Latn": {
+          "precision": 0.8560111989459815,
+          "recall": 0.8962450592885376,
+          "f1": 0.868365330321852,
+          "accuracy": 0.8962450592885376,
+          "main_score": 0.868365330321852
+        },
+        "devtest/ibo_Latn-amh_Ethi": {
+          "precision": 0.8110177865612648,
+          "recall": 0.8596837944664032,
+          "f1": 0.8257105213626952,
+          "accuracy": 0.8596837944664032,
+          "main_score": 0.8257105213626952
+        },
+        "devtest/ibo_Latn-xho_Latn": {
+          "precision": 0.8227849143610014,
+          "recall": 0.866600790513834,
+          "f1": 0.8359903381642512,
+          "accuracy": 0.866600790513834,
+          "main_score": 0.8359903381642512
+        },
+        "devtest/ibo_Latn-gaz_Latn": {
+          "precision": 0.72207674571805,
+          "recall": 0.7816205533596838,
+          "f1": 0.739881736620867,
+          "accuracy": 0.7816205533596838,
+          "main_score": 0.739881736620867
+        },
+        "devtest/ibo_Latn-yor_Latn": {
+          "precision": 0.6736942405420666,
+          "recall": 0.7361660079051383,
+          "f1": 0.6919137022397892,
+          "accuracy": 0.7361660079051383,
+          "main_score": 0.6919137022397892
+        },
+        "devtest/ibo_Latn-zul_Latn": {
+          "precision": 0.8394927536231884,
+          "recall": 0.8784584980237155,
+          "f1": 0.8512045925089404,
+          "accuracy": 0.8784584980237155,
+          "main_score": 0.8512045925089404
+        },
+        "devtest/ibo_Latn-hau_Latn": {
+          "precision": 0.8473320158102767,
+          "recall": 0.8843873517786561,
+          "f1": 0.8580227743271222,
+          "accuracy": 0.8843873517786561,
+          "main_score": 0.8580227743271222
+        },
+        "devtest/swh_Latn-eng_Latn": {
+          "precision": 0.9985177865612648,
+          "recall": 0.9990118577075099,
+          "f1": 0.9986824769433466,
+          "accuracy": 0.9990118577075099,
+          "main_score": 0.9986824769433466
+        },
+        "devtest/swh_Latn-kin_Latn": {
+          "precision": 0.9197134387351779,
+          "recall": 0.9436758893280632,
+          "f1": 0.9272727272727272,
+          "accuracy": 0.9436758893280632,
+          "main_score": 0.9272727272727272
+        },
+        "devtest/swh_Latn-ibo_Latn": {
+          "precision": 0.8548254281949934,
+          "recall": 0.8952569169960475,
+          "f1": 0.8676218708827405,
+          "accuracy": 0.8952569169960475,
+          "main_score": 0.8676218708827405
+        },
+        "devtest/swh_Latn-amh_Ethi": {
+          "precision": 0.9925889328063241,
+          "recall": 0.9950592885375494,
+          "f1": 0.9934123847167325,
+          "accuracy": 0.9950592885375494,
+          "main_score": 0.9934123847167325
+        },
+        "devtest/swh_Latn-xho_Latn": {
+          "precision": 0.9621212121212122,
+          "recall": 0.974308300395257,
+          "f1": 0.9660737812911726,
+          "accuracy": 0.974308300395257,
+          "main_score": 0.9660737812911726
+        },
+        "devtest/swh_Latn-gaz_Latn": {
+          "precision": 0.865233860342556,
+          "recall": 0.9051383399209486,
+          "f1": 0.8780303030303029,
+          "accuracy": 0.9051383399209486,
+          "main_score": 0.8780303030303029
+        },
+        "devtest/swh_Latn-yor_Latn": {
+          "precision": 0.7467473649538866,
+          "recall": 0.808300395256917,
+          "f1": 0.7651922956270782,
+          "accuracy": 0.808300395256917,
+          "main_score": 0.7651922956270782
+        },
+        "devtest/swh_Latn-zul_Latn": {
+          "precision": 0.9665678524374176,
+          "recall": 0.9772727272727273,
+          "f1": 0.9700263504611332,
+          "accuracy": 0.9772727272727273,
+          "main_score": 0.9700263504611332
+        },
+        "devtest/swh_Latn-hau_Latn": {
+          "precision": 0.9631422924901186,
+          "recall": 0.974308300395257,
+          "f1": 0.9667325428194994,
+          "accuracy": 0.974308300395257,
+          "main_score": 0.9667325428194994
+        },
+        "devtest/amh_Ethi-eng_Latn": {
+          "precision": 0.9985177865612648,
+          "recall": 0.9990118577075099,
+          "f1": 0.9986824769433464,
+          "accuracy": 0.9990118577075099,
+          "main_score": 0.9986824769433464
+        },
+        "devtest/amh_Ethi-kin_Latn": {
+          "precision": 0.8687747035573123,
+          "recall": 0.9051383399209486,
+          "f1": 0.8799077733860343,
+          "accuracy": 0.9051383399209486,
+          "main_score": 0.8799077733860343
+        },
+        "devtest/amh_Ethi-ibo_Latn": {
+          "precision": 0.8141798418972332,
+          "recall": 0.8646245059288538,
+          "f1": 0.8297101449275361,
+          "accuracy": 0.8646245059288538,
+          "main_score": 0.8297101449275361
+        },
+        "devtest/amh_Ethi-swh_Latn": {
+          "precision": 0.9940711462450593,
+          "recall": 0.9960474308300395,
+          "f1": 0.9947299077733859,
+          "accuracy": 0.9960474308300395,
+          "main_score": 0.9947299077733859
+        },
+        "devtest/amh_Ethi-xho_Latn": {
+          "precision": 0.9298418972332015,
+          "recall": 0.9515810276679841,
+          "f1": 0.9367588932806324,
+          "accuracy": 0.9515810276679841,
+          "main_score": 0.9367588932806324
+        },
+        "devtest/amh_Ethi-gaz_Latn": {
+          "precision": 0.8622364953886692,
+          "recall": 0.9021739130434783,
+          "f1": 0.874901185770751,
+          "accuracy": 0.9021739130434783,
+          "main_score": 0.874901185770751
+        },
+        "devtest/amh_Ethi-yor_Latn": {
+          "precision": 0.7031126482213438,
+          "recall": 0.7687747035573123,
+          "f1": 0.7220229046316002,
+          "accuracy": 0.7687747035573123,
+          "main_score": 0.7220229046316002
+        },
+        "devtest/amh_Ethi-zul_Latn": {
+          "precision": 0.9494400527009222,
+          "recall": 0.9654150197628458,
+          "f1": 0.9545454545454546,
+          "accuracy": 0.9654150197628458,
+          "main_score": 0.9545454545454546
+        },
+        "devtest/amh_Ethi-hau_Latn": {
+          "precision": 0.948451910408432,
+          "recall": 0.9644268774703557,
+          "f1": 0.953722002635046,
+          "accuracy": 0.9644268774703557,
+          "main_score": 0.953722002635046
+        },
+        "devtest/xho_Latn-eng_Latn": {
+          "precision": 0.9499341238471674,
+          "recall": 0.9664031620553359,
+          "f1": 0.955368906455863,
+          "accuracy": 0.9664031620553359,
+          "main_score": 0.955368906455863
+        },
+        "devtest/xho_Latn-kin_Latn": {
+          "precision": 0.8888339920948617,
+          "recall": 0.9179841897233202,
+          "f1": 0.8980237154150197,
+          "accuracy": 0.9179841897233202,
+          "main_score": 0.8980237154150197
+        },
+        "devtest/xho_Latn-ibo_Latn": {
+          "precision": 0.8262022397891962,
+          "recall": 0.8675889328063241,
+          "f1": 0.838844971453667,
+          "accuracy": 0.8675889328063241,
+          "main_score": 0.838844971453667
+        },
+        "devtest/xho_Latn-swh_Latn": {
+          "precision": 0.9626152832674573,
+          "recall": 0.974308300395257,
+          "f1": 0.9664031620553359,
+          "accuracy": 0.974308300395257,
+          "main_score": 0.9664031620553359
+        },
+        "devtest/xho_Latn-amh_Ethi": {
+          "precision": 0.9418642951251648,
+          "recall": 0.9604743083003953,
+          "f1": 0.947957839262187,
+          "accuracy": 0.9604743083003953,
+          "main_score": 0.947957839262187
+        },
+        "devtest/xho_Latn-gaz_Latn": {
+          "precision": 0.8177700922266139,
+          "recall": 0.866600790513834,
+          "f1": 0.8328722002635045,
+          "accuracy": 0.866600790513834,
+          "main_score": 0.8328722002635045
+        },
+        "devtest/xho_Latn-yor_Latn": {
+          "precision": 0.7355331262939958,
+          "recall": 0.7944664031620553,
+          "f1": 0.7530797101449276,
+          "accuracy": 0.7944664031620553,
+          "main_score": 0.7530797101449276
+        },
+        "devtest/xho_Latn-zul_Latn": {
+          "precision": 0.9692028985507247,
+          "recall": 0.9782608695652174,
+          "f1": 0.972167325428195,
+          "accuracy": 0.9782608695652174,
+          "main_score": 0.972167325428195
+        },
+        "devtest/xho_Latn-hau_Latn": {
+          "precision": 0.9125494071146245,
+          "recall": 0.9387351778656127,
+          "f1": 0.9209486166007905,
+          "accuracy": 0.9387351778656127,
+          "main_score": 0.9209486166007905
+        },
+        "devtest/gaz_Latn-eng_Latn": {
+          "precision": 0.8272068511198946,
+          "recall": 0.8715415019762845,
+          "f1": 0.8399868247694334,
+          "accuracy": 0.8715415019762845,
+          "main_score": 0.8399868247694334
+        },
+        "devtest/gaz_Latn-kin_Latn": {
+          "precision": 0.7401224982746721,
+          "recall": 0.7984189723320159,
+          "f1": 0.7571028609072087,
+          "accuracy": 0.7984189723320159,
+          "main_score": 0.7571028609072087
+        },
+        "devtest/gaz_Latn-ibo_Latn": {
+          "precision": 0.6727080588493632,
+          "recall": 0.7361660079051383,
+          "f1": 0.6903302011997664,
+          "accuracy": 0.7361660079051383,
+          "main_score": 0.6903302011997664
+        },
+        "devtest/gaz_Latn-swh_Latn": {
+          "precision": 0.8527997364953886,
+          "recall": 0.8913043478260869,
+          "f1": 0.8643939393939394,
+          "accuracy": 0.8913043478260869,
+          "main_score": 0.8643939393939394
+        },
+        "devtest/gaz_Latn-amh_Ethi": {
+          "precision": 0.8395750988142292,
+          "recall": 0.8814229249011858,
+          "f1": 0.8520939205721815,
+          "accuracy": 0.8814229249011858,
+          "main_score": 0.8520939205721815
+        },
+        "devtest/gaz_Latn-xho_Latn": {
+          "precision": 0.7970685111989458,
+          "recall": 0.8478260869565217,
+          "f1": 0.8120373697448796,
+          "accuracy": 0.8478260869565217,
+          "main_score": 0.8120373697448796
+        },
+        "devtest/gaz_Latn-yor_Latn": {
+          "precision": 0.6071816770186336,
+          "recall": 0.6689723320158103,
+          "f1": 0.6239420603551038,
+          "accuracy": 0.6689723320158103,
+          "main_score": 0.6239420603551038
+        },
+        "devtest/gaz_Latn-zul_Latn": {
+          "precision": 0.8186539306104524,
+          "recall": 0.8656126482213439,
+          "f1": 0.8327592697157914,
+          "accuracy": 0.8656126482213439,
+          "main_score": 0.8327592697157914
+        },
+        "devtest/gaz_Latn-hau_Latn": {
+          "precision": 0.7976119894598156,
+          "recall": 0.8478260869565217,
+          "f1": 0.8121400338791643,
+          "accuracy": 0.8478260869565217,
+          "main_score": 0.8121400338791643
+        },
+        "devtest/yor_Latn-eng_Latn": {
+          "precision": 0.7746910094736182,
+          "recall": 0.8280632411067194,
+          "f1": 0.7903656126482212,
+          "accuracy": 0.8280632411067194,
+          "main_score": 0.7903656126482212
+        },
+        "devtest/yor_Latn-kin_Latn": {
+          "precision": 0.705179512516469,
+          "recall": 0.758893280632411,
+          "f1": 0.7204341552167639,
+          "accuracy": 0.758893280632411,
+          "main_score": 0.7204341552167639
+        },
+        "devtest/yor_Latn-ibo_Latn": {
+          "precision": 0.6816123188405797,
+          "recall": 0.7341897233201581,
+          "f1": 0.6965313781519316,
+          "accuracy": 0.7341897233201581,
+          "main_score": 0.6965313781519316
+        },
+        "devtest/yor_Latn-swh_Latn": {
+          "precision": 0.7758728590250329,
+          "recall": 0.8280632411067194,
+          "f1": 0.7912761151891586,
+          "accuracy": 0.8280632411067194,
+          "main_score": 0.7912761151891586
+        },
+        "devtest/yor_Latn-amh_Ethi": {
+          "precision": 0.7183888575192923,
+          "recall": 0.782608695652174,
+          "f1": 0.7368318275926972,
+          "accuracy": 0.782608695652174,
+          "main_score": 0.7368318275926972
+        },
+        "devtest/yor_Latn-xho_Latn": {
+          "precision": 0.7351802183323922,
+          "recall": 0.7845849802371542,
+          "f1": 0.7494267919169105,
+          "accuracy": 0.7845849802371542,
+          "main_score": 0.7494267919169105
+        },
+        "devtest/yor_Latn-gaz_Latn": {
+          "precision": 0.6470849802371542,
+          "recall": 0.7124505928853755,
+          "f1": 0.6658487757301986,
+          "accuracy": 0.7124505928853755,
+          "main_score": 0.6658487757301986
+        },
+        "devtest/yor_Latn-zul_Latn": {
+          "precision": 0.7462066315327184,
+          "recall": 0.799407114624506,
+          "f1": 0.7618577075098815,
+          "accuracy": 0.799407114624506,
+          "main_score": 0.7618577075098815
+        },
+        "devtest/yor_Latn-hau_Latn": {
+          "precision": 0.755361848296631,
+          "recall": 0.8063241106719368,
+          "f1": 0.7708003952569169,
+          "accuracy": 0.8063241106719368,
+          "main_score": 0.7708003952569169
+        },
+        "devtest/zul_Latn-eng_Latn": {
+          "precision": 0.9568511198945981,
+          "recall": 0.9703557312252964,
+          "f1": 0.9611330698287219,
+          "accuracy": 0.9703557312252964,
+          "main_score": 0.9611330698287219
+        },
+        "devtest/zul_Latn-kin_Latn": {
+          "precision": 0.8987977602108037,
+          "recall": 0.9288537549407114,
+          "f1": 0.908498023715415,
+          "accuracy": 0.9288537549407114,
+          "main_score": 0.908498023715415
+        },
+        "devtest/zul_Latn-ibo_Latn": {
+          "precision": 0.815332674571805,
+          "recall": 0.8567193675889329,
+          "f1": 0.8276397515527949,
+          "accuracy": 0.8567193675889329,
+          "main_score": 0.8276397515527949
+        },
+        "devtest/zul_Latn-swh_Latn": {
+          "precision": 0.9662384716732543,
+          "recall": 0.9772727272727273,
+          "f1": 0.9698616600790514,
+          "accuracy": 0.9772727272727273,
+          "main_score": 0.9698616600790514
+        },
+        "devtest/zul_Latn-amh_Ethi": {
+          "precision": 0.9491106719367589,
+          "recall": 0.9644268774703557,
+          "f1": 0.954004329004329,
+          "accuracy": 0.9644268774703557,
+          "main_score": 0.954004329004329
+        },
+        "devtest/zul_Latn-xho_Latn": {
+          "precision": 0.9683794466403162,
+          "recall": 0.9782608695652174,
+          "f1": 0.9716732542819498,
+          "accuracy": 0.9782608695652174,
+          "main_score": 0.9716732542819498
+        },
+        "devtest/zul_Latn-gaz_Latn": {
+          "precision": 0.8246870882740447,
+          "recall": 0.8715415019762845,
+          "f1": 0.838965744400527,
+          "accuracy": 0.8715415019762845,
+          "main_score": 0.838965744400527
+        },
+        "devtest/zul_Latn-yor_Latn": {
+          "precision": 0.7414141414141414,
+          "recall": 0.7984189723320159,
+          "f1": 0.7582862789384528,
+          "accuracy": 0.7984189723320159,
+          "main_score": 0.7582862789384528
+        },
+        "devtest/zul_Latn-hau_Latn": {
+          "precision": 0.938570487483531,
+          "recall": 0.9575098814229249,
+          "f1": 0.9446640316205533,
+          "accuracy": 0.9575098814229249,
+          "main_score": 0.9446640316205533
+        },
+        "devtest/hau_Latn-eng_Latn": {
+          "precision": 0.9740612648221344,
+          "recall": 0.9822134387351779,
+          "f1": 0.9766798418972333,
+          "accuracy": 0.9822134387351779,
+          "main_score": 0.9766798418972333
+        },
+        "devtest/hau_Latn-kin_Latn": {
+          "precision": 0.8713768115942029,
+          "recall": 0.908102766798419,
+          "f1": 0.883399209486166,
+          "accuracy": 0.908102766798419,
+          "main_score": 0.883399209486166
+        },
+        "devtest/hau_Latn-ibo_Latn": {
+          "precision": 0.8485177865612649,
+          "recall": 0.8853754940711462,
+          "f1": 0.859782608695652,
+          "accuracy": 0.8853754940711462,
+          "main_score": 0.859782608695652
+        },
+        "devtest/hau_Latn-swh_Latn": {
+          "precision": 0.972167325428195,
+          "recall": 0.9812252964426877,
+          "f1": 0.9751317523056654,
+          "accuracy": 0.9812252964426877,
+          "main_score": 0.9751317523056654
+        },
+        "devtest/hau_Latn-amh_Ethi": {
+          "precision": 0.9430171277997365,
+          "recall": 0.9604743083003953,
+          "f1": 0.9486166007905138,
+          "accuracy": 0.9604743083003953,
+          "main_score": 0.9486166007905138
+        },
+        "devtest/hau_Latn-xho_Latn": {
+          "precision": 0.9189229249011858,
+          "recall": 0.9446640316205533,
+          "f1": 0.9272727272727272,
+          "accuracy": 0.9446640316205533,
+          "main_score": 0.9272727272727272
+        },
+        "devtest/hau_Latn-gaz_Latn": {
+          "precision": 0.8064723320158103,
+          "recall": 0.857707509881423,
+          "f1": 0.8221673254281949,
+          "accuracy": 0.857707509881423,
+          "main_score": 0.8221673254281949
+        },
+        "devtest/hau_Latn-yor_Latn": {
+          "precision": 0.7353943158290984,
+          "recall": 0.7924901185770751,
+          "f1": 0.7520092226613966,
+          "accuracy": 0.7924901185770751,
+          "main_score": 0.7520092226613966
+        },
+        "devtest/hau_Latn-zul_Latn": {
+          "precision": 0.9274538866930172,
+          "recall": 0.9486166007905138,
+          "f1": 0.9341897233201579,
+          "accuracy": 0.9486166007905138,
+          "main_score": 0.9341897233201579
+        }
+      }
+    },
+    "NTREXBitextMining": {
+      "main_score": 0.8471852699153879,
+      "subsets": {
+        "test/amh_Ethi-eng_Latn": {
+          "precision": 0.9377983642129861,
+          "recall": 0.956434651977967,
+          "f1": 0.9436988816558171,
+          "accuracy": 0.956434651977967,
+          "main_score": 0.9436988816558171
+        },
+        "test/amh_Ethi-hau_Latn": {
+          "precision": 0.8792772492071441,
+          "recall": 0.9153730595893841,
+          "f1": 0.8906025705224503,
+          "accuracy": 0.9153730595893841,
+          "main_score": 0.8906025705224503
+        },
+        "test/amh_Ethi-ibo_Latn": {
+          "precision": 0.7452150447894063,
+          "recall": 0.8072108162243365,
+          "f1": 0.7636454682023035,
+          "accuracy": 0.8072108162243365,
+          "main_score": 0.7636454682023035
+        },
+        "test/amh_Ethi-xho_Latn": {
+          "precision": 0.8135620096811885,
+          "recall": 0.8652979469203805,
+          "f1": 0.8296611584042731,
+          "accuracy": 0.8652979469203805,
+          "main_score": 0.8296611584042731
+        },
+        "test/amh_Ethi-yor_Latn": {
+          "precision": 0.6342513770655983,
+          "recall": 0.7165748622934401,
+          "f1": 0.6578713669349623,
+          "accuracy": 0.7165748622934401,
+          "main_score": 0.6578713669349623
+        },
+        "test/amh_Ethi-zul_Latn": {
+          "precision": 0.8256801869470872,
+          "recall": 0.871807711567351,
+          "f1": 0.8399265565014189,
+          "accuracy": 0.871807711567351,
+          "main_score": 0.8399265565014189
+        },
+        "test/eng_Latn-amh_Ethi": {
+          "precision": 0.9199632782507094,
+          "recall": 0.9444166249374061,
+          "f1": 0.9277678422395498,
+          "accuracy": 0.9444166249374061,
+          "main_score": 0.9277678422395498
+        },
+        "test/eng_Latn-hau_Latn": {
+          "precision": 0.9462610582540477,
+          "recall": 0.9619429143715573,
+          "f1": 0.9511266900350527,
+          "accuracy": 0.9619429143715573,
+          "main_score": 0.9511266900350527
+        },
+        "test/eng_Latn-ibo_Latn": {
+          "precision": 0.8503219114385865,
+          "recall": 0.8908362543815723,
+          "f1": 0.8626284665092878,
+          "accuracy": 0.8908362543815723,
+          "main_score": 0.8626284665092878
+        },
+        "test/eng_Latn-kin_Latn": {
+          "precision": 0.8555499916541479,
+          "recall": 0.8933400100150225,
+          "f1": 0.8671173426806876,
+          "accuracy": 0.8933400100150225,
+          "main_score": 0.8671173426806876
+        },
+        "test/eng_Latn-xho_Latn": {
+          "precision": 0.8872976130862962,
+          "recall": 0.9193790686029043,
+          "f1": 0.8971218732861197,
+          "accuracy": 0.9193790686029043,
+          "main_score": 0.8971218732861197
+        },
+        "test/eng_Latn-yor_Latn": {
+          "precision": 0.7469168037770942,
+          "recall": 0.8122183274912369,
+          "f1": 0.766391253546987,
+          "accuracy": 0.8122183274912369,
+          "main_score": 0.766391253546987
+        },
+        "test/eng_Latn-zul_Latn": {
+          "precision": 0.8917960273743949,
+          "recall": 0.9228843264897346,
+          "f1": 0.9015022533800702,
+          "accuracy": 0.9228843264897346,
+          "main_score": 0.9015022533800702
+        },
+        "test/hau_Latn-amh_Ethi": {
+          "precision": 0.8611631733314258,
+          "recall": 0.8988482724086129,
+          "f1": 0.8727174094475045,
+          "accuracy": 0.8988482724086129,
+          "main_score": 0.8727174094475045
+        },
+        "test/hau_Latn-eng_Latn": {
+          "precision": 0.9647805040894676,
+          "recall": 0.9749624436654982,
+          "f1": 0.9679113908958675,
+          "accuracy": 0.9749624436654982,
+          "main_score": 0.9679113908958675
+        },
+        "test/hau_Latn-ibo_Latn": {
+          "precision": 0.884843932565515,
+          "recall": 0.9173760640961443,
+          "f1": 0.8952428642964447,
+          "accuracy": 0.9173760640961443,
+          "main_score": 0.8952428642964447
+        },
+        "test/hau_Latn-xho_Latn": {
+          "precision": 0.8863503588716407,
+          "recall": 0.9153730595893841,
+          "f1": 0.8953803721455199,
+          "accuracy": 0.9153730595893841,
+          "main_score": 0.8953803721455199
+        },
+        "test/hau_Latn-yor_Latn": {
+          "precision": 0.7890502420297112,
+          "recall": 0.8367551326990486,
+          "f1": 0.8034408755991129,
+          "accuracy": 0.8367551326990486,
+          "main_score": 0.8034408755991129
+        },
+        "test/hau_Latn-zul_Latn": {
+          "precision": 0.9015773660490737,
+          "recall": 0.928392588883325,
+          "f1": 0.9100650976464697,
+          "accuracy": 0.928392588883325,
+          "main_score": 0.9100650976464697
+        },
+        "test/ibo_Latn-amh_Ethi": {
+          "precision": 0.7332802775591959,
+          "recall": 0.7976965448172258,
+          "f1": 0.7525518436384736,
+          "accuracy": 0.7976965448172258,
+          "main_score": 0.7525518436384736
+        },
+        "test/ibo_Latn-eng_Latn": {
+          "precision": 0.8623482843312588,
+          "recall": 0.8968452679018528,
+          "f1": 0.8725433388177505,
+          "accuracy": 0.8968452679018528,
+          "main_score": 0.8725433388177505
+        },
+        "test/ibo_Latn-hau_Latn": {
+          "precision": 0.8959856451343682,
+          "recall": 0.9213820731096645,
+          "f1": 0.9038891670839593,
+          "accuracy": 0.9213820731096645,
+          "main_score": 0.9038891670839593
+        },
+        "test/ibo_Latn-xho_Latn": {
+          "precision": 0.8487230846269405,
+          "recall": 0.8868302453680521,
+          "f1": 0.8605741946252712,
+          "accuracy": 0.8868302453680521,
+          "main_score": 0.8605741946252712
+        },
+        "test/ibo_Latn-yor_Latn": {
+          "precision": 0.7663870806209313,
+          "recall": 0.8202303455182774,
+          "f1": 0.7826207565316227,
+          "accuracy": 0.8202303455182774,
+          "main_score": 0.7826207565316227
+        },
+        "test/ibo_Latn-zul_Latn": {
+          "precision": 0.8473126356200967,
+          "recall": 0.8863294942413621,
+          "f1": 0.8593080096334978,
+          "accuracy": 0.8863294942413621,
+          "main_score": 0.8593080096334978
+        },
+        "test/kin_Latn-eng_Latn": {
+          "precision": 0.8566731048954385,
+          "recall": 0.8913370055082624,
+          "f1": 0.8670016930157141,
+          "accuracy": 0.8913370055082624,
+          "main_score": 0.8670016930157141
+        },
+        "test/xho_Latn-amh_Ethi": {
+          "precision": 0.8158821565681856,
+          "recall": 0.8647971957936905,
+          "f1": 0.8309726494503659,
+          "accuracy": 0.8647971957936905,
+          "main_score": 0.8309726494503659
+        },
+        "test/xho_Latn-eng_Latn": {
+          "precision": 0.9048918616019267,
+          "recall": 0.9298948422633951,
+          "f1": 0.9123613992417197,
+          "accuracy": 0.9298948422633951,
+          "main_score": 0.9123613992417197
+        },
+        "test/xho_Latn-hau_Latn": {
+          "precision": 0.9015356367885161,
+          "recall": 0.927391086629945,
+          "f1": 0.9097646469704557,
+          "accuracy": 0.927391086629945,
+          "main_score": 0.9097646469704557
+        },
+        "test/xho_Latn-ibo_Latn": {
+          "precision": 0.8519195459856451,
+          "recall": 0.8868302453680521,
+          "f1": 0.8627774995827074,
+          "accuracy": 0.8868302453680521,
+          "main_score": 0.8627774995827074
+        },
+        "test/xho_Latn-yor_Latn": {
+          "precision": 0.7422478956530033,
+          "recall": 0.7976965448172258,
+          "f1": 0.758730953573217,
+          "accuracy": 0.7976965448172258,
+          "main_score": 0.758730953573217
+        },
+        "test/xho_Latn-zul_Latn": {
+          "precision": 0.9133283258220664,
+          "recall": 0.9364046069103655,
+          "f1": 0.9205808713069605,
+          "accuracy": 0.9364046069103655,
+          "main_score": 0.9205808713069605
+        },
+        "test/yor_Latn-amh_Ethi": {
+          "precision": 0.6350263184764938,
+          "recall": 0.7095643465197796,
+          "f1": 0.6561743408763939,
+          "accuracy": 0.7095643465197796,
+          "main_score": 0.6561743408763939
+        },
+        "test/yor_Latn-eng_Latn": {
+          "precision": 0.7752175882871926,
+          "recall": 0.8247371056584877,
+          "f1": 0.7900052459641843,
+          "accuracy": 0.8247371056584877,
+          "main_score": 0.7900052459641843
+        },
+        "test/yor_Latn-hau_Latn": {
+          "precision": 0.8034190174150114,
+          "recall": 0.8512769153730596,
+          "f1": 0.8183274912368552,
+          "accuracy": 0.8512769153730596,
+          "main_score": 0.8183274912368552
+        },
+        "test/yor_Latn-ibo_Latn": {
+          "precision": 0.7685611750959773,
+          "recall": 0.8182273410115173,
+          "f1": 0.7831230362026556,
+          "accuracy": 0.8182273410115173,
+          "main_score": 0.7831230362026556
+        },
+        "test/yor_Latn-xho_Latn": {
+          "precision": 0.7447727146274968,
+          "recall": 0.7991987981972959,
+          "f1": 0.7607871514231053,
+          "accuracy": 0.7991987981972959,
+          "main_score": 0.7607871514231053
+        },
+        "test/yor_Latn-zul_Latn": {
+          "precision": 0.7516071726637575,
+          "recall": 0.8057085628442664,
+          "f1": 0.7681610077453843,
+          "accuracy": 0.8057085628442664,
+          "main_score": 0.7681610077453843
+        },
+        "test/zul_Latn-amh_Ethi": {
+          "precision": 0.8127453084388487,
+          "recall": 0.8602904356534802,
+          "f1": 0.8272074778834919,
+          "accuracy": 0.8602904356534802,
+          "main_score": 0.8272074778834919
+        },
+        "test/zul_Latn-eng_Latn": {
+          "precision": 0.9122099816391254,
+          "recall": 0.9359038557836755,
+          "f1": 0.9193957603071273,
+          "accuracy": 0.9359038557836755,
+          "main_score": 0.9193957603071273
+        },
+        "test/zul_Latn-hau_Latn": {
+          "precision": 0.8900767818394258,
+          "recall": 0.9188783174762143,
+          "f1": 0.89883158070439,
+          "accuracy": 0.9188783174762143,
+          "main_score": 0.89883158070439
+        },
+        "test/zul_Latn-ibo_Latn": {
+          "precision": 0.8456142547154064,
+          "recall": 0.8818227341011518,
+          "f1": 0.8565721598270422,
+          "accuracy": 0.8818227341011518,
+          "main_score": 0.8565721598270422
+        },
+        "test/zul_Latn-xho_Latn": {
+          "precision": 0.9012852612251712,
+          "recall": 0.927891837756635,
+          "f1": 0.9097408016787085,
+          "accuracy": 0.927891837756635,
+          "main_score": 0.9097408016787085
+        },
+        "test/zul_Latn-yor_Latn": {
+          "precision": 0.7319582548425814,
+          "recall": 0.7941912869303956,
+          "f1": 0.7503290650261106,
+          "accuracy": 0.7941912869303956,
+          "main_score": 0.7503290650261106
+        }
+      }
+    }
+  },
+  "per_language": {
+    "amh": 0.8685172866920217,
+    "gaz": 0.7992682182405502,
+    "hau": 0.8957486556994243,
+    "ibo": 0.8218455654001734,
+    "kin": 0.8509690051017271,
+    "swh": 0.9260923590633736,
+    "xho": 0.8823914951834475,
+    "yor": 0.7428595209271237,
+    "zul": 0.8882424585547205
+  },
+  "mteb_cache": "/vol/mteb_cache/bge-m3-base-lite"
+}

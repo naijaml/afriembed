@@ -1,0 +1,69 @@
+{
+  "experiment": "validate",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-222559-adapter",
+  "timestamp": "2026-10-15T22:25:59",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "d29dd48",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "name": "waxal-lug",
+  "n_clips": 600,
+  "n_prompts": 600,
+  "thresholds": {
+    "pass_margin": 0.02,
+    "borderline_rank": 5,
+    "min_similarity": 0.3
+  },
+  "counts": {
+    "pass": 533,
+    "borderline": 7,
+    "fail": 60
+  },
+  "flag_rate": 0.1117,
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": "artifacts/audio-lora",
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "injection": {
+    "n_injected": 60,
+    "recall_flagged": 1.0,
+    "precision_flagged": 0.8955,
+    "recall_fail_only": 1.0,
+    "precision_fail_only": 1.0,
+    "false_alarm_rate_clean": 0.013
+  },
+  "report": "reports/validate-waxal-lug/report.csv"
+}

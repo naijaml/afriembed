@@ -1,0 +1,1652 @@
+✓ Initialized. View run at 
+https://modal.com/apps/<workspace>/main/ap-Z3HL4GuEd7yIXKev6OKRKO
+✓ Created objects.
+├── ✓ Uploaded ./modal_app.py
+├── ✓ Uploaded ./configs
+├── ✓ Uploaded PythonPackage:afriembed
+├── ✓ Created Function run.
+└── ✓ Created Function report.
+
+=== afriembed speech-text --langs fleurs_all --max-items 500 --batch-size 64
+[10/14/26 19:48:30] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  16%|█▋        | 190/1165 [00:00<00:00, 1898.18it/s]
+[1ALoading weights:  33%|███▎      | 380/1165 [00:00<00:00, 1796.52it/s]
+[1ALoading weights:  53%|█████▎    | 616/1165 [00:00<00:00, 2034.73it/s]
+[1ALoading weights:  70%|███████   | 821/1165 [00:00<00:00, 2001.60it/s]
+[1ALoading weights:  88%|████████▊ | 1022/1165 [00:00<00:00, 1971.23it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 2085.74it/s]
+[10/14/26 19:48:34] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+
+[1AGenerating train split:   0%|          | 0/3163 [00:00<?, ? examples/s]
+[1AGenerating train split:   3%|▎         | 100/3163 [00:00<00:06, 485.48 examples/s]
+[1AGenerating train split:   6%|▋         | 200/3163 [00:00<00:04, 646.49 examples/s]
+[1AGenerating train split:   9%|▉         | 300/3163 [00:00<00:03, 720.59 examples/s]
+[1AGenerating train split:  13%|█▎        | 400/3163 [00:00<00:03, 792.50 examples/s]
+[1AGenerating train split:  16%|█▌        | 500/3163 [00:00<00:05, 455.95 examples/s]
+[1AGenerating train split:  20%|█▉        | 628/3163 [00:01<00:05, 485.71 examples/s]
+[1AGenerating train split:  23%|██▎       | 728/3163 [00:01<00:04, 557.68 examples/s]
+[1AGenerating train split:  26%|██▌       | 828/3163 [00:01<00:04, 498.10 examples/s]
+[1AGenerating train split:  29%|██▉       | 928/3163 [00:01<00:05, 435.94 examples/s]
+[1AGenerating train split:  33%|███▎      | 1028/3163 [00:01<00:04, 498.35 examples/s]
+[1AGenerating train split:  37%|███▋      | 1155/3163 [00:02<00:05, 382.86 examples/s]
+[1AGenerating train split:  40%|███▉      | 1255/3163 [00:02<00:04, 398.03 examples/s]
+[1AGenerating train split:  43%|████▎     | 1355/3163 [00:02<00:04, 412.97 examples/s]
+[1AGenerating train split:  46%|████▌     | 1455/3163 [00:03<00:04, 420.17 examples/s]
+[1AGenerating train split:  49%|████▉     | 1555/3163 [00:03<00:03, 468.29 examples/s]
+[1AGenerating train split:  53%|█████▎    | 1682/3163 [00:03<00:03, 398.53 examples/s]
+[1AGenerating train split:  56%|█████▋    | 1782/3163 [00:03<00:03, 436.92 examples/s]
+[1AGenerating train split:  60%|█████▉    | 1882/3163 [00:03<00:02, 494.05 examples/s]
+[1AGenerating train split:  63%|██████▎   | 1982/3163 [00:04<00:02, 558.12 examples/s]
+[1AGenerating train split:  70%|██████▉   | 2209/3163 [00:04<00:01, 614.22 examples/s]
+[1AGenerating train split:  73%|███████▎  | 2309/3163 [00:04<00:01, 644.21 examples/s]
+[1AGenerating train split:  76%|███████▌  | 2409/3163 [00:04<00:01, 674.05 examples/s]
+[1AGenerating train split:  79%|███████▉  | 2509/3163 [00:04<00:00, 727.14 examples/s]
+[1AGenerating train split:  87%|████████▋ | 2736/3163 [00:05<00:00, 792.54 examples/s]
+[1AGenerating train split:  93%|█████████▎| 2936/3163 [00:05<00:00, 827.47 examples/s]
+[1AGenerating train split:  96%|█████████▌| 3036/3163 [00:05<00:00, 821.11 examples/s]
+[1AGenerating train split: 100%|██████████| 3163/3163 [00:05<00:00, 574.01 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/223 [00:00<?, ? examples/s]
+[1AGenerating validation split:  45%|████▍     | 100/223 [00:00<00:00, 644.60 examples/s]
+[1AGenerating validation split: 100%|██████████| 223/223 [00:00<00:00, 976.02 examples/s]
+
+[1AGenerating test split:   0%|          | 0/516 [00:00<?, ? examples/s]
+[1AGenerating test split:  19%|█▉        | 100/516 [00:00<00:00, 584.13 examples/s]
+[1AGenerating test split:  39%|███▉      | 200/516 [00:00<00:00, 763.84 examples/s]
+[1AGenerating test split:  78%|███████▊  | 400/516 [00:00<00:00, 940.05 examples/s]
+[1AGenerating test split: 100%|██████████| 516/516 [00:00<00:00, 975.20 examples/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 47, in run
+    utts = load_fleurs(lang, split=split, max_items=max_items)
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2766, in __iter__
+    yield self._getitem(
+          ~~~~~~~~~~~~~^
+        i,
+        ^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 3131, in _getitem
+    formatted_output = format_table(
+        pa_subtable, key, formatter=formatter, format_columns=format_columns, output_all_columns=output_all_columns
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+
+=== afriembed speech-text --model embeddinggemma-2 --langs fleurs_core --text-task none --batch-size 64 --tag texttask-none
+[10/14/26 19:50:33] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+[10/14/26 19:50:34] INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  48%|████▊     | 563/1165 [00:00<00:00, 5586.84it/s]
+[1ALoading weights:  96%|█████████▋| 1122/1165 [00:00<00:00, 4959.11it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5194.28it/s]
+[10/14/26 19:50:37] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 47, in run
+    utts = load_fleurs(lang, split=split, max_items=max_items)
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2766, in __iter__
+    yield self._getitem(
+          ~~~~~~~~~~~~~^
+        i,
+        ^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 3131, in _getitem
+    formatted_output = format_table(
+        pa_subtable, key, formatter=formatter, format_columns=format_columns, output_all_columns=output_all_columns
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+
+=== afriembed speech-bitext --langs fleurs_core --pivot eng --batch-size 64
+[10/14/26 19:50:38] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  48%|████▊     | 559/1165 [00:00<00:00, 5550.99it/s]
+[1ALoading weights:  96%|█████████▌| 1115/1165 [00:00<00:00, 4958.79it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5217.98it/s]
+[10/14/26 19:50:42] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 212, in speech_bitext
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<6 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_bitext.py", line 52, in run
+    s, t = enc(src), enc(tgt)
+           ~~~^^^^^
+  File "/root/afriembed/experiments/speech_bitext.py", line 38, in enc
+    utts = load_fleurs(lang, split=split, max_items=None)  # full split so ids overlap maximally
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2756, in __iter__
+    formatted_output = format_table(
+        pa_subtable_ex,
+    ...<3 lines>...
+        output_all_columns=self._output_all_columns,
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+
+=== afriembed speech-bitext --langs hau,yor,swh,amh,ibo,som --all-pairs --batch-size 64 --tag allpairs
+[10/14/26 19:50:43] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  51%|█████     | 595/1165 [00:00<00:00, 5949.58it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5459.55it/s]
+[10/14/26 19:50:46] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+
+[1AGenerating train split:   0%|          | 0/3259 [00:00<?, ? examples/s]
+[1AGenerating train split:   3%|▎         | 100/3259 [00:00<00:08, 386.13 examples/s]
+[1AGenerating train split:   6%|▌         | 200/3259 [00:00<00:05, 515.21 examples/s]
+[1AGenerating train split:   9%|▉         | 300/3259 [00:00<00:04, 596.36 examples/s]
+[1AGenerating train split:  12%|█▏        | 400/3259 [00:00<00:04, 707.58 examples/s]
+[1AGenerating train split:  17%|█▋        | 566/3259 [00:00<00:04, 655.00 examples/s]
+[1AGenerating train split:  20%|██        | 666/3259 [00:01<00:03, 680.98 examples/s]
+[1AGenerating train split:  24%|██▎       | 766/3259 [00:01<00:03, 682.93 examples/s]
+[1AGenerating train split:  27%|██▋       | 866/3259 [00:01<00:03, 734.14 examples/s]
+[1AGenerating train split:  32%|███▏      | 1032/3259 [00:01<00:03, 671.28 examples/s]
+[1AGenerating train split:  35%|███▍      | 1132/3259 [00:01<00:03, 697.95 examples/s]
+[1AGenerating train split:  38%|███▊      | 1232/3259 [00:01<00:02, 745.95 examples/s]
+[1AGenerating train split:  43%|████▎     | 1398/3259 [00:01<00:02, 857.53 examples/s]
+[1AGenerating train split:  46%|████▌     | 1498/3259 [00:02<00:02, 675.94 examples/s]
+[1AGenerating train split:  49%|████▉     | 1598/3259 [00:02<00:02, 675.35 examples/s]
+[1AGenerating train split:  52%|█████▏    | 1698/3259 [00:02<00:02, 706.88 examples/s]
+[1AGenerating train split:  55%|█████▌    | 1798/3259 [00:02<00:01, 765.13 examples/s]
+[1AGenerating train split:  60%|██████    | 1964/3259 [00:02<00:01, 708.12 examples/s]
+[1AGenerating train split:  63%|██████▎   | 2064/3259 [00:02<00:01, 727.64 examples/s]
+[1AGenerating train split:  66%|██████▋   | 2164/3259 [00:03<00:01, 768.31 examples/s]
+[1AGenerating train split:  69%|██████▉   | 2264/3259 [00:03<00:01, 768.97 examples/s]
+[1AGenerating train split:  75%|███████▍  | 2429/3259 [00:03<00:01, 671.05 examples/s]
+[1AGenerating train split:  78%|███████▊  | 2529/3259 [00:03<00:01, 672.55 examples/s]
+[1AGenerating train split:  81%|████████  | 2629/3259 [00:03<00:00, 692.55 examples/s]
+[1AGenerating train split:  84%|████████▎ | 2729/3259 [00:03<00:00, 755.50 examples/s]
+[1AGenerating train split:  89%|████████▉ | 2894/3259 [00:04<00:00, 693.63 examples/s]
+[1AGenerating train split:  92%|█████████▏| 2994/3259 [00:04<00:00, 474.94 examples/s]
+[1AGenerating train split:  95%|█████████▍| 3094/3259 [00:04<00:00, 548.91 examples/s]
+[1AGenerating train split:  98%|█████████▊| 3194/3259 [00:04<00:00, 588.70 examples/s]Generating train split: 100%|██████████| 3259/3259 [00:04<00:00, 667.87 examples/s]
+
+[1AGenerating validation split:   0%|          | 0/296 [00:00<?, ? examples/s]
+[1AGenerating validation split:  34%|███▍      | 100/296 [00:00<00:00, 299.57 examples/s]
+[1AGenerating validation split:  68%|██████▊   | 200/296 [00:00<00:00, 418.70 examples/s]
+[1AGenerating validation split: 100%|██████████| 296/296 [00:00<00:00, 548.93 examples/s]
+[1AGenerating validation split: 100%|██████████| 296/296 [00:00<00:00, 481.40 examples/s]
+
+[1AGenerating test split:   0%|          | 0/621 [00:00<?, ? examples/s]
+[1AGenerating test split:  16%|█▌        | 100/621 [00:00<00:01, 294.46 examples/s]
+[1AGenerating test split:  32%|███▏      | 200/621 [00:00<00:01, 349.85 examples/s]
+[1AGenerating test split:  48%|████▊     | 300/621 [00:01<00:01, 212.40 examples/s]
+[1AGenerating test split:  66%|██████▌   | 411/621 [00:02<00:01, 109.50 examples/s]
+[1AGenerating test split:  82%|████████▏ | 511/621 [00:03<00:00, 136.80 examples/s]
+[1AGenerating test split:  98%|█████████▊| 611/621 [00:03<00:00, 176.10 examples/s]
+[1AGenerating test split: 100%|██████████| 621/621 [00:03<00:00, 170.47 examples/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 212, in speech_bitext
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<6 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_bitext.py", line 52, in run
+    s, t = enc(src), enc(tgt)
+           ~~~^^^^^
+  File "/root/afriembed/experiments/speech_bitext.py", line 38, in enc
+    utts = load_fleurs(lang, split=split, max_items=None)  # full split so ids overlap maximally
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2756, in __iter__
+    formatted_output = format_table(
+        pa_subtable_ex,
+    ...<3 lines>...
+        output_all_columns=self._output_all_columns,
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+
+=== afriembed lid --langs fleurs_all --per-lang 80 --batch-size 64
+[10/14/26 19:52:33] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  49%|████▉     | 569/1165 [00:00<00:00, 5687.55it/s]
+[1ALoading weights:  98%|█████████▊| 1138/1165 [00:00<00:00, 5092.50it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5246.57it/s]
+[10/14/26 19:52:36] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 569, in lid
+    E.run(opts, L.resolve(langs, "fleurs_core"), per_lang=per_lang, k=k, tag=tag)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/experiments/lid.py", line 48, in run
+    utts = load_fleurs(lang, split=split, max_items=per_lang)
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2766, in __iter__
+    yield self._getitem(
+          ~~~~~~~~~~~~~^
+        i,
+        ^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 3131, in _getitem
+    formatted_output = format_table(
+        pa_subtable, key, formatter=formatter, format_columns=format_columns, output_all_columns=output_all_columns
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+
+=== afriembed accent --max-per-accent 20 --batch-size 64
+[10/14/26 19:52:38] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  49%|████▊     | 567/1165 [00:00<00:00, 5653.35it/s]
+[1ALoading weights:  97%|█████████▋| 1133/1165 [00:00<00:00, 5080.66it/s]Loading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5218.07it/s]
+[10/14/26 19:52:42] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 589, in accent
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<3 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/accent.py", line 27, in run
+    utts = load_afrispeech(accents, split=split, max_per_accent=max_per_accent)
+  File "/root/afriembed/data/afrispeech.py", line 57, in load_afrispeech
+    for r in ds:
+             ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2756, in __iter__
+    formatted_output = format_table(
+        pa_subtable_ex,
+    ...<3 lines>...
+        output_all_columns=self._output_all_columns,
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+
+=== afriembed vision --dataset afri-aya --batch-size 32
+[10/14/26 19:52:44] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'image')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/624 [00:00<?, ?it/s]
+[1ALoading weights:  67%|██████▋   | 418/624 [00:00<00:00, 3728.27it/s]
+[1ALoading weights: 100%|██████████| 624/624 [00:00<00:00, 2336.70it/s]
+[10/14/26 19:52:47] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+
+[1AGenerating train split:   0%|          | 0/2466 [00:00<?, ? examples/s]
+[1AGenerating train split:  12%|█▏        | 300/2466 [00:00<00:01, 1842.82 examples/s]
+[1AGenerating train split:  28%|██▊       | 700/2466 [00:00<00:00, 2188.28 examples/s]
+[1AGenerating train split:  45%|████▍     | 1100/2466 [00:00<00:00, 2578.49 examples/s]
+[1AGenerating train split:  62%|██████▏   | 1533/2466 [00:00<00:00, 2584.17 examples/s]
+[1AGenerating train split:  78%|███████▊  | 1933/2466 [00:00<00:00, 2858.76 examples/s]
+[1AGenerating train split:  95%|█████████▍| 2333/2466 [00:00<00:00, 2966.39 examples/s]
+[1AGenerating train split: 100%|██████████| 2466/2466 [00:00<00:00, 2759.79 examples/s]
+[10/14/26 19:53:16] INFO     Afri-Aya: 2464 items, 13 languages                 
+
+[1ABatches:   0%|          | 0/10 [00:00<?, ?it/s]
+[1ABatches:  10%|█         | 1/10 [00:03<00:33,  3.69s/it]
+[1ABatches:  20%|██        | 2/10 [00:05<00:19,  2.47s/it]
+[1ABatches:  30%|███       | 3/10 [00:05<00:10,  1.57s/it]
+[1ABatches:  40%|████      | 4/10 [00:07<00:09,  1.51s/it]
+[1ABatches:  50%|█████     | 5/10 [00:08<00:07,  1.48s/it]
+[1ABatches:  60%|██████    | 6/10 [00:09<00:04,  1.14s/it]
+[1ABatches:  70%|███████   | 7/10 [00:09<00:02,  1.09it/s]
+[1ABatches:  80%|████████  | 8/10 [00:10<00:01,  1.27it/s]
+[1ABatches:  90%|█████████ | 9/10 [00:10<00:00,  1.46it/s]
+[1ABatches: 100%|██████████| 10/10 [00:10<00:00,  1.77it/s]Batches: 100%|██████████| 10/10 [00:10<00:00,  1.09s/it]
+[10/14/26 19:53:27] INFO     encode 300 images took 10.9s                       
+[10/14/26 19:53:29] INFO     Kinyarwanda n=300 image->local R@1=0.097           
+                             image->english R@1=0.803                           
+
+[1ABatches:   0%|          | 0/10 [00:00<?, ?it/s]
+[1ABatches:  10%|█         | 1/10 [00:00<00:05,  1.53it/s]
+[1ABatches:  20%|██        | 2/10 [00:01<00:04,  1.71it/s]
+[1ABatches:  30%|███       | 3/10 [00:01<00:04,  1.75it/s]
+[1ABatches:  40%|████      | 4/10 [00:02<00:03,  1.83it/s]
+[1ABatches:  50%|█████     | 5/10 [00:02<00:02,  1.89it/s]
+[1ABatches:  60%|██████    | 6/10 [00:03<00:02,  1.96it/s]
+[1ABatches:  70%|███████   | 7/10 [00:03<00:01,  2.00it/s]
+[1ABatches:  80%|████████  | 8/10 [00:04<00:00,  2.05it/s]
+[1ABatches:  90%|█████████ | 9/10 [00:04<00:00,  2.09it/s]
+[1ABatches: 100%|██████████| 10/10 [00:04<00:00,  2.46it/s]Batches: 100%|██████████| 10/10 [00:04<00:00,  2.05it/s]
+[10/14/26 19:53:34] INFO     encode 300 images took 4.9s                        
+[10/14/26 19:53:36] INFO     Luganda (Ganda) n=300 image->local R@1=0.083       
+                             image->english R@1=0.760                           
+
+[1ABatches:   0%|          | 0/9 [00:00<?, ?it/s]
+[1ABatches:  11%|█         | 1/9 [00:00<00:05,  1.46it/s]/usr/local/lib/python3.13/site-packages/PIL/Image.py:1136: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+
+[1ABatches:  22%|██▏       | 2/9 [00:01<00:04,  1.71it/s]
+[1ABatches:  33%|███▎      | 3/9 [00:02<00:05,  1.13it/s]
+[1ABatches:  44%|████▍     | 4/9 [00:02<00:03,  1.34it/s]
+[1ABatches:  56%|█████▌    | 5/9 [00:03<00:02,  1.54it/s]
+[1ABatches:  67%|██████▋   | 6/9 [00:03<00:01,  1.70it/s]
+[1ABatches:  78%|███████▊  | 7/9 [00:04<00:01,  1.84it/s]
+[1ABatches:  89%|████████▉ | 8/9 [00:04<00:00,  1.94it/s]
+[1ABatches: 100%|██████████| 9/9 [00:05<00:00,  2.04it/s]Batches: 100%|██████████| 9/9 [00:05<00:00,  1.71it/s]
+[10/14/26 19:53:41] INFO     encode 279 images took 5.3s                        
+[10/14/26 19:53:42] INFO     Twi n=279 image->local R@1=0.057 image->english    
+                             R@1=0.670                                          
+
+[1ABatches:   0%|          | 0/8 [00:00<?, ?it/s]
+[1ABatches:  12%|█▎        | 1/8 [00:00<00:05,  1.25it/s]
+[1ABatches:  25%|██▌       | 2/8 [00:01<00:03,  1.57it/s]
+[1ABatches:  38%|███▊      | 3/8 [00:01<00:02,  1.73it/s]
+[1ABatches:  50%|█████     | 4/8 [00:02<00:02,  1.78it/s]
+[1ABatches:  62%|██████▎   | 5/8 [00:02<00:01,  1.86it/s]
+[1ABatches:  75%|███████▌  | 6/8 [00:03<00:01,  1.91it/s]
+[1ABatches:  88%|████████▊ | 7/8 [00:03<00:00,  1.96it/s]
+[1ABatches: 100%|██████████| 8/8 [00:04<00:00,  2.22it/s]
+[1ABatches: 100%|██████████| 8/8 [00:04<00:00,  1.92it/s]
+[10/14/26 19:53:47] INFO     encode 239 images took 4.2s                        
+[10/14/26 19:53:48] INFO     Nyankore n=239 image->local R@1=0.096              
+                             image->english R@1=0.883                           
+
+[1ABatches:   0%|          | 0/7 [00:00<?, ?it/s]
+[1ABatches:  14%|█▍        | 1/7 [00:00<00:03,  1.69it/s]
+[1ABatches:  29%|██▊       | 2/7 [00:01<00:02,  1.81it/s]
+[1ABatches:  43%|████▎     | 3/7 [00:01<00:02,  1.90it/s]
+[1ABatches:  57%|█████▋    | 4/7 [00:02<00:01,  1.98it/s]
+[1ABatches:  71%|███████▏  | 5/7 [00:02<00:00,  2.03it/s]
+[1ABatches:  86%|████████▌ | 6/7 [00:03<00:00,  2.09it/s]
+[1ABatches: 100%|██████████| 7/7 [00:03<00:00,  2.32it/s]Batches: 100%|██████████| 7/7 [00:03<00:00,  2.10it/s]
+[10/14/26 19:53:51] INFO     encode 208 images took 3.3s                        
+[10/14/26 19:53:52] INFO     Hausa n=208 image->local R@1=0.101 image->english  
+                             R@1=0.793                                          
+
+[1ABatches:   0%|          | 0/7 [00:00<?, ?it/s]
+[1ABatches:  14%|█▍        | 1/7 [00:00<00:03,  1.55it/s]
+[1ABatches:  29%|██▊       | 2/7 [00:01<00:02,  1.67it/s]
+[1ABatches:  43%|████▎     | 3/7 [00:01<00:02,  1.69it/s]
+[1ABatches:  57%|█████▋    | 4/7 [00:02<00:01,  1.81it/s]
+[1ABatches:  71%|███████▏  | 5/7 [00:02<00:01,  1.89it/s]
+[1ABatches:  86%|████████▌ | 6/7 [00:03<00:00,  1.97it/s]
+[1ABatches: 100%|██████████| 7/7 [00:03<00:00,  2.40it/s]Batches: 100%|██████████| 7/7 [00:03<00:00,  2.02it/s]
+[10/14/26 19:53:56] INFO     encode 207 images took 3.5s                        
+[10/14/26 19:53:57] INFO     Egyptian Arabic n=207 image->local R@1=0.517       
+                             image->english R@1=0.754                           
+
+[1ABatches:   0%|          | 0/6 [00:00<?, ?it/s]
+[1ABatches:  17%|█▋        | 1/6 [00:00<00:03,  1.47it/s]
+[1ABatches:  33%|███▎      | 2/6 [00:01<00:02,  1.69it/s]
+[1ABatches:  50%|█████     | 3/6 [00:01<00:01,  1.75it/s]
+[1ABatches:  67%|██████▋   | 4/6 [00:02<00:01,  1.83it/s]
+[1ABatches:  83%|████████▎ | 5/6 [00:02<00:00,  1.92it/s]
+[1ABatches: 100%|██████████| 6/6 [00:03<00:00,  1.99it/s]
+[1ABatches: 100%|██████████| 6/6 [00:03<00:00,  1.87it/s]
+[10/14/26 19:54:00] INFO     encode 186 images took 3.2s                        
+[10/14/26 19:54:02] INFO     Yoruba n=186 image->local R@1=0.043 image->english 
+                             R@1=0.478                                          
+
+[1ABatches:   0%|          | 0/6 [00:00<?, ?it/s]
+[1ABatches:  17%|█▋        | 1/6 [00:00<00:03,  1.25it/s]
+[1ABatches:  33%|███▎      | 2/6 [00:01<00:02,  1.60it/s]
+[1ABatches:  50%|█████     | 3/6 [00:01<00:01,  1.78it/s]
+[1ABatches:  67%|██████▋   | 4/6 [00:02<00:01,  1.90it/s]
+[1ABatches:  83%|████████▎ | 5/6 [00:02<00:00,  1.99it/s]
+[1ABatches: 100%|██████████| 6/6 [00:03<00:00,  2.25it/s]Batches: 100%|██████████| 6/6 [00:03<00:00,  1.96it/s]
+[10/14/26 19:54:05] INFO     encode 183 images took 3.1s                        
+[10/14/26 19:54:06] INFO     Kirundi n=183 image->local R@1=0.087 image->english
+                             R@1=0.852                                          
+
+[1ABatches:   0%|          | 0/6 [00:00<?, ?it/s]
+[1ABatches:  17%|█▋        | 1/6 [00:00<00:03,  1.51it/s]
+[1ABatches:  33%|███▎      | 2/6 [00:01<00:02,  1.69it/s]
+[1ABatches:  50%|█████     | 3/6 [00:01<00:01,  1.83it/s]
+[1ABatches:  67%|██████▋   | 4/6 [00:02<00:01,  1.86it/s]
+[1ABatches:  83%|████████▎ | 5/6 [00:02<00:00,  1.97it/s]
+[1ABatches: 100%|██████████| 6/6 [00:02<00:00,  2.53it/s]Batches: 100%|██████████| 6/6 [00:02<00:00,  2.10it/s]
+[10/14/26 19:54:09] INFO     encode 161 images took 2.9s                        
+[10/14/26 19:54:10] INFO     Zulu n=161 image->local R@1=0.075 image->english   
+                             R@1=0.770                                          
+
+[1ABatches:   0%|          | 0/3 [00:00<?, ?it/s]
+[1ABatches:  33%|███▎      | 1/3 [00:00<00:01,  1.76it/s]
+[1ABatches:  67%|██████▋   | 2/3 [00:01<00:00,  1.96it/s]
+[1ABatches: 100%|██████████| 3/3 [00:01<00:00,  2.47it/s]Batches: 100%|██████████| 3/3 [00:01<00:00,  2.28it/s]
+[10/14/26 19:54:11] INFO     encode 75 images took 1.3s                         
+                    INFO     Krio n=75 image->local R@1=0.373 image->english    
+                             R@1=0.947                                          
+
+[1ABatches:   0%|          | 0/3 [00:00<?, ?it/s]
+[1ABatches:  33%|███▎      | 1/3 [00:00<00:01,  1.80it/s]
+[1ABatches:  67%|██████▋   | 2/3 [00:01<00:00,  1.95it/s]
+[1ABatches: 100%|██████████| 3/3 [00:01<00:00,  2.64it/s]
+[1ABatches: 100%|██████████| 3/3 [00:01<00:00,  2.39it/s]
+[10/14/26 19:54:13] INFO     encode 70 images took 1.3s                         
+                    INFO     Gishu n=70 image->local R@1=0.229 image->english   
+                             R@1=0.829                                          
+
+[1ABatches:   0%|          | 0/2 [00:00<?, ?it/s]
+[1ABatches:  50%|█████     | 1/2 [00:00<00:00,  1.87it/s]
+[1ABatches: 100%|██████████| 2/2 [00:00<00:00,  2.53it/s]Batches: 100%|██████████| 2/2 [00:00<00:00,  2.40it/s]
+[10/14/26 19:54:14] INFO     encode 48 images took 0.8s                         
+                    INFO     Igbo n=48 image->local R@1=0.229 image->english    
+                             R@1=0.917                                          
+[10/14/26 19:54:17] INFO     Saved                                              
+                             /vol/results/vision/embeddinggemma-2/20261014-19541
+                             4.json                                             
+
+=== afriembed ciral --batch-size 256
+[10/14/26 19:54:18] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',)      
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/413 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 413/413 [00:00<00:00, 4987.64it/s]
+[10/14/26 19:54:21] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 38, in run
+    data = load_ciral(code, split=split, max_passages=max_passages, translated=translated)
+  File "/root/afriembed/data/ciral.py", line 70, in load_ciral
+    passages[r["docid"]] = (r.get("title", "").strip(), r["text"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+
+=== afriembed ciral --model me5-base --batch-size 256
+[10/14/26 19:54:52] INFO     Loading me5-base (intfloat/multilingual-e5-base) on
+                             cuda dtype=torch.bfloat16 towers=('text',)         
+                    INFO     Loading SentenceTransformer model from             
+                             intfloat/multilingual-e5-base.                     
+
+[1ALoading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+[1ALoading weights:   3%|▎         | 5/199 [00:00<00:04, 38.85it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1460.63it/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 38, in run
+    data = load_ciral(code, split=split, max_passages=max_passages, translated=translated)
+  File "/root/afriembed/data/ciral.py", line 70, in load_ciral
+    passages[r["docid"]] = (r.get("title", "").strip(), r["text"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+
+=== afriembed ciral --model embeddinggemma-300m --batch-size 256
+[10/14/26 19:55:05] INFO     Loading embeddinggemma-300m                        
+                             (google/embeddinggemma-300m) on cuda               
+                             dtype=torch.bfloat16 towers=('text',)              
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-300m.                        
+
+[1ALoading weights:   0%|          | 0/314 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/314 [00:00<02:10,  2.41it/s]Loading weights: 100%|██████████| 314/314 [00:00<00:00, 736.49it/s]
+[10/14/26 19:55:08] INFO     Loaded 14 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Clustering',          
+                             'Classification', 'InstructionRetrieval',          
+                             'MultilabelClassification', 'PairClassification',  
+                             'Reranking', 'Retrieval', 'Retrieval-query',       
+                             'Retrieval-document', 'STS', 'Summarization']      
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 38, in run
+    data = load_ciral(code, split=split, max_passages=max_passages, translated=translated)
+  File "/root/afriembed/data/ciral.py", line 70, in load_ciral
+    passages[r["docid"]] = (r.get("title", "").strip(), r["text"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+ERR speech-text --langs fleurs_all --max-items 500 --batch-size 64
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 47, in run
+    utts = load_fleurs(lang, split=split, max_items=max_items)
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2766, in __iter__
+    yield self._getitem(
+          ~~~~~~~~~~~~~^
+        i,
+        ^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 3131, in _getitem
+    formatted_output = format_table(
+        pa_subtable, key, formatter=formatter, format_columns=format_columns, output_all_columns=output_all_columns
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+ERR speech-text --model embeddinggemma-2 --langs fleurs_core --text-task none --batch-size 64 --tag texttask-none
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 177, in speech_text
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<5 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_text.py", line 47, in run
+    utts = load_fleurs(lang, split=split, max_items=max_items)
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2766, in __iter__
+    yield self._getitem(
+          ~~~~~~~~~~~~~^
+        i,
+        ^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 3131, in _getitem
+    formatted_output = format_table(
+        pa_subtable, key, formatter=formatter, format_columns=format_columns, output_all_columns=output_all_columns
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+ERR speech-bitext --langs fleurs_core --pivot eng --batch-size 64
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 212, in speech_bitext
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<6 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_bitext.py", line 52, in run
+    s, t = enc(src), enc(tgt)
+           ~~~^^^^^
+  File "/root/afriembed/experiments/speech_bitext.py", line 38, in enc
+    utts = load_fleurs(lang, split=split, max_items=None)  # full split so ids overlap maximally
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2756, in __iter__
+    formatted_output = format_table(
+        pa_subtable_ex,
+    ...<3 lines>...
+        output_all_columns=self._output_all_columns,
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+ERR speech-bitext --langs hau,yor,swh,amh,ibo,som --all-pairs --batch-size 64 --tag allpairs
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 212, in speech_bitext
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<6 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/speech_bitext.py", line 52, in run
+    s, t = enc(src), enc(tgt)
+           ~~~^^^^^
+  File "/root/afriembed/experiments/speech_bitext.py", line 38, in enc
+    utts = load_fleurs(lang, split=split, max_items=None)  # full split so ids overlap maximally
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2756, in __iter__
+    formatted_output = format_table(
+        pa_subtable_ex,
+    ...<3 lines>...
+        output_all_columns=self._output_all_columns,
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+ERR lid --langs fleurs_all --per-lang 80 --batch-size 64
+ne 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 569, in lid
+    E.run(opts, L.resolve(langs, "fleurs_core"), per_lang=per_lang, k=k, tag=tag)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/experiments/lid.py", line 48, in run
+    utts = load_fleurs(lang, split=split, max_items=per_lang)
+  File "/root/afriembed/data/fleurs.py", line 47, in load_fleurs
+    for row in ds:
+               ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2766, in __iter__
+    yield self._getitem(
+          ~~~~~~~~~~~~~^
+        i,
+        ^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 3131, in _getitem
+    formatted_output = format_table(
+        pa_subtable, key, formatter=formatter, format_columns=format_columns, output_all_columns=output_all_columns
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+ERR accent --max-per-accent 20 --batch-size 64
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 589, in accent
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<3 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/accent.py", line 27, in run
+    utts = load_afrispeech(accents, split=split, max_per_accent=max_per_accent)
+  File "/root/afriembed/data/afrispeech.py", line 57, in load_afrispeech
+    for r in ds:
+             ^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/arrow_dataset.py", line 2756, in __iter__
+    formatted_output = format_table(
+        pa_subtable_ex,
+    ...<3 lines>...
+        output_all_columns=self._output_all_columns,
+    )
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 674, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 427, in __call__
+    return self.format_row(pa_table)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 476, in format_row
+    row = self.python_features_decoder.decode_row(row)
+  File "/usr/local/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 240, in decode_row
+    return self.features.decode_example(row, token_per_repo_id=self.token_per_repo_id) if self.features else row
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 2290, in decode_example
+    column_name: decode_nested_example(feature, value, token_per_repo_id=token_per_repo_id)
+                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/features.py", line 1589, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/datasets/features/audio.py", line 186, in decode_example
+    raise ImportError("To support decoding audio data, please install 'torchcodec'.")
+ImportError: To support decoding audio data, please install 'torchcodec'.
+
+ok  vision --dataset afri-aya --batch-size 32
+ERR ciral --batch-size 256
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 38, in run
+    data = load_ciral(code, split=split, max_passages=max_passages, translated=translated)
+  File "/root/afriembed/data/ciral.py", line 70, in load_ciral
+    passages[r["docid"]] = (r.get("title", "").strip(), r["text"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+ERR ciral --model me5-base --batch-size 256
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 38, in run
+    data = load_ciral(code, split=split, max_passages=max_passages, translated=translated)
+  File "/root/afriembed/data/ciral.py", line 70, in load_ciral
+    passages[r["docid"]] = (r.get("title", "").strip(), r["text"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+ERR ciral --model embeddinggemma-300m --batch-size 256
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 38, in run
+    data = load_ciral(code, split=split, max_passages=max_passages, translated=translated)
+  File "/root/afriembed/data/ciral.py", line 70, in load_ciral
+    passages[r["docid"]] = (r.get("title", "").strip(), r["text"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+# afriembed results
+
+## afrimteb-lite
+
+| model | run | prompts | dim | macro avg | amh | gaz | hau | ibo | kin | swh | xho | yor | zul |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-195245-fullctx | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-2 | 20261014-185051-noprompt | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-300m | 20261014-195419-fullctx | True | 768 | 0.453 | 0.447 | 0.337 | 0.462 | 0.451 | 0.420 | 0.524 | 0.471 | 0.424 | 0.461 |
+| embeddinggemma-300m | 20261014-185418-noprompt | False | 768 | 0.434 | 0.396 | 0.282 | 0.433 | 0.426 | 0.389 | 0.493 | 0.439 | 0.405 | 0.430 |
+
+| task | embeddinggemma-2:ullctx | embeddinggemma-2:prompt | embeddinggemma-300m:ullctx | embeddinggemma-300m:prompt |
+|---|---|---|---|---|
+| AfriHateClassification | 0.495 | 0.495 | 0.481 | 0.490 |
+| AfriSentiClassification | 0.530 | 0.530 | 0.442 | 0.467 |
+| AfriXNLI | 0.564 | 0.564 | 0.592 | 0.570 |
+| BelebeleRetrieval | 0.505 | 0.505 | 0.549 | 0.454 |
+| EmotionAnalysisPlus | 0.274 | 0.274 | 0.265 | 0.266 |
+| FloresBitextMining | 0.353 | 0.353 | 0.421 | 0.383 |
+| InjongoIntent | 0.575 | 0.575 | 0.595 | 0.593 |
+| KinNewsClassification | 0.441 | 0.439 | 0.434 | 0.415 |
+| MasakhaNEWSClassification | 0.730 | 0.728 | 0.750 | 0.738 |
+| NTREXBitextMining | 0.442 | 0.442 | 0.490 | 0.456 |
+| SIB200Classification | 0.426 | 0.426 | 0.442 | 0.424 |
+| SIB200Classification.v2 | 0.248 | 0.248 | 0.262 | 0.242 |
+| SIB200ClusteringS2S | 0.127 | 0.127 | 0.166 | 0.143 |
+## vision
+
+**embeddinggemma-2** (20261014-195414, afri-aya)
+
+| language | n | image→local R@1 | image→english R@1 | local→image R@1 | local↔english text R@1 | gap (en−local cos) |
+|---|---|---|---|---|---|---|
+| Kinyarwanda | 300 | 0.097 | 0.803 | 0.027 | 0.107 | 0.151 |
+| Luganda (Ganda) | 300 | 0.083 | 0.760 | 0.043 | 0.073 | 0.160 |
+| Twi | 279 | 0.057 | 0.670 | 0.036 | 0.143 | 0.153 |
+| Nyankore | 239 | 0.096 | 0.883 | 0.059 | 0.138 | 0.179 |
+| Hausa | 208 | 0.101 | 0.793 | 0.082 | 0.120 | 0.156 |
+| Egyptian Arabic | 207 | 0.517 | 0.754 | 0.512 | 0.961 | 0.084 |
+| Yoruba | 186 | 0.043 | 0.478 | 0.032 | 0.086 | 0.137 |
+| Kirundi | 183 | 0.087 | 0.852 | 0.049 | 0.104 | 0.164 |
+| Zulu | 161 | 0.075 | 0.770 | 0.056 | 0.118 | 0.140 |
+| Krio | 75 | 0.373 | 0.947 | 0.387 | 0.840 | 0.096 |
+| Gishu | 70 | 0.229 | 0.829 | 0.157 | 0.186 | 0.142 |
+| Igbo | 48 | 0.229 | 0.917 | 0.250 | 0.375 | 0.143 |
+
+Stopping app - uncaught exception raised locally: SystemExit(1).

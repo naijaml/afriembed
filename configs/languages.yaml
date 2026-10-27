@@ -1,0 +1,48 @@
+# Language registry. Keys are ISO 639-3 codes as used by AfriMTEB.
+# tier: rough resource level for grouping results (high / mid / low).
+# fleurs: config name in mteb/fleurs (null if the language is not in FLEURS).
+# sib: config name in mteb/sib200 (FLORES-200 code, used for tokenizer fertility).
+# africaption: column name in AfriMM/AFRICaption (null if absent).
+# injongo: config name in masakhane/InjongoIntent (null if absent).
+languages:
+  eng: {name: English,      script: Latn, tier: anchor, fleurs: en_us, sib: eng_Latn, africaption: eng, injongo: eng}
+  fra: {name: French,       script: Latn, tier: anchor, fleurs: fr_fr, sib: fra_Latn, africaption: null, injongo: null}
+  arb: {name: Arabic,       script: Arab, tier: anchor, fleurs: ar_eg, sib: arb_Arab, africaption: null, injongo: null}
+  # ---- AfriMTEB-Lite nine ----
+  amh: {name: Amharic,      script: Ethi, tier: mid,  fleurs: am_et,  sib: amh_Ethi, africaption: amh, injongo: amh, lite: true}
+  gaz: {name: Oromo,        script: Latn, tier: low,  fleurs: om_et,  sib: gaz_Latn, africaption: null, injongo: orm, lite: true}
+  ibo: {name: Igbo,         script: Latn, tier: mid,  fleurs: ig_ng,  sib: ibo_Latn, africaption: ibo, injongo: ibo, lite: true}
+  yor: {name: Yoruba,       script: Latn, tier: mid,  fleurs: yo_ng,  sib: yor_Latn, africaption: yor, injongo: yor, lite: true}
+  hau: {name: Hausa,        script: Latn, tier: high, fleurs: ha_ng,  sib: hau_Latn, africaption: hau, injongo: hau, lite: true}
+  swh: {name: Swahili,      script: Latn, tier: high, fleurs: sw_ke,  sib: swh_Latn, africaption: null, injongo: swa, lite: true}
+  kin: {name: Kinyarwanda,  script: Latn, tier: mid,  fleurs: null,   sib: kin_Latn, africaption: kin, injongo: kin, lite: true}
+  xho: {name: Xhosa,        script: Latn, tier: mid,  fleurs: xh_za,  sib: xho_Latn, africaption: null, injongo: xho, lite: true}
+  zul: {name: Zulu,         script: Latn, tier: mid,  fleurs: zu_za,  sib: zul_Latn, africaption: null, injongo: zul, lite: true}
+  # ---- wider set ----
+  afr: {name: Afrikaans,    script: Latn, tier: high, fleurs: af_za,  sib: afr_Latn, africaption: afr, injongo: null}
+  som: {name: Somali,       script: Latn, tier: mid,  fleurs: so_so,  sib: som_Latn, africaption: null, injongo: null}
+  wol: {name: Wolof,        script: Latn, tier: low,  fleurs: wo_sn,  sib: wol_Latn, africaption: null, injongo: wol}
+  lug: {name: Luganda,      script: Latn, tier: low,  fleurs: lg_ug,  sib: lug_Latn, africaption: lug, injongo: lug}
+  lin: {name: Lingala,      script: Latn, tier: low,  fleurs: ln_cd,  sib: lin_Latn, africaption: lin, injongo: lin}
+  sna: {name: Shona,        script: Latn, tier: mid,  fleurs: sn_zw,  sib: sna_Latn, africaption: null, injongo: sna}
+  nso: {name: Sepedi,       script: Latn, tier: low,  fleurs: nso_za, sib: nso_Latn, africaption: null, injongo: null}
+  nya: {name: Chichewa,     script: Latn, tier: low,  fleurs: ny_mw,  sib: nya_Latn, africaption: null, injongo: null}
+  umb: {name: Umbundu,      script: Latn, tier: low,  fleurs: umb_ao, sib: umb_Latn, africaption: null, injongo: null}
+  fuv: {name: Fulfulde,     script: Latn, tier: low,  fleurs: ff_sn,  sib: fuv_Latn, africaption: fuv, injongo: null}
+  luo: {name: Luo,          script: Latn, tier: low,  fleurs: luo_ke, sib: luo_Latn, africaption: null, injongo: null}
+  kam: {name: Kamba,        script: Latn, tier: low,  fleurs: kam_ke, sib: kam_Latn, africaption: kam, injongo: null}
+  kea: {name: Kabuverdianu, script: Latn, tier: low,  fleurs: kea_cv, sib: kea_Latn, africaption: null, injongo: null}
+  ewe: {name: Ewe,          script: Latn, tier: low,  fleurs: null,   sib: ewe_Latn, africaption: ewe, injongo: ewe}
+  twi: {name: Twi,          script: Latn, tier: low,  fleurs: null,   sib: twi_Latn, africaption: null, injongo: twi}
+  tir: {name: Tigrinya,     script: Ethi, tier: low,  fleurs: null,   sib: tir_Ethi, africaption: null, injongo: null}
+  pcm: {name: Nigerian Pidgin, script: Latn, tier: mid, fleurs: null, sib: null, africaption: null, injongo: null}
+  kik: {name: Kikuyu,       script: Latn, tier: low,  fleurs: null,   sib: kik_Latn, africaption: kik, injongo: null}
+  bem: {name: Bemba,        script: Latn, tier: low,  fleurs: null,   sib: bem_Latn, africaption: bem, injongo: null}
+
+# Named sets used by experiments.
+sets:
+  lite: [amh, gaz, ibo, yor, hau, swh, kin, xho, zul]
+  fleurs_core: [amh, gaz, ibo, yor, hau, swh, xho, zul, afr, som, wol, lug, lin, sna]
+  fleurs_all: [amh, gaz, ibo, yor, hau, swh, xho, zul, afr, som, wol, lug, lin, sna, nso, nya, umb, fuv, luo, kam, kea]
+  ciral: [hau, som, swh, yor]
+  fertility: [eng, fra, arb, amh, gaz, ibo, yor, hau, swh, kin, xho, zul, afr, som, wol, lug, lin, sna, nso, nya, umb, fuv, luo, kam, kea, ewe, twi, tir, kik, bem]

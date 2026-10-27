@@ -1,0 +1,70 @@
+# Model registry. `family` selects how task prompts are applied (see afriembed/models/embedder.py).
+# `revision` pins the Hugging Face commit every experiment loads (recorded in each results file as model_info.revision).
+# `prompts` for non-Gemma families map generic task names to literal prefixes.
+models:
+  embeddinggemma-2:
+    hf_id: google/embeddinggemma-2
+    revision: 914f7f89142e33e77833254d9c9b90c3cef7303b  # pinned 2026-10-15
+    family: embeddinggemma2
+    modalities: [text, image, audio, video]
+    params_text_only: 271_000_000
+    params_full: 744_000_000
+    dim: 768
+    matryoshka: [768, 512, 256, 128]
+    max_seq_length: 8192
+  embeddinggemma-300m:
+    hf_id: google/embeddinggemma-300m
+    revision: 57c266a740f537b4dc058e1b0cda161fd15afa75  # pinned 2026-10-15
+    family: embeddinggemma1
+    modalities: [text]
+    params_text_only: 308_000_000
+    dim: 768
+    matryoshka: [768, 512, 256, 128]
+    max_seq_length: 2048
+  me5-large-instruct:
+    hf_id: intfloat/multilingual-e5-large-instruct
+    revision: 274baa43b0e13e37fafa6428dbc7938e62e5c439  # pinned 2026-10-15
+    family: e5-instruct
+    modalities: [text]
+    params_text_only: 560_000_000
+    dim: 1024
+    max_seq_length: 512
+  afrie5-large-instruct:
+    hf_id: McGill-NLP/AfriE5-Large-instruct
+    revision: 0d7a51373bacc776c5f41696116c6c9100dcde72  # pinned 2026-10-15
+    family: e5-instruct
+    modalities: [text]
+    params_text_only: 560_000_000
+    dim: 1024
+    max_seq_length: 512
+  me5-base:
+    hf_id: intfloat/multilingual-e5-base
+    revision: d128750597153bb5987e10b1c3493a34e5a4502a  # pinned 2026-10-15
+    family: e5
+    modalities: [text]
+    params_text_only: 278_000_000
+    dim: 768
+    max_seq_length: 512
+  me5-small:
+    hf_id: intfloat/multilingual-e5-small
+    revision: 614241f622f53c4eeff9890bdc4f31cfecc418b3  # pinned 2026-10-15
+    family: e5
+    modalities: [text]
+    params_text_only: 118_000_000
+    dim: 384
+    max_seq_length: 512
+  bge-m3:
+    hf_id: BAAI/bge-m3
+    revision: 5617a9f61b028005a4858fdac845db406aefb181  # pinned 2026-10-15
+    family: plain
+    modalities: [text]
+    params_text_only: 568_000_000
+    dim: 1024
+    max_seq_length: 8192
+
+# Tokenizers compared in the fertility study (experiment 4). Any HF tokenizer id works.
+tokenizers:
+  gemma-4 (EmbeddingGemma 2): google/embeddinggemma-2
+  gemma-3 (EmbeddingGemma 1): google/embeddinggemma-300m
+  xlm-roberta (mE5 / bge-m3): FacebookAI/xlm-roberta-base
+  nllb-200: facebook/nllb-200-distilled-600M

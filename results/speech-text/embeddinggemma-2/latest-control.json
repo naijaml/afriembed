@@ -1,0 +1,328 @@
+{
+  "experiment": "speech-text",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-070402-control",
+  "timestamp": "2026-10-15T07:04:02",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA A10"
+  },
+  "dataset": "mteb/fleurs",
+  "split": "test",
+  "shuffle_control": true,
+  "text_task": "document",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "dims": [
+    768,
+    512,
+    256,
+    128
+  ],
+  "per_language": {
+    "hau": {
+      "tier": "high",
+      "script": "Latn",
+      "n": 300,
+      "mean_duration_s": 19.410600000000002,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.02,
+            "recall@10": 0.03333333333333333,
+            "mrr": 0.020528360506097843,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.016666666666666666,
+            "recall@10": 0.04,
+            "mrr": 0.022612908263386338,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.6686142086982727
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.01,
+            "recall@10": 0.03,
+            "mrr": 0.019765362537836673,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.013333333333333334,
+            "recall@10": 0.03333333333333333,
+            "mrr": 0.02181463250072413,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.675214946269989
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.013333333333333334,
+            "recall@10": 0.02,
+            "mrr": 0.019445660997433136,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.016666666666666666,
+            "recall@10": 0.02666666666666667,
+            "mrr": 0.021258191782491487,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.6943603754043579
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.016666666666666666,
+            "recall@10": 0.03,
+            "mrr": 0.02097853075131908,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.01,
+            "recall@10": 0.02666666666666667,
+            "mrr": 0.020193737378796775,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.7777247428894043
+        }
+      }
+    },
+    "ibo": {
+      "tier": "mid",
+      "script": "Latn",
+      "n": 300,
+      "mean_duration_s": 17.669800000000002,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.023333333333333334,
+            "recall@10": 0.05,
+            "mrr": 0.02367551524688632,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.006666666666666667,
+            "recall@10": 0.023333333333333334,
+            "mrr": 0.017774146986533203,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.6693025827407837
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.02,
+            "recall@10": 0.05,
+            "mrr": 0.023132109794391884,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.006666666666666667,
+            "recall@10": 0.023333333333333334,
+            "mrr": 0.018345468220755053,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.6749071478843689
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.016666666666666666,
+            "recall@10": 0.03666666666666667,
+            "mrr": 0.020232438210711315,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.01,
+            "recall@10": 0.02666666666666667,
+            "mrr": 0.01837297852194525,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.6946713924407959
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.006666666666666667,
+            "recall@5": 0.013333333333333334,
+            "recall@10": 0.03,
+            "mrr": 0.0223752560991088,
+            "n": 300,
+            "pool": 300
+          },
+          "text->audio": {
+            "recall@1": 0.0033333333333333335,
+            "recall@5": 0.02,
+            "recall@10": 0.02666666666666667,
+            "mrr": 0.01992666815158085,
+            "n": 300,
+            "pool": 300
+          },
+          "diag_cos_mean": 0.7786426544189453
+        }
+      }
+    },
+    "amh": {
+      "tier": "mid",
+      "script": "Ethi",
+      "n": 296,
+      "mean_duration_s": 11.57837837837838,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.02702702702702703,
+            "recall@10": 0.0472972972972973,
+            "mrr": 0.02323717460548041,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.016891891891891893,
+            "recall@10": 0.037162162162162164,
+            "mrr": 0.02307902493416335,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.6326678395271301
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.02364864864864865,
+            "recall@10": 0.04054054054054054,
+            "mrr": 0.02379994455314808,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.02027027027027027,
+            "recall@10": 0.030405405405405407,
+            "mrr": 0.023684719945889714,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.6406864523887634
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.02364864864864865,
+            "recall@10": 0.037162162162162164,
+            "mrr": 0.022025668031504655,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.010135135135135136,
+            "recall@10": 0.033783783783783786,
+            "mrr": 0.02063244409815065,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.6577282547950745
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.02364864864864865,
+            "recall@10": 0.04391891891891892,
+            "mrr": 0.02281860725279657,
+            "n": 296,
+            "pool": 296
+          },
+          "text->audio": {
+            "recall@1": 0.0033783783783783786,
+            "recall@5": 0.02027027027027027,
+            "recall@10": 0.030405405405405407,
+            "mrr": 0.021102271057951906,
+            "n": 296,
+            "pool": 296
+          },
+          "diag_cos_mean": 0.7481534481048584
+        }
+      }
+    }
+  },
+  "summary": {
+    "768": {
+      "mean_audio->text_recall@1": 0.003348348348348349,
+      "retention_vs_full": 1.0
+    },
+    "512": {
+      "mean_audio->text_recall@1": 0.003348348348348349,
+      "retention_vs_full": 1.0
+    },
+    "256": {
+      "mean_audio->text_recall@1": 0.003348348348348349,
+      "retention_vs_full": 1.0
+    },
+    "128": {
+      "mean_audio->text_recall@1": 0.00445945945945946,
+      "retention_vs_full": 1.3318385650224214
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "experiment": "largepool",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-093018",
+  "timestamp": "2026-10-15T09:30:18",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "per_language": {
+    "hau": {
+      "n_queries": 600,
+      "query_sources": {
+        "fleurs": 300,
+        "naija": 300
+      },
+      "levels": [
+        {
+          "dim": 768,
+          "pool": "own transcripts",
+          "pool_size": 600,
+          "recall@1": 0.8633333333333333,
+          "recall@10": 0.9533333333333334,
+          "mrr": 0.8943345605184705,
+          "recall@1_fleurs": 0.8133333333333334,
+          "recall@1_naija": 0.9133333333333333
+        },
+        {
+          "dim": 768,
+          "pool": "+ all FLEURS sentences",
+          "pool_size": 2242,
+          "recall@1": 0.86,
+          "recall@10": 0.95,
+          "mrr": 0.8911859880582794,
+          "recall@1_fleurs": 0.8066666666666666,
+          "recall@1_naija": 0.9133333333333333
+        },
+        {
+          "dim": 768,
+          "pool": "+ CIRAL passages (whole)",
+          "pool_size": 51613,
+          "recall@1": 0.84,
+          "recall@10": 0.9366666666666666,
+          "mrr": 0.8717985676937533,
+          "recall@1_fleurs": 0.7733333333333333,
+          "recall@1_naija": 0.9066666666666666
+        },
+        {
+          "dim": 768,
+          "pool": "+ CIRAL passages split into sentences",
+          "pool_size": 259101,
+          "recall@1": 0.7,
+          "recall@10": 0.8216666666666667,
+          "mrr": 0.7433993140606462,
+          "recall@1_fleurs": 0.6433333333333333,
+          "recall@1_naija": 0.7566666666666667
+        },
+        {
+          "dim": 256,
+          "pool": "own transcripts",
+          "pool_size": 600,
+          "recall@1": 0.835,
+          "recall@10": 0.9383333333333334,
+          "mrr": 0.8694679471817259,
+          "recall@1_fleurs": 0.7633333333333333,
+          "recall@1_naija": 0.9066666666666666
+        },
+        {
+          "dim": 256,
+          "pool": "+ all FLEURS sentences",
+          "pool_size": 2242,
+          "recall@1": 0.8316666666666667,
+          "recall@10": 0.9283333333333333,
+          "mrr": 0.8630562164714896,
+          "recall@1_fleurs": 0.7566666666666667,
+          "recall@1_naija": 0.9066666666666666
+        },
+        {
+          "dim": 256,
+          "pool": "+ CIRAL passages (whole)",
+          "pool_size": 51613,
+          "recall@1": 0.7966666666666666,
+          "recall@10": 0.895,
+          "mrr": 0.8322953409003021,
+          "recall@1_fleurs": 0.7066666666666667,
+          "recall@1_naija": 0.8866666666666667
+        },
+        {
+          "dim": 256,
+          "pool": "+ CIRAL passages split into sentences",
+          "pool_size": 259101,
+          "recall@1": 0.6216666666666667,
+          "recall@10": 0.7733333333333333,
+          "mrr": 0.6754219563467637,
+          "recall@1_fleurs": 0.54,
+          "recall@1_naija": 0.7033333333333334
+        }
+      ]
+    },
+    "yor": {
+      "n_queries": 596,
+      "query_sources": {
+        "fleurs": 300,
+        "naija": 296
+      },
+      "levels": [
+        {
+          "dim": 768,
+          "pool": "own transcripts",
+          "pool_size": 596,
+          "recall@1": 0.87751677852349,
+          "recall@10": 0.9614093959731543,
+          "mrr": 0.9101025036614009,
+          "recall@1_fleurs": 0.9066666666666666,
+          "recall@1_naija": 0.847972972972973
+        },
+        {
+          "dim": 768,
+          "pool": "+ all FLEURS sentences",
+          "pool_size": 2097,
+          "recall@1": 0.8322147651006712,
+          "recall@10": 0.947986577181208,
+          "mrr": 0.8742546439801951,
+          "recall@1_fleurs": 0.83,
+          "recall@1_naija": 0.8344594594594594
+        },
+        {
+          "dim": 768,
+          "pool": "+ CIRAL passages (whole)",
+          "pool_size": 51988,
+          "recall@1": 0.7701342281879194,
+          "recall@10": 0.9026845637583892,
+          "mrr": 0.8167198330444717,
+          "recall@1_fleurs": 0.74,
+          "recall@1_naija": 0.8006756756756757
+        },
+        {
+          "dim": 768,
+          "pool": "+ CIRAL passages split into sentences",
+          "pool_size": 235304,
+          "recall@1": 0.5302013422818792,
+          "recall@10": 0.7265100671140939,
+          "mrr": 0.5965091805148468,
+          "recall@1_fleurs": 0.58,
+          "recall@1_naija": 0.4797297297297297
+        },
+        {
+          "dim": 256,
+          "pool": "own transcripts",
+          "pool_size": 596,
+          "recall@1": 0.8221476510067114,
+          "recall@10": 0.9463087248322147,
+          "mrr": 0.8697083939103936,
+          "recall@1_fleurs": 0.8333333333333334,
+          "recall@1_naija": 0.8108108108108109
+        },
+        {
+          "dim": 256,
+          "pool": "+ all FLEURS sentences",
+          "pool_size": 2097,
+          "recall@1": 0.7684563758389261,
+          "recall@10": 0.9228187919463087,
+          "mrr": 0.8242551147846503,
+          "recall@1_fleurs": 0.7533333333333333,
+          "recall@1_naija": 0.7837837837837838
+        },
+        {
+          "dim": 256,
+          "pool": "+ CIRAL passages (whole)",
+          "pool_size": 51988,
+          "recall@1": 0.7013422818791947,
+          "recall@10": 0.8674496644295302,
+          "mrr": 0.757207504341726,
+          "recall@1_fleurs": 0.6766666666666666,
+          "recall@1_naija": 0.7263513513513513
+        },
+        {
+          "dim": 256,
+          "pool": "+ CIRAL passages split into sentences",
+          "pool_size": 235304,
+          "recall@1": 0.4748322147651007,
+          "recall@10": 0.6694630872483222,
+          "mrr": 0.5419537758145407,
+          "recall@1_fleurs": 0.5266666666666666,
+          "recall@1_naija": 0.4222972972972973
+        }
+      ]
+    }
+  },
+  "partial": true
+}

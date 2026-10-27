@@ -1,0 +1,170 @@
+{
+  "experiment": "lid",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-212241",
+  "timestamp": "2026-10-14T21:22:41",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "dataset": "mteb/fleurs",
+  "languages": [
+    "amh",
+    "gaz",
+    "ibo",
+    "yor",
+    "hau",
+    "swh",
+    "xho",
+    "zul",
+    "afr",
+    "som",
+    "wol",
+    "lug",
+    "lin",
+    "sna",
+    "nso",
+    "nya",
+    "umb",
+    "fuv",
+    "luo",
+    "kam",
+    "kea"
+  ],
+  "per_lang": 80,
+  "k": 5,
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656
+  },
+  "audio": {
+    "knn_accuracy": 0.6699266503667481,
+    "nmi": 0.7062544408424019,
+    "ari": 0.5701023621229574,
+    "purity": 0.6992665036674817,
+    "n_clusters": 21,
+    "top_confusions": [
+      {
+        "true": "zul",
+        "pred": "xho",
+        "count": 44
+      },
+      {
+        "true": "swh",
+        "pred": "sna",
+        "count": 15
+      },
+      {
+        "true": "nya",
+        "pred": "sna",
+        "count": 13
+      },
+      {
+        "true": "yor",
+        "pred": "ibo",
+        "count": 12
+      },
+      {
+        "true": "lug",
+        "pred": "xho",
+        "count": 11
+      },
+      {
+        "true": "nso",
+        "pred": "ibo",
+        "count": 11
+      },
+      {
+        "true": "nya",
+        "pred": "xho",
+        "count": 10
+      },
+      {
+        "true": "wol",
+        "pred": "ibo",
+        "count": 9
+      }
+    ]
+  },
+  "text": {
+    "knn_accuracy": 0.7084352078239609,
+    "nmi": 0.6157812779284932,
+    "ari": 0.4314483667624849,
+    "purity": 0.5672371638141809,
+    "n_clusters": 21,
+    "top_confusions": [
+      {
+        "true": "xho",
+        "pred": "zul",
+        "count": 35
+      },
+      {
+        "true": "zul",
+        "pred": "xho",
+        "count": 15
+      },
+      {
+        "true": "fuv",
+        "pred": "hau",
+        "count": 10
+      },
+      {
+        "true": "kam",
+        "pred": "lug",
+        "count": 9
+      },
+      {
+        "true": "swh",
+        "pred": "kam",
+        "count": 8
+      },
+      {
+        "true": "luo",
+        "pred": "ibo",
+        "count": 8
+      },
+      {
+        "true": "sna",
+        "pred": "zul",
+        "count": 7
+      },
+      {
+        "true": "nya",
+        "pred": "lug",
+        "count": 7
+      }
+    ]
+  },
+  "chance": 0.047619047619047616
+}

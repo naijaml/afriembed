@@ -1,0 +1,617 @@
+{
+  "experiment": "cascade",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-090003",
+  "timestamp": "2026-10-15T09:00:03",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "asr": "facebook/mms-1b-all",
+  "split": "test",
+  "text_task": "document",
+  "query_task": "query",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "per_language": {
+    "hau": {
+      "n": 300,
+      "wer": 0.25628992308695087,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9933333333333333,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 1.0,
+            "mrr": 0.9954166666666666,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9533333333333334,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.9933333333333333,
+            "mrr": 0.9660643274853802,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9766666666666667,
+            "recall@5": 0.99,
+            "recall@10": 0.99,
+            "mrr": 0.9817812911725955,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.7433333333333333,
+            "recall@5": 0.9,
+            "recall@10": 0.9333333333333333,
+            "mrr": 0.8120921598656959,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Shaharar ta na kasancewa cibiyar jin daɗi ya fara ne a kusan shekara ta 400 A.D. kuma ya kai har kusan 1100 A.D.",
+          "hyp": "shaharar tana kasancewa cibiyar jin dadi ya fara ne a kusan shekarata 4080 kuma ya kai har kusan 80"
+        },
+        {
+          "ref": "Muhammadu yana matukar sha'awar al'amuran da suka wuce rayuwar wannan duniya. Ya na yawan ziyarar kogon da a ka fi sani da na “Hira” a tsaunin “Noor” (wato haske) domin kadaicewa yayi tunani.",
+          "hyp": "muhammadu yana matukar sha'awar al'amuran da suke wuce rayuwar wannan duniya yana yawan ziyarar gogon da aka fi sani da hira a tsaunin nur wato haske domin kada cewa ya yi tunani"
+        },
+        {
+          "ref": "An gano Dokta Malar Balasubramanian, 29, a cikin Blue Ash, Ohio, wani yanki kusa da kilomita 15 arewacin Cincinnati kwance a ƙasa kusa da hanya a cikin T-shirt da tufafi a cikin halain tsananin daukan magani.",
+          "hyp": "an gano dr malar balasubramania 29 a cikin luh ohyo wani yanki kusa da kilmta15 arewacin cencenati kowace a asa kusa da hanya a cikin tishet da tuffafi a cikin halin tsananin daukar magana"
+        }
+      ]
+    },
+    "yor": {
+      "n": 300,
+      "wer": 0.5353439027297652,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9966666666666667,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 0.9966666666666667,
+            "mrr": 0.9967006802721088,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9566666666666667,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.99,
+            "mrr": 0.9706666666666667,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9633333333333334,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 0.9966666666666667,
+            "mrr": 0.9769590004852013,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.7333333333333333,
+            "recall@5": 0.9066666666666666,
+            "recall@10": 0.9466666666666667,
+            "mrr": 0.812154902994245,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Wọ́n tí gba àwọn arìnrìn àjò ní mọ̀ràn láti ṣọ́ra fún ewu ojú ọja tó lè ní ipa ní agbègbè wọ́n nítorí ó lè ní ipa fún ènikẹni tó bá ní ètò láti rìnrìn àjò.",
+          "hyp": "wọn ti gba àwọn arìnrìn àjò ní ìmọ̀nà láti sọ́ra fún ewò jojú ọjà tó lè ní ipa ní agbígbi wọn nítorí ó lè ní ìpá fún ẹmi kẹmi tó bá ní ètò láti rìnrìn àjò"
+        },
+        {
+          "ref": "Àwọn ẹgbẹ́ àfojúrí ní a gbé papọ̀ bí ẹgbẹ́ tí a kan ní ìgbàgba nínú rẹ̀, ṣùgbọ́n ìyàtọ̀ díẹ̀ wà nínú rẹ̀.",
+          "hyp": "àwọn ẹgbẹ́ àfojúrí ni agbé papọ̀ bíi ẹgbẹ́ tí a kàn ní ìgbàgbọ́ nínú rẹ̀ ṣùgbọ́n ìyàtọ̀ díẹ wà nínú rẹ̀"
+        },
+        {
+          "ref": "Giza Plateau àbí “Giza Necropolis” ní òkè Egypt àwọn tí ó ti kú ní àkópọ̀ onírúurú pírámíìdì (èyí tí ó jẹ́ pé pírámìdi ńlá ló tóbi jù) onírúurú ibojì kéékèké, tẹ́m̀pìlì lọ́pọ̀lọpọ̀ àti sphinx ńlá.",
+          "hyp": "giza plato abi giza necropolis ni okè egypt awọn ti o ti ku ni àkópọ onírúru piramidi èyí ti o je pe piramidi nla lótóbijù onírúrú ibòjì kékéké tẹḿpili lọpọlọpọ̀ àti sphenisi nla"
+        }
+      ]
+    },
+    "swh": {
+      "n": 300,
+      "wer": 0.14713896457765668,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9966666666666667,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9983333333333333,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.97,
+            "recall@5": 0.9933333333333333,
+            "recall@10": 0.9933333333333333,
+            "mrr": 0.9819474078233202,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9966666666666667,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 1.0,
+            "mrr": 0.9970833333333333,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.88,
+            "recall@5": 0.9566666666666667,
+            "recall@10": 0.9666666666666667,
+            "mrr": 0.9133066341645645,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Ugonjwa huo hubebwa na nguruwe, kisha huhamia kwa binadamu kupitia mbu.",
+          "hyp": "ugonjwa huo ubebwa na uungurue kisha huhamia kwa binadamu kupitia mbu"
+        },
+        {
+          "ref": "Mtiririko wa Trafiki ni utafiti wa mwondoko wa madereva binafsi na magari kati ya sehemu mbili na mwingiliano wanaofanya na wenzao.",
+          "hyp": "mtiririko wa trafiki ni utafiti wa mondoko wa madereva binasi na magari katika ya sehemu mbili na muingiliano wa wanaofanya na wenzao"
+        },
+        {
+          "ref": "Hatujui kwa kweli, lakini inaweza kuwa alikuwa na ulimi uliogawanyika. Lishe yake ni pamoja na kasa, samaki wakubwa, mosasau wengine, na labda anaweza kuwa kiumbe alaye wenziwe.",
+          "hyp": "hatujui kwa kweli lakini inaweza kuwa alikuwa na ulimu uliogawanyika alisha yake ni pamoja na kasakasa samaki wakubwa mosasau wengine na labda anaweza kuwa kiumbe alayewenzie"
+        }
+      ]
+    },
+    "amh": {
+      "n": 296,
+      "wer": 0.2730503455083909,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 296,
+            "pool": 296
+          },
+          "direct_audio->text": {
+            "recall@1": 0.8817567567567568,
+            "recall@5": 0.9594594594594594,
+            "recall@10": 0.9662162162162162,
+            "mrr": 0.916430651794543,
+            "n": 296,
+            "pool": 296
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 1.0,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 1.0,
+            "n": 296,
+            "pool": 296
+          },
+          "direct_audio->text": {
+            "recall@1": 0.6655405405405406,
+            "recall@5": 0.8006756756756757,
+            "recall@10": 0.8648648648648649,
+            "mrr": 0.7315216736496091,
+            "n": 296,
+            "pool": 296
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "ከባድ የአየር ሁኔታ ለማንኛውም ጉዳት፣ ከፍተኛ ማህበራዊ ረብሻ ወይም ህይወት ማጣትን የሚያስከትል አደገኛ የአየር ሁኔታ አጠቃላይ ስም ነው።",
+          "hyp": "ከባድ የአየር ሁኔታ ለማንኛም ጉዳት ከፍተኛ ማህበሪዊ የረብሻ ወይም ህይወት ማጣትን የሚያስከተል አደገኝ የአየር ሁኔታ አጠቃ ላይ ስም ነው"
+        },
+        {
+          "ref": "ቨርቹዋል ቡድኖች ከተለመዱት ቡድኖች ተመሳሳይ የላቁ ደረጃዎች ጋር የተያዙ ናቸው ፣ ግን ስውር ልዩነቶች አሏቸው።",
+          "hyp": "ቨርቱዋል ቡድኖች ከተለመዱት ቡድኖች ተመሳሳይ የላውቁ ደረጆች ጋር የተያዙ ናቸው ግን ስውር ልዩነቶች አሏቸው"
+        },
+        {
+          "ref": "በአትላንቲክ ውቅያኖስ ወቅት ዛሬ አስረኛው የተሰየመ አውሎነፋስ ጄሪ፣ በአትላንቲክ ውቅያኖስ ተመስርቷል።",
+          "hyp": "በአትላንቲክ ውቀኖስ ወቅት ዛሬ አስረኛው የተሰየመ አውሎ ነፋስ ጄሪ በአትላንቲክ ውቀኖስ ተመስርቷል"
+        }
+      ]
+    },
+    "ibo": {
+      "n": 300,
+      "wer": 0.4417846847975937,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9766666666666667,
+            "recall@5": 0.9933333333333333,
+            "recall@10": 0.9966666666666667,
+            "mrr": 0.9842817817817818,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.7766666666666666,
+            "recall@5": 0.9,
+            "recall@10": 0.9333333333333333,
+            "mrr": 0.837622849324687,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.91,
+            "recall@5": 0.9666666666666667,
+            "recall@10": 0.9833333333333333,
+            "mrr": 0.9362880730380728,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.55,
+            "recall@5": 0.74,
+            "recall@10": 0.79,
+            "mrr": 0.6414173654536904,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Obodo ahụ bụkwa ntọala ịrị ugwu mgbawa Nyiragongo tinyere ụfọdụ nsochi Ọzọdimgba Ugwu dịchasị ọnụ ala n'Afrịka.",
+          "hyp": "obodo ahụ bụkwa ntọala iri ugwu mgbawa nyaragongo tinyere ụfọdụ nsochi ọzụ dị mkpa ugwu dichasị ọnụ ala n'afrịka"
+        },
+        {
+          "ref": "Iji ụgbọ mmiri ebughari ngwa ahịa bụ ụzọ kachasị mma n'ezie iji buru ọtụtụ ndị na ọtụtụ ngwa gafee oke osimiri.",
+          "hyp": "iji ụgbọ mmiri ebugharị ngwa ahịa bụ ụzọ kachasị mma n'ezia iji buru ọtụtụ ndị na ọtụtụ ngwa gafee oke osinyiri"
+        },
+        {
+          "ref": "Ka akara Rossby na-adị obere karịa, ka arụmarụ na-adịkwu obere nke kpakpando n’ikwanye ugwu nye ụmụ ntụgharị nke ihendọta.",
+          "hyp": "akara rossbay nadị obere kariaka ari nwari nadịk nke bakpandọ na ikwa nye bugu ne ụmọnta ntụarị nke ihi ndọta"
+        }
+      ]
+    },
+    "som": {
+      "n": 300,
+      "wer": 0.4403246117251994,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.98,
+            "recall@5": 0.99,
+            "recall@10": 0.9933333333333333,
+            "mrr": 0.9850609460946095,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.8766666666666667,
+            "recall@5": 0.9666666666666667,
+            "recall@10": 0.9833333333333333,
+            "mrr": 0.9159706312233671,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9533333333333334,
+            "recall@5": 0.98,
+            "recall@10": 0.9866666666666667,
+            "mrr": 0.9646033437584932,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.5866666666666667,
+            "recall@5": 0.8166666666666667,
+            "recall@10": 0.8933333333333333,
+            "mrr": 0.6911588795782537,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Waxaa salamay ku Xigeenka Resul Wasaaraha Singapore ee Wong Kan Seng iyo waxay ka wada hadleen ganacsiga iyo arimaha argagixisa Resal Wasaraha Singapore ee Lee Hsien Loong.",
+          "hyp": "waxaa salaamay ku xogeynka resalusaaraha singapori woga zing iyo waxay ka wada hadleen ganacsiga iyo arimaha arga gaxsada ee resalusaaraha singapori eli haze long"
+        },
+        {
+          "ref": "Dadku hadda waxay fariimo ku qoraan shaashadda koombiyuutarka , weligaa hasoo dhawaysan soofeeye.",
+          "hyp": "dadku hada waxay kuiraan fariimo ku qoraan shaashadaha kambuutarka weliga haasoo dhowaysan sofeeye"
+        },
+        {
+          "ref": "Hadba inta cadaadisku hooseeyo, ayay awoodda dhabta ahi muuqaynaysaa. Qof kasta waxa uu awood u leeyahay inuu helo nabad iyo degenaansho dhab ah.",
+          "hyp": "hadba inta cadaadiisku heseeyo ayay awooda dhabta ahi muuqanaysa qof kasta waxa uu awood u leeyahay inuu helo nabad iyo deganaansho dhab ah"
+        }
+      ]
+    },
+    "xho": {
+      "n": 300,
+      "wer": 0.3700707785642063,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9866666666666667,
+            "recall@5": 0.9933333333333333,
+            "recall@10": 0.9966666666666667,
+            "mrr": 0.99,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9433333333333334,
+            "recall@5": 0.98,
+            "recall@10": 0.9966666666666667,
+            "mrr": 0.9633437118437119,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9533333333333334,
+            "recall@5": 0.97,
+            "recall@10": 0.98,
+            "mrr": 0.9604371252204585,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.77,
+            "recall@5": 0.87,
+            "recall@10": 0.92,
+            "mrr": 0.8201807458839263,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "I-Romanticism yayinento enkulu yokuchazwa kwenkcubeko, ethathwe kubabhali abanjengoGoethe, Fichte, noSchlegel.",
+          "hyp": "iromanticism yayinento enkulu yokuchazwa kwenkcubeko ethathwe kubabhali abanjengogoweth fithe nochagal"
+        },
+        {
+          "ref": "Ukhanyiselo sisithethe esinye ekwabelwana ngaso liqela labantu abaninzi abahlala baphinde basebenzisane eluntwini.",
+          "hyp": "ukhanyiselo sesithethe esinye ekwabelwana ngaso liqela labantu abaninzi abahlala baphinde basebenzisane eluntweni"
+        },
+        {
+          "ref": "Sekunjalo, lisebenzise icebiso labasemagunyeni, thobela zonke izalathisi, uze unikele ingqalelo kwizilumkiso zokhuseleko.",
+          "hyp": "sekunjalo lisebenzisa icebiso labasemagonyeni thobela zonke izalatis uze unikele iingqalelo kwizelomkiso zokhoseleko"
+        }
+      ]
+    },
+    "zul": {
+      "n": 300,
+      "wer": 0.3369807497467072,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9933333333333333,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 1.0,
+            "mrr": 0.9954166666666666,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9633333333333334,
+            "recall@5": 0.99,
+            "recall@10": 0.99,
+            "mrr": 0.974476911976912,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9366666666666666,
+            "recall@5": 0.9766666666666667,
+            "recall@10": 0.9833333333333333,
+            "mrr": 0.9523538294205722,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.75,
+            "recall@5": 0.88,
+            "recall@10": 0.9366666666666666,
+            "mrr": 0.8147923356646819,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Izinkambiso zokukhansela ziyahluka, kodwa kusukela ngasekupheleni kukaMashi izinkampiso eziningi zokukhansela ngenxa ye-coronavirus azifiki kuJulayi 2020, ngenkathi okwakuhlelwe ngayo ama-Olimpiki.",
+          "hyp": "izinkambizo zokukhansela ziyahluka kodwa kusukela ngasekupheleni kukamashi izinkabizo eziningi zokukhansela ngenca yecorona virus azifiki kujulayi 2020 ngekhathi okwakuhlelwe ngayo ama-olimpiki"
+        },
+        {
+          "ref": "Kusenabesilisa kanye nabesifazane abaningi abaphilayo abahlala lapha, kanye nabaningi abanabathandekayo babo ababulewe noma abasebenze baze bafela lapha, amaJuda kanye nokungebona amaJuda ngokufanayo.",
+          "hyp": "kusenabesilisa kanye nabesifazane abaningi abaphilayo abahlala lapha kanye nabaningi abanabathandekayo babo ababulewe noma abasebenze baze bafela lapha amajuda kanye nokunge bona amajuda ngokufanayo"
+        },
+        {
+          "ref": "Izikrini ezinkulu eziningana zethelevishini zifakiwe ezindaweni ezihlukahlukene eRoma ukwenzela ukuthi abantu babukele umcimbi.",
+          "hyp": "izigrini ezinkulu ezingana zethelevishini zifakwe ezindaweni ezidlukahlukene eroma okenzela obontu abuthi abantu babukele umcembi"
+        }
+      ]
+    },
+    "wol": {
+      "n": 239,
+      "wer": 0.3875064355586065,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.99581589958159,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9972105997210599,
+            "n": 239,
+            "pool": 239
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9623430962343096,
+            "recall@5": 0.9874476987447699,
+            "recall@10": 1.0,
+            "mrr": 0.975418410041841,
+            "n": 239,
+            "pool": 239
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9790794979079498,
+            "recall@5": 0.99581589958159,
+            "recall@10": 0.99581589958159,
+            "mrr": 0.9864333713706098,
+            "n": 239,
+            "pool": 239
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9037656903765691,
+            "recall@5": 0.9497907949790795,
+            "recall@10": 0.9748953974895398,
+            "mrr": 0.9222303138319733,
+            "n": 239,
+            "pool": 239
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Loolu dina doon mbir mu baax ci ñi bëgga gis li ñuy woowe aurores boréale, ndax asamaan si dafay lëndam guddi ak bëccëg.",
+          "hyp": "loolu dina doon mbir bu baax ci ñi bëgga gis duñuy woy oroboreaal ndax asamaan si dafay lëndam guddi ak bëcce"
+        },
+        {
+          "ref": "Li ko dalee 1966 ba tay ji, Sundarbans barab la buñu jagleel rab yi, te leegi warna am lu tollu ci 400 Ségg royal yu Bengale ak lu tollu ci 30 000 kéwél yu am ay tupp-tupp ci gox bi.",
+          "hyp": "li ko dalee 1966 ba tay ji sunderbans darab la buñu jagleel rab yi te léegi warna am lu toll ci 4005g royal yu bengali ak lu toll ci 30,000 kewel yu am ay tupp-tup ci gox bi"
+        },
+        {
+          "ref": "Mooy barab bi britanik jàppee ni ñoo ko moomal seen bopp, kon sudee danga wër taarixu jaar-jaaru kolonisasioŋ bi, fii nga wara tàmbalee.",
+          "hyp": "mooy barab bi britaniq jàppee ni ñoo ko moomal seen bopp kon suddee danga wer tarixu jaar-jaaru kolonisasiyon bi fi nga wara tambale"
+        }
+      ]
+    },
+    "lug": {
+      "n": 300,
+      "wer": 0.43914473684210525,
+      "dims": {
+        "768": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.9833333333333333,
+            "recall@5": 0.9933333333333333,
+            "recall@10": 0.9966666666666667,
+            "mrr": 0.989,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.9566666666666667,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.99,
+            "mrr": 0.9675599415204678,
+            "n": 300,
+            "pool": 300
+          }
+        },
+        "128": {
+          "cascade_asr_text->text": {
+            "recall@1": 0.96,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.9933333333333333,
+            "mrr": 0.9731569064938769,
+            "n": 300,
+            "pool": 300
+          },
+          "direct_audio->text": {
+            "recall@1": 0.7466666666666667,
+            "recall@5": 0.9066666666666666,
+            "recall@10": 0.9433333333333334,
+            "mrr": 0.8130104583728858,
+            "n": 300,
+            "pool": 300
+          }
+        }
+      },
+      "sample": [
+        {
+          "ref": "Pilamiidi eyamaanyi eye Giza yeyokka kubyewunyiisa omusaanvu ekyayimiridde n’olwaleero.",
+          "hyp": "piramidi eyamaanyi eyegiza yeyoka ku byewunyisa omusanvu ekyayimiridde n'olwaliro"
+        },
+        {
+          "ref": "Amadaala agatali gadala gayungibwa mu software nga galubirirwa okubuuza, okukirizisa n’okunyonyola emitendera egisobola okuwa obuzibu abayizi okubikola boka.",
+          "hyp": "amadaala agatali gaddala gayungibwa mu soft ware nga galuubiriza okubuuza okukkirizisa nokunyonyola emitendera egisobola okuwa abayizi okubikola bokka"
+        },
+        {
+          "ref": "Huhne alekulidde, ajja kubera nga asikilwa mu kabineti ne Ed Davey MP. Norman Lamb MP asubilwa okudda mu bigele bya minisita webyenfuna Job Davey ali okulekulira ekifo.",
+          "hyp": "huhne alekulidde ajja kubeera ngaasikirwa mu kabineti ne vmp nmp asuubira okudda mu bigere bya minisita webyenfuna job davy ali okulekulira ekifo"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "mean_wer": 0.36276351331371826,
+    "mean_cascade_recall@1": 0.9902482566248254,
+    "mean_direct_recall@1": 0.9240766519657735
+  }
+}

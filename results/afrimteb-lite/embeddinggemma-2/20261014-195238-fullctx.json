@@ -1,0 +1,141 @@
+{
+  "experiment": "afrimteb-lite",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-195238-fullctx",
+  "timestamp": "2026-10-14T19:52:38",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "suite": "MTEB(Africa, v1, lite)",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": false,
+    "prompts": {
+      "query": "",
+      "document": "",
+      "classification": "",
+      "clustering": "",
+      "sts": "",
+      "bitext": ""
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 8192
+  },
+  "mteb_wrapper": "sentence-transformer",
+  "task_patches": {},
+  "n_tasks": 2,
+  "macro_average": 0.5856269820955936,
+  "tasks": {
+    "MasakhaNEWSClassification": {
+      "main_score": 0.7302181076174821,
+      "subsets": {
+        "test/amh": {
+          "accuracy": 0.85,
+          "f1": 0.8434805658385793,
+          "f1_weighted": 0.8473811920693646,
+          "precision": 0.851676717366221,
+          "precision_weighted": 0.852570641387089,
+          "recall": 0.8434876543209878,
+          "recall_weighted": 0.85,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.85
+        },
+        "test/hau": {
+          "accuracy": 0.670800627943485,
+          "f1": 0.6526138083633207,
+          "f1_weighted": 0.6651158756557549,
+          "precision": 0.6720216502442533,
+          "precision_weighted": 0.6832518631929314,
+          "recall": 0.656994692689608,
+          "recall_weighted": 0.670800627943485,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.670800627943485
+        },
+        "test/ibo": {
+          "accuracy": 0.6005128205128205,
+          "f1": 0.5773608505800435,
+          "f1_weighted": 0.5980612650379908,
+          "precision": 0.5791434631431578,
+          "precision_weighted": 0.6303992264163604,
+          "recall": 0.6240706191840159,
+          "recall_weighted": 0.6005128205128205,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.6005128205128205
+        },
+        "test/xho": {
+          "accuracy": 0.7670033670033669,
+          "f1": 0.658689744832891,
+          "f1_weighted": 0.7827258312618394,
+          "precision": 0.6605867124008005,
+          "precision_weighted": 0.8202233298521999,
+          "recall": 0.7031161290322581,
+          "recall_weighted": 0.7670033670033669,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.7670033670033669
+        },
+        "test/yor": {
+          "accuracy": 0.7627737226277371,
+          "f1": 0.7640611644378013,
+          "f1_weighted": 0.7645032098635405,
+          "precision": 0.7710816164500813,
+          "precision_weighted": 0.7729456578119571,
+          "recall": 0.7638113805970148,
+          "recall_weighted": 0.7627737226277371,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.7627737226277371
+        }
+      }
+    },
+    "KinNewsClassification": {
+      "main_score": 0.44103585657370514,
+      "subsets": {
+        "test/kinnews_cleaned": {
+          "accuracy": 0.44103585657370514,
+          "f1": 0.336590604550024,
+          "f1_weighted": 0.4536958458348156,
+          "precision": 0.349232883175273,
+          "precision_weighted": 0.5435547747026092,
+          "recall": 0.43770623030317796,
+          "recall_weighted": 0.44103585657370514,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.44103585657370514
+        }
+      }
+    }
+  },
+  "per_language": {
+    "amh": 0.85,
+    "hau": 0.670800627943485,
+    "ibo": 0.6005128205128205,
+    "xho": 0.7670033670033669,
+    "yor": 0.7627737226277371
+  },
+  "mteb_cache": "/vol/mteb_cache/embeddinggemma-2-noprompt"
+}

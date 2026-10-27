@@ -1,0 +1,111 @@
+{
+  "experiment": "dedup",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-205200-adapter",
+  "timestamp": "2026-10-15T20:52:00",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "71f87f6",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "a": "naija-hau",
+  "b": "fleurs:hau:test",
+  "n_a": 1000,
+  "n_b": 331,
+  "threshold": 0.6511700749397278,
+  "calibrated": true,
+  "true_overlap": 0,
+  "flagged": 0,
+  "tp": 0,
+  "fp": 0,
+  "fn": 0,
+  "precision": 0.0,
+  "recall": null,
+  "own_pair_sim_mean": 0.7512851357460022,
+  "best_cross_sim_mean": 0.5218605995178223,
+  "top_matches": [
+    {
+      "a_text": "Mutan gidan yari suna cikin matsi.",
+      "b_text": "Mutanen Paris sun yi suna kan son kai, rashin kunya da girman kai.",
+      "sim": 0.64,
+      "true": false
+    },
+    {
+      "a_text": "Bana son sa takalma masu ɗiddige .",
+      "b_text": "Da farko, yawancin mahaya suna sanye da takalman hawa masu diddige da kuma ƙasan takalmi mai santsi,",
+      "sim": 0.603,
+      "true": false
+    },
+    {
+      "a_text": "Ehh, zata fara aiki da dakin sayar da abincin",
+      "b_text": "Yayin da yake aiki a asibiti Liggins ya fara binciken aikin da bai dace ba a lokacin rashi.",
+      "sim": 0.601,
+      "true": false
+    },
+    {
+      "a_text": "Tsarin yin Ƙumar kasko ya na buƙatan laka",
+      "b_text": "Yana da sirinta a ƙarƙashin maria kuma ya fi kauri a ƙarƙashin tsaunuka.",
+      "sim": 0.6,
+      "true": false
+    },
+    {
+      "a_text": "Kowane shugaban jami'a yana da ofishi.",
+      "b_text": "Ofishin gwamnan ya ce jamia’an yan sanda goma sha tara ne su ka sami raunuka.",
+      "sim": 0.597,
+      "true": false
+    },
+    {
+      "a_text": "Ansan mutanen Igbo da miyar ogbono.",
+      "b_text": "Del Potro ya samu riba a sa na biyu, amma wannan shima na bukatan tie break bayan an kai 6-6.",
+      "sim": 0.596,
+      "true": false
+    },
+    {
+      "a_text": "Yara na son yin wasan ɓuya.",
+      "b_text": "Don 'yan Springboks, ya ƙare rashin nasara a wasanni biyar.",
+      "sim": 0.596,
+      "true": false
+    },
+    {
+      "a_text": "Mutane dayawa su na yin kira a waya",
+      "b_text": "Ya kira jita-jitar da cewa “hirar siyasa da wauta”.",
+      "sim": 0.593,
+      "true": false
+    }
+  ],
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": "artifacts/audio-lora",
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  }
+}

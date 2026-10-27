@@ -1,0 +1,111 @@
+{
+  "experiment": "dedup",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-205515-adapter",
+  "timestamp": "2026-10-15T20:55:15",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "325ba8b",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "a": "bible-hau",
+  "b": "fleurs:hau:test",
+  "n_a": 910,
+  "n_b": 331,
+  "threshold": 0.6945412755012512,
+  "calibrated": true,
+  "true_overlap": 0,
+  "flagged": 0,
+  "tp": 0,
+  "fp": 0,
+  "fn": 0,
+  "precision": 0.0,
+  "recall": null,
+  "own_pair_sim_mean": 0.7577411532402039,
+  "best_cross_sim_mean": 0.5098516345024109,
+  "top_matches": [
+    {
+      "a_text": "Kamar Adamu, sun tā da alkawari, sun yi mini rashin aminci a can.",
+      "b_text": "Ana alaƙanta sinadarai kamar calcium da kanwa a zaman ƙarafa. Tabbas, akwai kuma ƙarafa kamar azurfa",
+      "sim": 0.61,
+      "true": false
+    },
+    {
+      "a_text": "Yaya zan ba da kai, Efraim?",
+      "b_text": "A bayyane take, idan ka san yaren Romance, zai yi sauki maka ka koyi Portuguese.",
+      "sim": 0.609,
+      "true": false
+    },
+    {
+      "a_text": "Da azurfa da zinariya sun ƙera gumaka wa kansu wanda zai kai zuwa ga hallakarsu.",
+      "b_text": "Ana alaƙanta sinadarai kamar calcium da kanwa a zaman ƙarafa. Tabbas, akwai kuma ƙarafa kamar azurfa",
+      "sim": 0.599,
+      "true": false
+    },
+    {
+      "a_text": "Dukanku ’ya’yan haske ne da kuma ’ya’yan rana.",
+      "b_text": "Yankin Schengen, duk da haka, yana aiki kamar ƙasa ɗaya ta wannan.",
+      "sim": 0.593,
+      "true": false
+    },
+    {
+      "a_text": "Amma zan zauna a cikinki masu tawali’u da masu ƙasƙantar da kai, waɗanda suke dogara ga sunan Ubangi",
+      "b_text": "Wannan danshi ya zama dole don ƙirƙirar linta da rairayin bakin teku, waɗanda suka yi aiki a matsayi",
+      "sim": 0.592,
+      "true": false
+    },
+    {
+      "a_text": "daya Tessalonikawa Sura uku",
+      "b_text": "Aerosmith sun soke sauran kade-kade a yawon shakatawansu.",
+      "sim": 0.592,
+      "true": false
+    },
+    {
+      "a_text": "Kai, su masu kaciya ma ba su kiyaye Doka ba, duk da haka suna so a yi muku kaciya don su yi taƙama k",
+      "b_text": "Gugan kayayyakin sawa masu lema su a iya taimaka masu bushewa. Yawancin otal suna da dutsen guga da ",
+      "sim": 0.591,
+      "true": false
+    },
+    {
+      "a_text": "Mutanena sun ƙudura su juye daga gare ni.",
+      "b_text": "Mutanen Paris sun yi suna kan son kai, rashin kunya da girman kai.",
+      "sim": 0.591,
+      "true": false
+    }
+  ],
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": "artifacts/audio-lora",
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  }
+}

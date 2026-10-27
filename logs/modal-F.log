@@ -1,0 +1,801 @@
+Note that running a local entrypoint in detached mode only keeps the last triggered Modal function alive after the parent process has been killed or disconnected.
+✓ Initialized. View run at 
+https://modal.com/apps/<workspace>/main/ap-WYtHOVViDeBOze2vxt2Ppu
+✓ Created objects.
+├── ✓ Uploaded ./modal_app.py
+├── ✓ Uploaded ./configs
+├── ✓ Uploaded PythonPackage:afriembed
+├── ✓ Created Function run.
+└── ✓ Created Function report.
+
+=== afriembed speech-text --langs hau,ibo,amh --max-items 300 --batch-size 16 --shuffle-control --tag control
+[10/15/26 07:02:55] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  30%|██▉       | 346/1165 [00:00<00:00, 3341.86it/s]
+[1ALoading weights:  59%|█████▊    | 683/1165 [00:00<00:00, 3357.50it/s]
+[1ALoading weights:  87%|████████▋ | 1019/1165 [00:00<00:00, 3016.70it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 3265.36it/s]
+[10/15/26 07:02:59] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+[10/15/26 07:03:02] INFO     FLEURS hau/test: 300 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:02<00:45,  2.50s/it]
+[1ABatches:  11%|█         | 2/19 [00:03<00:26,  1.57s/it]
+[1ABatches:  16%|█▌        | 3/19 [00:04<00:21,  1.33s/it]
+[1ABatches:  21%|██        | 4/19 [00:05<00:18,  1.21s/it]
+[1ABatches:  26%|██▋       | 5/19 [00:06<00:15,  1.14s/it]
+[1ABatches:  32%|███▏      | 6/19 [00:07<00:14,  1.10s/it]
+[1ABatches:  37%|███▋      | 7/19 [00:08<00:12,  1.08s/it]
+[1ABatches:  42%|████▏     | 8/19 [00:09<00:11,  1.07s/it]
+[1ABatches:  47%|████▋     | 9/19 [00:10<00:10,  1.07s/it]
+[1ABatches:  53%|█████▎    | 10/19 [00:11<00:09,  1.05s/it]
+[1ABatches:  58%|█████▊    | 11/19 [00:12<00:08,  1.04s/it]
+[1ABatches:  63%|██████▎   | 12/19 [00:13<00:07,  1.03s/it]
+[1ABatches:  68%|██████▊   | 13/19 [00:14<00:06,  1.04s/it]
+[1ABatches:  74%|███████▎  | 14/19 [00:15<00:05,  1.00s/it]
+[1ABatches:  79%|███████▉  | 15/19 [00:16<00:04,  1.01s/it]
+[1ABatches:  84%|████████▍ | 16/19 [00:17<00:02,  1.02it/s]
+[1ABatches:  89%|████████▉ | 17/19 [00:18<00:01,  1.04it/s]
+[1ABatches:  95%|█████████▍| 18/19 [00:19<00:00,  1.02it/s]
+[1ABatches: 100%|██████████| 19/19 [00:20<00:00,  1.09it/s]
+[1ABatches: 100%|██████████| 19/19 [00:20<00:00,  1.07s/it]
+[10/15/26 07:03:23] INFO     hau: encode 300 audio took 20.4s                   
+                    INFO     hau audio->text R@1 = 0.003 (pool 300)             
+[10/15/26 07:03:26] INFO     FLEURS ibo/test: 300 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:01<00:18,  1.02s/it]
+[1ABatches:  11%|█         | 2/19 [00:01<00:15,  1.06it/s]
+[1ABatches:  16%|█▌        | 3/19 [00:02<00:15,  1.02it/s]
+[1ABatches:  21%|██        | 4/19 [00:03<00:14,  1.01it/s]
+[1ABatches:  26%|██▋       | 5/19 [00:04<00:14,  1.01s/it]
+[1ABatches:  32%|███▏      | 6/19 [00:05<00:12,  1.00it/s]
+[1ABatches:  37%|███▋      | 7/19 [00:06<00:12,  1.01s/it]
+[1ABatches:  42%|████▏     | 8/19 [00:07<00:11,  1.00s/it]
+[1ABatches:  47%|████▋     | 9/19 [00:09<00:10,  1.01s/it]
+[1ABatches:  53%|█████▎    | 10/19 [00:09<00:08,  1.09it/s]
+[1ABatches:  58%|█████▊    | 11/19 [00:10<00:07,  1.05it/s]
+[1ABatches:  63%|██████▎   | 12/19 [00:11<00:06,  1.02it/s]
+[1ABatches:  68%|██████▊   | 13/19 [00:12<00:05,  1.00it/s]
+[1ABatches:  74%|███████▎  | 14/19 [00:13<00:05,  1.01s/it]
+[1ABatches:  79%|███████▉  | 15/19 [00:14<00:03,  1.02it/s]
+[1ABatches:  84%|████████▍ | 16/19 [00:15<00:02,  1.02it/s]
+[1ABatches:  89%|████████▉ | 17/19 [00:16<00:01,  1.01it/s]
+[1ABatches:  95%|█████████▍| 18/19 [00:17<00:00,  1.00it/s]
+[1ABatches: 100%|██████████| 19/19 [00:18<00:00,  1.08it/s]
+[1ABatches: 100%|██████████| 19/19 [00:18<00:00,  1.02it/s]
+[10/15/26 07:03:45] INFO     ibo: encode 300 audio took 18.6s                   
+                    INFO     ibo audio->text R@1 = 0.003 (pool 300)             
+[10/15/26 07:03:48] INFO     FLEURS amh/test: 296 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:00<00:08,  2.09it/s]
+[1ABatches:  11%|█         | 2/19 [00:01<00:10,  1.68it/s]
+[1ABatches:  16%|█▌        | 3/19 [00:01<00:09,  1.67it/s]
+[1ABatches:  21%|██        | 4/19 [00:02<00:09,  1.54it/s]
+[1ABatches:  26%|██▋       | 5/19 [00:03<00:08,  1.58it/s]
+[1ABatches:  32%|███▏      | 6/19 [00:03<00:08,  1.48it/s]
+[1ABatches:  37%|███▋      | 7/19 [00:04<00:08,  1.49it/s]
+[1ABatches:  42%|████▏     | 8/19 [00:05<00:07,  1.53it/s]
+[1ABatches:  47%|████▋     | 9/19 [00:05<00:06,  1.62it/s]
+[1ABatches:  53%|█████▎    | 10/19 [00:06<00:05,  1.57it/s]
+[1ABatches:  58%|█████▊    | 11/19 [00:07<00:05,  1.41it/s]
+[1ABatches:  63%|██████▎   | 12/19 [00:07<00:05,  1.39it/s]
+[1ABatches:  68%|██████▊   | 13/19 [00:08<00:04,  1.26it/s]
+[1ABatches:  74%|███████▎  | 14/19 [00:09<00:03,  1.41it/s]
+[1ABatches:  79%|███████▉  | 15/19 [00:10<00:02,  1.45it/s]
+[1ABatches:  84%|████████▍ | 16/19 [00:10<00:02,  1.32it/s]
+[1ABatches:  89%|████████▉ | 17/19 [00:11<00:01,  1.35it/s]
+[1ABatches:  95%|█████████▍| 18/19 [00:12<00:00,  1.43it/s]
+[1ABatches: 100%|██████████| 19/19 [00:12<00:00,  1.72it/s]
+[1ABatches: 100%|██████████| 19/19 [00:12<00:00,  1.51it/s]
+[10/15/26 07:04:01] INFO     amh: encode 296 audio took 12.6s                   
+[10/15/26 07:04:02] INFO     amh audio->text R@1 = 0.003 (pool 296)             
+[10/15/26 07:04:04] INFO     Saved                                              
+                             /vol/results/speech-text/embeddinggemma-2/20261015-
+                             070402-control.json                                
+
+=== afriembed speech-text --langs hau,ibo,amh --max-items 300 --batch-size 16 --adapter checkpoints/audio-lora/adapter --shuffle-control --tag control
+[10/15/26 07:04:06] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  75%|███████▍  | 870/1165 [00:00<00:00, 8698.39it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 8774.55it/s]
+[10/15/26 07:04:10] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+
+[1ALoading weights:   0%|          | 0/336 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 336/336 [00:00<00:00, 5824.36it/s]
+                    INFO     Attached adapter default from                      
+                             checkpoints/audio-lora/adapter                     
+[10/15/26 07:04:13] INFO     FLEURS hau/test: 300 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:01<00:19,  1.09s/it]
+[1ABatches:  11%|█         | 2/19 [00:02<00:17,  1.02s/it]
+[1ABatches:  16%|█▌        | 3/19 [00:03<00:16,  1.04s/it]
+[1ABatches:  21%|██        | 4/19 [00:04<00:15,  1.06s/it]
+[1ABatches:  26%|██▋       | 5/19 [00:05<00:14,  1.07s/it]
+[1ABatches:  32%|███▏      | 6/19 [00:06<00:13,  1.07s/it]
+[1ABatches:  37%|███▋      | 7/19 [00:07<00:13,  1.09s/it]
+[1ABatches:  42%|████▏     | 8/19 [00:08<00:11,  1.09s/it]
+[1ABatches:  47%|████▋     | 9/19 [00:09<00:10,  1.09s/it]
+[1ABatches:  53%|█████▎    | 10/19 [00:10<00:09,  1.09s/it]
+[1ABatches:  58%|█████▊    | 11/19 [00:11<00:08,  1.09s/it]
+[1ABatches:  63%|██████▎   | 12/19 [00:12<00:07,  1.09s/it]
+[1ABatches:  68%|██████▊   | 13/19 [00:14<00:06,  1.09s/it]
+[1ABatches:  74%|███████▎  | 14/19 [00:15<00:05,  1.06s/it]
+[1ABatches:  79%|███████▉  | 15/19 [00:16<00:04,  1.07s/it]
+[1ABatches:  84%|████████▍ | 16/19 [00:17<00:03,  1.04s/it]
+[1ABatches:  89%|████████▉ | 17/19 [00:18<00:02,  1.02s/it]
+[1ABatches:  95%|█████████▍| 18/19 [00:19<00:01,  1.04s/it]
+[1ABatches: 100%|██████████| 19/19 [00:19<00:00,  1.02it/s]
+[1ABatches: 100%|██████████| 19/19 [00:19<00:00,  1.05s/it]
+[10/15/26 07:04:33] INFO     hau: encode 300 audio took 20.0s                   
+[10/15/26 07:04:34] INFO     hau audio->text R@1 = 0.003 (pool 300)             
+[10/15/26 07:04:36] INFO     FLEURS ibo/test: 300 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:01<00:19,  1.09s/it]
+[1ABatches:  11%|█         | 2/19 [00:02<00:17,  1.03s/it]
+[1ABatches:  16%|█▌        | 3/19 [00:03<00:16,  1.05s/it]
+[1ABatches:  21%|██        | 4/19 [00:04<00:15,  1.06s/it]
+[1ABatches:  26%|██▋       | 5/19 [00:05<00:14,  1.07s/it]
+[1ABatches:  32%|███▏      | 6/19 [00:06<00:13,  1.05s/it]
+[1ABatches:  37%|███▋      | 7/19 [00:07<00:12,  1.05s/it]
+[1ABatches:  42%|████▏     | 8/19 [00:08<00:11,  1.06s/it]
+[1ABatches:  47%|████▋     | 9/19 [00:09<00:10,  1.07s/it]
+[1ABatches:  53%|█████▎    | 10/19 [00:10<00:08,  1.03it/s]
+[1ABatches:  58%|█████▊    | 11/19 [00:11<00:08,  1.01s/it]
+[1ABatches:  63%|██████▎   | 12/19 [00:12<00:07,  1.04s/it]
+[1ABatches:  68%|██████▊   | 13/19 [00:13<00:06,  1.05s/it]
+[1ABatches:  74%|███████▎  | 14/19 [00:14<00:05,  1.06s/it]
+[1ABatches:  79%|███████▉  | 15/19 [00:15<00:04,  1.01s/it]
+[1ABatches:  84%|████████▍ | 16/19 [00:16<00:03,  1.02s/it]
+[1ABatches:  89%|████████▉ | 17/19 [00:17<00:02,  1.04s/it]
+[1ABatches:  95%|█████████▍| 18/19 [00:18<00:01,  1.05s/it]
+[1ABatches: 100%|██████████| 19/19 [00:19<00:00,  1.01it/s]
+[1ABatches: 100%|██████████| 19/19 [00:19<00:00,  1.03s/it]
+[10/15/26 07:04:56] INFO     ibo: encode 300 audio took 19.6s                   
+[10/15/26 07:04:57] INFO     ibo audio->text R@1 = 0.003 (pool 300)             
+[10/15/26 07:04:59] INFO     FLEURS amh/test: 296 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:00<00:09,  1.98it/s]
+[1ABatches:  11%|█         | 2/19 [00:01<00:10,  1.59it/s]
+[1ABatches:  16%|█▌        | 3/19 [00:01<00:10,  1.58it/s]
+[1ABatches:  21%|██        | 4/19 [00:02<00:10,  1.45it/s]
+[1ABatches:  26%|██▋       | 5/19 [00:03<00:09,  1.48it/s]
+[1ABatches:  32%|███▏      | 6/19 [00:04<00:09,  1.38it/s]
+[1ABatches:  37%|███▋      | 7/19 [00:04<00:08,  1.40it/s]
+[1ABatches:  42%|████▏     | 8/19 [00:05<00:07,  1.44it/s]
+[1ABatches:  47%|████▋     | 9/19 [00:06<00:06,  1.52it/s]
+[1ABatches:  53%|█████▎    | 10/19 [00:06<00:05,  1.50it/s]
+[1ABatches:  58%|█████▊    | 11/19 [00:07<00:05,  1.34it/s]
+[1ABatches:  63%|██████▎   | 12/19 [00:08<00:05,  1.31it/s]
+[1ABatches:  68%|██████▊   | 13/19 [00:09<00:05,  1.19it/s]
+[1ABatches:  74%|███████▎  | 14/19 [00:10<00:03,  1.33it/s]
+[1ABatches:  79%|███████▉  | 15/19 [00:10<00:02,  1.38it/s]
+[1ABatches:  84%|████████▍ | 16/19 [00:11<00:02,  1.26it/s]
+[1ABatches:  89%|████████▉ | 17/19 [00:12<00:01,  1.29it/s]
+[1ABatches:  95%|█████████▍| 18/19 [00:13<00:00,  1.36it/s]
+[1ABatches: 100%|██████████| 19/19 [00:13<00:00,  1.63it/s]
+[1ABatches: 100%|██████████| 19/19 [00:13<00:00,  1.43it/s]
+[10/15/26 07:05:12] INFO     amh: encode 296 audio took 13.4s                   
+[10/15/26 07:05:13] INFO     amh audio->text R@1 = 0.003 (pool 296)             
+                    INFO     Saved                                              
+                             /vol/results/speech-text/embeddinggemma-2/20261015-
+                             070513-adapter-control.json                        
+
+=== afriembed speech-text --langs hau,ibo,amh --max-items 300 --batch-size 16 --adapter checkpoints/audio-lora/adapter --tag recheck
+[10/15/26 07:05:15] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  73%|███████▎  | 852/1165 [00:00<00:00, 8515.52it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 8050.53it/s]
+[10/15/26 07:05:19] INFO     Loaded 20 prompts with these keys: ['query',       
+                             'document', 'BitextMining', 'Classification',      
+                             'Clustering', 'CodeRetrieval', 'Document',         
+                             'FactChecking', 'InstructionRetrieval',            
+                             'MultilabelClassification', 'PairClassification',  
+                             'QuestionAnswering', 'Reranking', 'Retrieval',     
+                             'Retrieval-document', 'Retrieval-query', 'STS',    
+                             'SearchQuery', 'SentenceSimilarity',               
+                             'Summarization']                                   
+
+[1ALoading weights:   0%|          | 0/336 [00:00<?, ?it/s]
+[1ALoading weights: 100%|██████████| 336/336 [00:00<00:00, 5167.75it/s]
+                    INFO     Attached adapter default from                      
+                             checkpoints/audio-lora/adapter                     
+[10/15/26 07:05:21] INFO     FLEURS hau/test: 300 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:01<00:19,  1.09s/it]
+[1ABatches:  11%|█         | 2/19 [00:02<00:17,  1.02s/it]
+[1ABatches:  16%|█▌        | 3/19 [00:03<00:17,  1.06s/it]
+[1ABatches:  21%|██        | 4/19 [00:04<00:16,  1.08s/it]
+[1ABatches:  26%|██▋       | 5/19 [00:05<00:15,  1.08s/it]
+[1ABatches:  32%|███▏      | 6/19 [00:06<00:13,  1.08s/it]
+[1ABatches:  37%|███▋      | 7/19 [00:07<00:13,  1.09s/it]
+[1ABatches:  42%|████▏     | 8/19 [00:08<00:12,  1.09s/it]
+[1ABatches:  47%|████▋     | 9/19 [00:09<00:10,  1.10s/it]
+[1ABatches:  53%|█████▎    | 10/19 [00:10<00:09,  1.10s/it]
+[1ABatches:  58%|█████▊    | 11/19 [00:11<00:08,  1.10s/it]
+[1ABatches:  63%|██████▎   | 12/19 [00:13<00:07,  1.11s/it]
+[1ABatches:  68%|██████▊   | 13/19 [00:14<00:06,  1.10s/it]
+[1ABatches:  74%|███████▎  | 14/19 [00:15<00:05,  1.08s/it]
+[1ABatches:  79%|███████▉  | 15/19 [00:16<00:04,  1.08s/it]
+[1ABatches:  84%|████████▍ | 16/19 [00:17<00:03,  1.05s/it]
+[1ABatches:  89%|████████▉ | 17/19 [00:18<00:02,  1.03s/it]
+[1ABatches:  95%|█████████▍| 18/19 [00:19<00:01,  1.04s/it]
+[1ABatches: 100%|██████████| 19/19 [00:20<00:00,  1.02it/s]
+[1ABatches: 100%|██████████| 19/19 [00:20<00:00,  1.06s/it]
+[10/15/26 07:05:42] INFO     hau: encode 300 audio took 20.2s                   
+[10/15/26 07:05:43] INFO     hau audio->text R@1 = 1.000 (pool 300)             
+[10/15/26 07:05:45] INFO     FLEURS ibo/test: 300 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:01<00:19,  1.09s/it]
+[1ABatches:  11%|█         | 2/19 [00:01<00:16,  1.02it/s]
+[1ABatches:  16%|█▌        | 3/19 [00:03<00:16,  1.04s/it]
+[1ABatches:  21%|██        | 4/19 [00:04<00:15,  1.06s/it]
+[1ABatches:  26%|██▋       | 5/19 [00:05<00:14,  1.07s/it]
+[1ABatches:  32%|███▏      | 6/19 [00:06<00:13,  1.07s/it]
+[1ABatches:  37%|███▋      | 7/19 [00:07<00:12,  1.08s/it]
+[1ABatches:  42%|████▏     | 8/19 [00:08<00:11,  1.08s/it]
+[1ABatches:  47%|████▋     | 9/19 [00:09<00:10,  1.08s/it]
+[1ABatches:  53%|█████▎    | 10/19 [00:10<00:08,  1.02it/s]
+[1ABatches:  58%|█████▊    | 11/19 [00:11<00:08,  1.01s/it]
+[1ABatches:  63%|██████▎   | 12/19 [00:12<00:07,  1.04s/it]
+[1ABatches:  68%|██████▊   | 13/19 [00:13<00:06,  1.06s/it]
+[1ABatches:  74%|███████▎  | 14/19 [00:14<00:05,  1.07s/it]
+[1ABatches:  79%|███████▉  | 15/19 [00:15<00:04,  1.03s/it]
+[1ABatches:  84%|████████▍ | 16/19 [00:16<00:03,  1.03s/it]
+[1ABatches:  89%|████████▉ | 17/19 [00:17<00:02,  1.05s/it]
+[1ABatches:  95%|█████████▍| 18/19 [00:18<00:01,  1.06s/it]
+[1ABatches: 100%|██████████| 19/19 [00:19<00:00,  1.01it/s]Batches: 100%|██████████| 19/19 [00:19<00:00,  1.04s/it]
+[10/15/26 07:06:05] INFO     ibo: encode 300 audio took 19.7s                   
+[10/15/26 07:06:06] INFO     ibo audio->text R@1 = 0.980 (pool 300)             
+[10/15/26 07:06:08] INFO     FLEURS amh/test: 296 utterances (deduped)          
+
+[1ABatches:   0%|          | 0/19 [00:00<?, ?it/s]
+[1ABatches:   5%|▌         | 1/19 [00:00<00:08,  2.01it/s]
+[1ABatches:  11%|█         | 2/19 [00:01<00:10,  1.55it/s]
+[1ABatches:  16%|█▌        | 3/19 [00:01<00:10,  1.57it/s]
+[1ABatches:  21%|██        | 4/19 [00:02<00:10,  1.44it/s]
+[1ABatches:  26%|██▋       | 5/19 [00:03<00:09,  1.49it/s]
+[1ABatches:  32%|███▏      | 6/19 [00:04<00:09,  1.39it/s]
+[1ABatches:  37%|███▋      | 7/19 [00:04<00:08,  1.41it/s]
+[1ABatches:  42%|████▏     | 8/19 [00:05<00:07,  1.46it/s]
+[1ABatches:  47%|████▋     | 9/19 [00:06<00:06,  1.53it/s]
+[1ABatches:  53%|█████▎    | 10/19 [00:06<00:05,  1.51it/s]
+[1ABatches:  58%|█████▊    | 11/19 [00:07<00:05,  1.34it/s]
+[1ABatches:  63%|██████▎   | 12/19 [00:08<00:05,  1.31it/s]
+[1ABatches:  68%|██████▊   | 13/19 [00:09<00:05,  1.19it/s]
+[1ABatches:  74%|███████▎  | 14/19 [00:09<00:03,  1.33it/s]
+[1ABatches:  79%|███████▉  | 15/19 [00:10<00:02,  1.38it/s]
+[1ABatches:  84%|████████▍ | 16/19 [00:11<00:02,  1.27it/s]
+[1ABatches:  89%|████████▉ | 17/19 [00:12<00:01,  1.28it/s]
+[1ABatches:  95%|█████████▍| 18/19 [00:13<00:00,  1.34it/s]
+[1ABatches: 100%|██████████| 19/19 [00:13<00:00,  1.61it/s]
+[1ABatches: 100%|██████████| 19/19 [00:13<00:00,  1.42it/s]
+[10/15/26 07:06:21] INFO     amh: encode 296 audio took 13.4s                   
+[10/15/26 07:06:23] INFO     amh audio->text R@1 = 0.986 (pool 296)             
+                    INFO     Saved                                              
+                             /vol/results/speech-text/embeddinggemma-2/20261015-
+                             070623-adapter-recheck.json                        
+ok  speech-text --langs hau,ibo,amh --max-items 300 --batch-size 16 --shuffle-control --tag control
+ok  speech-text --langs hau,ibo,amh --max-items 300 --batch-size 16 --adapter checkpoints/audio-lora/adapter --shuffle-control --tag control
+ok  speech-text --langs hau,ibo,amh --max-items 300 --batch-size 16 --adapter checkpoints/audio-lora/adapter --tag recheck
+# afriembed results
+
+## accent
+
+**embeddinggemma-2** (20261014-204458-noprompt) overall R@1=0.889 pool=1967
+
+| country | n | R@1 | R@10 | MRR |
+|---|---|---|---|---|
+| BW | 29 | 0.931 | 1.000 | 0.953 |
+| GH | 60 | 0.900 | 0.967 | 0.926 |
+| KE | 87 | 0.966 | 1.000 | 0.972 |
+| LS | 3 | 1.000 | 1.000 | 1.000 |
+| NG | 1513 | 0.877 | 0.947 | 0.902 |
+| RW | 15 | 0.933 | 1.000 | 0.942 |
+| UG | 30 | 0.900 | 0.933 | 0.908 |
+| US | 1 | 1.000 | 1.000 | 1.000 |
+| ZA | 225 | 0.924 | 0.960 | 0.937 |
+| ZW | 4 | 1.000 | 1.000 | 1.000 |
+
+| domain | n | R@1 | MRR |
+|---|---|---|---|
+| clinical | 1185 | 0.889 | 0.914 |
+| general | 782 | 0.889 | 0.906 |
+
+**embeddinggemma-2** (20261014-211518) overall R@1=0.888 pool=1967
+
+| country | n | R@1 | R@10 | MRR |
+|---|---|---|---|---|
+| BW | 29 | 0.931 | 1.000 | 0.966 |
+| GH | 60 | 0.850 | 0.983 | 0.912 |
+| KE | 87 | 0.977 | 0.989 | 0.983 |
+| LS | 3 | 1.000 | 1.000 | 1.000 |
+| NG | 1513 | 0.876 | 0.942 | 0.901 |
+| RW | 15 | 0.867 | 0.933 | 0.891 |
+| UG | 30 | 0.933 | 0.967 | 0.938 |
+| US | 1 | 1.000 | 1.000 | 1.000 |
+| ZA | 225 | 0.929 | 0.960 | 0.943 |
+| ZW | 4 | 1.000 | 1.000 | 1.000 |
+
+| domain | n | R@1 | MRR |
+|---|---|---|---|
+| clinical | 1185 | 0.892 | 0.917 |
+| general | 782 | 0.882 | 0.903 |
+
+## afrimteb-full
+
+| model | run | prompts | dim | macro avg | aeb | afr | aka | amh | arb | arq | ary | arz | bam | bem | cjk | dik | dyu | ewe | fon | fuv | gaz | hau | ibo | kab | kam | kbp | kea | kik | kin | kmb | knc | kon | lin | lua | lug | luo | mos | nqo | nso | nus | nya | pcm | plt | por | run | sag | sna | som | sot | ssw | swh | taq | tir | tsn | tso | tum | twi | tzm | umb | ven | wol | xho | yor | zul |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-224619 | True | 768 | 0.520 | 0.466 | 0.516 | 0.409 | 0.437 | 0.402 | 0.378 | 0.464 | 0.492 | 0.363 | 0.425 | 0.377 | 0.369 | 0.328 | 0.379 | 0.347 | 0.381 | 0.293 | 0.406 | 0.409 | 0.240 | 0.386 | 0.339 | 0.477 | 0.365 | 0.384 | 0.374 | 0.277 | 0.405 | 0.414 | 0.408 | 0.374 | 0.398 | 0.375 | 0.145 | 0.431 | 0.234 | 0.424 | 0.593 | 0.397 | 0.542 | 0.377 | 0.394 | 0.415 | 0.381 | 0.409 | 0.412 | 0.506 | 0.224 | 0.337 | 0.410 | 0.394 | 0.398 | 0.421 | 0.064 | 0.372 | 0.517 | 0.417 | 0.424 | 0.371 | 0.414 |
+| embeddinggemma-300m | 20261014-235446 | True | 768 | 0.526 | 0.475 | 0.527 | 0.434 | 0.448 | 0.413 | 0.354 | 0.473 | 0.501 | 0.393 | 0.453 | 0.404 | 0.388 | 0.342 | 0.411 | 0.378 | 0.412 | 0.322 | 0.439 | 0.428 | 0.288 | 0.417 | 0.369 | 0.496 | 0.391 | 0.416 | 0.404 | 0.313 | 0.440 | 0.447 | 0.437 | 0.400 | 0.426 | 0.400 | 0.147 | 0.461 | 0.325 | 0.452 | 0.608 | 0.426 | 0.549 | 0.410 | 0.426 | 0.444 | 0.402 | 0.439 | 0.436 | 0.516 | 0.281 | 0.333 | 0.443 | 0.422 | 0.425 | 0.448 | 0.131 | 0.395 | 0.533 | 0.435 | 0.447 | 0.394 | 0.439 |
+
+| task | embeddinggemma-2:224619 | embeddinggemma-300m:235446 |
+|---|---|---|
+| AfriHateClassification | 0.485 | 0.476 |
+| AfriSentiClassification | 0.457 | 0.437 |
+| AfriSentiLangClassification | 0.832 | 0.729 |
+| AfriXNLI | 0.605 | 0.607 |
+| BelebeleRetrieval | 0.564 | 0.587 |
+| BibleNLPBitextMining | 0.191 | 0.213 |
+| EmotionAnalysisPlus | 0.267 | 0.254 |
+| FloresBitextMining | 0.377 | 0.405 |
+| InjongoIntent | 0.584 | 0.612 |
+| IsiZuluNewsClassification | 0.242 | 0.242 |
+| KinNewsClassification | 0.509 | 0.499 |
+| MIRACLReranking | 0.575 | 0.575 |
+| MIRACLRetrievalHardNegatives | 0.672 | 0.674 |
+| MasakhaNEWSClassification | 0.750 | 0.744 |
+| MasakhaNEWSClusteringP2P | 0.543 | 0.525 |
+| MasakhaNEWSClusteringS2S | 0.464 | 0.453 |
+| MassiveIntentClassification | 0.604 | 0.620 |
+| MassiveScenarioClassification | 0.697 | 0.710 |
+| MultilingualSentimentClassification | 0.728 | 0.760 |
+| NTREXBitextMining | 0.508 | 0.527 |
+| NaijaSenti | 0.438 | 0.424 |
+| NollySentiBitextMining | 0.373 | 0.412 |
+| SIB200Classification | 0.437 | 0.452 |
+| SIB200Classification.v2 | 0.266 | 0.288 |
+| SIB200ClusteringS2S | 0.137 | 0.175 |
+| SemRel24STS | 0.613 | 0.601 |
+| SiswatiNewsClassification | 0.475 | 0.540 |
+| SouthAfricanLangClassification | 0.750 | 0.718 |
+| SwahiliNewsClassification | 0.590 | 0.637 |
+| Tatoeba | 0.420 | 0.410 |
+| TswanaNewsClassification | 0.315 | 0.312 |
+| XNLI | 0.740 | 0.778 |
+| XQuADRetrieval | 0.947 | 0.961 |
+## afrimteb-lite
+
+| model | run | prompts | dim | macro avg | amh | gaz | hau | ibo | kin | swh | xho | yor | zul |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| afrie5-large-instruct | 20261014-204557 | True | 1024 | 0.662 | 0.871 | 0.806 | 0.865 | 0.858 | 0.834 | 0.918 | 0.880 | 0.834 | 0.882 |
+| bge-m3 | 20261014-202704 | True | 1024 | 0.575 | 0.774 | 0.657 | 0.787 | 0.709 | 0.700 | 0.847 | 0.779 | 0.667 | 0.784 |
+| embeddinggemma-2 | 20261014-215246-adapter-text-lora | True | 768 | 0.440 | 0.450 | 0.319 | 0.444 | 0.442 | 0.395 | 0.523 | 0.447 | 0.420 | 0.439 |
+| embeddinggemma-2 | 20261014-211333-d128 | True | 128 | 0.405 | 0.349 | 0.235 | 0.365 | 0.373 | 0.328 | 0.421 | 0.380 | 0.347 | 0.368 |
+| embeddinggemma-2 | 20261014-210431-d256 | True | 256 | 0.435 | 0.415 | 0.285 | 0.409 | 0.415 | 0.367 | 0.483 | 0.427 | 0.389 | 0.415 |
+| embeddinggemma-2 | 20261014-205527-d512 | True | 512 | 0.445 | 0.440 | 0.310 | 0.427 | 0.432 | 0.382 | 0.506 | 0.447 | 0.405 | 0.435 |
+| embeddinggemma-2 | 20261014-195245-fullctx | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-2 | 20261014-212504-trimmed | True | 768 | 0.396 | 0.357 | 0.245 | 0.321 | 0.322 | 0.315 | 0.428 | 0.328 | 0.296 | 0.316 |
+| embeddinggemma-2 | 20261014-185051-noprompt | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-300m | 20261014-195419-fullctx | True | 768 | 0.453 | 0.447 | 0.337 | 0.462 | 0.451 | 0.420 | 0.524 | 0.471 | 0.424 | 0.461 |
+| embeddinggemma-300m | 20261014-185418-noprompt | False | 768 | 0.434 | 0.396 | 0.282 | 0.433 | 0.426 | 0.389 | 0.493 | 0.439 | 0.405 | 0.430 |
+| me5-base | 20261014-200425 | True | 768 | 0.573 | 0.795 | 0.653 | 0.792 | 0.779 | 0.748 | 0.857 | 0.812 | 0.744 | 0.821 |
+| me5-large-instruct | 20261014-203641 | True | 1024 | 0.647 | 0.858 | 0.795 | 0.861 | 0.854 | 0.827 | 0.919 | 0.877 | 0.828 | 0.880 |
+| me5-small | 20261014-201244 | True | 384 | 0.535 | 0.739 | 0.503 | 0.715 | 0.719 | 0.701 | 0.812 | 0.761 | 0.658 | 0.774 |
+
+| task | afrie5-large-instruct:204557 | bge-m3:202704 | embeddinggemma-2:t-lora | embeddinggemma-2:3-d128 | embeddinggemma-2:1-d256 | embeddinggemma-2:7-d512 | embeddinggemma-2:ullctx | embeddinggemma-2:rimmed | embeddinggemma-2:prompt | embeddinggemma-300m:ullctx | embeddinggemma-300m:prompt | me5-base:200425 | me5-large-instruct:203641 | me5-small:201244 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| AfriHateClassification | 0.509 | 0.495 | 0.471 | 0.466 | 0.473 | 0.478 | 0.495 | 0.476 | 0.495 | 0.481 | 0.490 | 0.490 | 0.511 | 0.472 |
+| AfriSentiClassification | 0.551 | 0.512 | 0.496 | 0.498 | 0.494 | 0.495 | 0.530 | 0.445 | 0.530 | 0.442 | 0.467 | 0.513 | 0.497 | 0.469 |
+| AfriXNLI | 0.688 | 0.683 | 0.583 | 0.597 | 0.599 | 0.597 | 0.564 | 0.572 | 0.564 | 0.592 | 0.570 | 0.635 | 0.642 | 0.621 |
+| BelebeleRetrieval | 0.764 | 0.699 | 0.517 | 0.433 | 0.486 | 0.513 | 0.505 | 0.409 | 0.505 | 0.549 | 0.454 | 0.629 | 0.760 | 0.530 |
+| EmotionAnalysisPlus | 0.313 | 0.280 | 0.281 | 0.274 | 0.279 | 0.280 | 0.274 | 0.256 | 0.274 | 0.265 | 0.266 | 0.293 | 0.296 | 0.280 |
+| FloresBitextMining | 0.979 | 0.850 | 0.411 | 0.307 | 0.365 | 0.390 | 0.353 | 0.292 | 0.353 | 0.421 | 0.383 | 0.913 | 0.978 | 0.828 |
+| InjongoIntent | 0.750 | 0.748 | 0.481 | 0.495 | 0.533 | 0.558 | 0.575 | 0.610 | 0.575 | 0.595 | 0.593 | 0.750 | 0.755 | 0.650 |
+| KinNewsClassification | 0.575 | 0.504 | 0.446 | 0.396 | 0.436 | 0.442 | 0.441 | 0.387 | 0.439 | 0.434 | 0.415 | 0.503 | 0.561 | 0.533 |
+| MasakhaNEWSClassification | 0.835 | 0.768 | 0.745 | 0.699 | 0.745 | 0.750 | 0.730 | 0.672 | 0.728 | 0.750 | 0.738 | 0.749 | 0.829 | 0.734 |
+| NTREXBitextMining | 0.948 | 0.828 | 0.483 | 0.386 | 0.442 | 0.466 | 0.442 | 0.257 | 0.442 | 0.490 | 0.456 | 0.886 | 0.944 | 0.817 |
+| SIB200Classification | 0.719 | 0.556 | 0.426 | 0.380 | 0.423 | 0.434 | 0.426 | 0.413 | 0.426 | 0.442 | 0.424 | 0.549 | 0.710 | 0.525 |
+| SIB200Classification.v2 | 0.523 | 0.343 | 0.241 | 0.210 | 0.244 | 0.246 | 0.248 | 0.232 | 0.248 | 0.262 | 0.242 | 0.341 | 0.491 | 0.316 |
+| SIB200ClusteringS2S | 0.457 | 0.211 | 0.135 | 0.121 | 0.141 | 0.141 | 0.127 | 0.124 | 0.127 | 0.166 | 0.143 | 0.200 | 0.437 | 0.183 |
+## ciral
+
+| model | run | split | hau nDCG@20 | som nDCG@20 | swh nDCG@20 | yor nDCG@20 | hau R@100 | som R@100 | swh R@100 | yor R@100 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-220148-adapter-text-lora | test-a | 0.338 | 0.356 | 0.457 | 0.336 | 0.630 | 0.635 | 0.862 | 0.693 |
+| embeddinggemma-2 | 20261014-205251 | test-a | 0.352 | 0.363 | 0.452 | 0.355 | 0.636 | 0.631 | 0.859 | 0.690 |
+| embeddinggemma-300m | 20261014-210822 | test-a | 0.387 | 0.357 | 0.486 | 0.373 | 0.698 | 0.602 | 0.866 | 0.724 |
+| me5-base | 20261014-210128 | test-a | 0.384 | 0.357 | 0.400 | 0.377 | 0.678 | 0.603 | 0.786 | 0.744 |
+
+## fertility
+
+| lang | tier | script | gemma-4 (EmbeddingGemma 2) tok/word | gemma-3 (EmbeddingGemma 1) tok/word | xlm-roberta (mE5 / bge-m3) tok/word | nllb-200 tok/word | gemma-4 (EmbeddingGemma 2) ×eng | gemma-3 (EmbeddingGemma 1) ×eng | xlm-roberta (mE5 / bge-m3) ×eng | nllb-200 ×eng |
+|---|---|---|---|---|---|---|---|---|---|---|
+| eng | anchor | Latn | 1.245 | 1.245 | 1.394 | 1.383 | 1.000 | 1.000 | 1.000 | 1.000 |
+| fra | anchor | Latn | 1.535 | 1.535 | 1.589 | 1.670 | 1.233 | 1.233 | 1.140 | 1.207 |
+| arb | anchor | Arab | 2.041 | 2.041 | 1.818 | 2.185 | 1.639 | 1.639 | 1.304 | 1.580 |
+| amh | mid | Ethi | 3.011 | 3.011 | 2.343 | 2.306 | 2.419 | 2.419 | 1.681 | 1.667 |
+| gaz | low | Latn | 2.958 | 2.958 | 2.779 | 2.250 | 2.376 | 2.376 | 1.994 | 1.626 |
+| ibo | mid | Latn | 2.289 | 2.289 | 2.537 | 1.623 | 1.839 | 1.839 | 1.820 | 1.173 |
+| yor | mid | Latn | 2.515 | 2.515 | 2.630 | 1.793 | 2.020 | 2.020 | 1.887 | 1.296 |
+| hau | high | Latn | 1.853 | 1.853 | 1.672 | 1.415 | 1.488 | 1.488 | 1.199 | 1.023 |
+| swh | high | Latn | 2.058 | 2.058 | 1.656 | 1.605 | 1.653 | 1.653 | 1.188 | 1.160 |
+| kin | mid | Latn | 2.606 | 2.606 | 2.554 | 1.952 | 2.093 | 2.093 | 1.833 | 1.411 |
+| xho | mid | Latn | 3.239 | 3.239 | 2.924 | 2.369 | 2.602 | 2.602 | 2.098 | 1.712 |
+| zul | mid | Latn | 3.403 | 3.403 | 3.040 | 2.432 | 2.733 | 2.733 | 2.181 | 1.758 |
+| afr | high | Latn | 1.765 | 1.765 | 1.567 | 1.592 | 1.417 | 1.417 | 1.125 | 1.151 |
+| som | mid | Latn | 2.238 | 2.238 | 1.841 | 1.820 | 1.798 | 1.798 | 1.321 | 1.315 |
+| wol | low | Latn | 1.887 | 1.887 | 1.904 | 1.603 | 1.516 | 1.516 | 1.366 | 1.159 |
+| lug | low | Latn | 2.738 | 2.738 | 2.621 | 2.146 | 2.199 | 2.199 | 1.881 | 1.551 |
+| lin | low | Latn | 1.920 | 1.920 | 1.911 | 1.432 | 1.542 | 1.542 | 1.371 | 1.035 |
+| sna | mid | Latn | 2.896 | 2.896 | 2.863 | 2.175 | 2.326 | 2.326 | 2.054 | 1.572 |
+| nso | low | Latn | 1.844 | 1.844 | 1.830 | 1.440 | 1.482 | 1.482 | 1.313 | 1.041 |
+| nya | low | Latn | 2.568 | 2.568 | 2.442 | 1.786 | 2.063 | 2.063 | 1.752 | 1.291 |
+| umb | low | Latn | 2.803 | 2.803 | 2.673 | 2.199 | 2.251 | 2.251 | 1.918 | 1.590 |
+| fuv | low | Latn | 1.945 | 1.945 | 1.929 | 1.658 | 1.562 | 1.562 | 1.384 | 1.198 |
+| luo | low | Latn | 1.870 | 1.870 | 1.870 | 1.540 | 1.502 | 1.502 | 1.342 | 1.114 |
+| kam | low | Latn | 2.382 | 2.382 | 2.344 | 1.843 | 1.914 | 1.914 | 1.682 | 1.332 |
+| kea | low | Latn | 1.826 | 1.826 | 1.775 | 1.687 | 1.467 | 1.467 | 1.274 | 1.220 |
+| ewe | low | Latn | 2.334 | 2.334 | 2.396 | 1.544 | 1.875 | 1.875 | 1.719 | 1.116 |
+| twi | low | Latn | 1.987 | 1.987 | 2.183 | 1.443 | 1.596 | 1.596 | 1.566 | 1.043 |
+| tir | low | Ethi | 3.404 | 3.404 | 3.028 | 2.274 | 2.734 | 2.734 | 2.173 | 1.644 |
+| kik | low | Latn | 2.920 | 2.920 | 3.011 | 1.942 | 2.346 | 2.346 | 2.161 | 1.404 |
+| bem | low | Latn | 2.360 | 2.360 | 2.285 | 1.830 | 1.896 | 1.896 | 1.639 | 1.323 |
+
+## finetune-audio
+
+| model | run | keys |
+|---|---|---|
+| embeddinggemma-2 | 20261014-232836-train | experiment, model, run_id, timestamp, saved, n_pairs, languages, epochs, lr, batch_size, train_audio_tower, lora |
+
+## finetune-text
+
+| model | run | keys |
+|---|---|---|
+| embeddinggemma-2 | 20261014-214355-train | experiment, model, run_id, timestamp, saved, n_pairs, languages, epochs, lr, batch_size, lora, prompts |
+
+## heldout
+
+| model | run | keys |
+|---|---|---|
+| embeddinggemma-2 | 20261015-055448-adapter-audio-lora | experiment, model, run_id, timestamp, sources, text_task, model_info, per_source, mean_audio->text_recall@1 |
+| embeddinggemma-2 | 20261015-055213 | experiment, model, run_id, timestamp, sources, text_task, model_info, per_source, mean_audio->text_recall@1 |
+
+## lid
+
+| model | run | langs | audio kNN | audio NMI | audio purity | text kNN | text NMI | chance |
+|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-204003-noprompt | 21 | 0.670 | 0.706 | 0.699 | 0.602 | 0.661 | 0.048 |
+| embeddinggemma-2 | 20261014-212241 | 21 | 0.670 | 0.706 | 0.699 | 0.708 | 0.616 | 0.048 |
+
+## speech-bitext
+
+**embeddinggemma-2** (20261014-231405-adapter-audio-lora, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| amh->eng | 296 | 0.649 | 0.601 | 0.902 | 0.841 | 0.689 |
+| gaz->eng | 36 | 0.500 | 0.472 | 0.472 | 0.528 | 0.500 |
+| ibo->eng | 350 | 0.403 | 0.369 | 0.554 | 0.463 | 0.434 |
+| yor->eng | 340 | 0.429 | 0.397 | 0.524 | 0.479 | 0.482 |
+| hau->eng | 331 | 0.420 | 0.335 | 0.553 | 0.468 | 0.435 |
+| swh->eng | 312 | 0.737 | 0.679 | 0.949 | 0.923 | 0.804 |
+| xho->eng | 350 | 0.491 | 0.477 | 0.571 | 0.494 | 0.549 |
+| zul->eng | 346 | 0.405 | 0.373 | 0.483 | 0.422 | 0.465 |
+| som->eng | 350 | 0.420 | 0.394 | 0.486 | 0.466 | 0.457 |
+| wol->eng | 239 | 0.527 | 0.515 | 0.644 | 0.561 | 0.603 |
+| lug->eng | 339 | 0.378 | 0.339 | 0.513 | 0.428 | 0.413 |
+| lin->eng | 285 | 0.463 | 0.418 | 0.611 | 0.547 | 0.540 |
+| sna->eng | 348 | 0.474 | 0.428 | 0.506 | 0.471 | 0.514 |
+
+**embeddinggemma-2** (20261015-061004-adapter-stacked, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| amh->eng | 296 | 0.655 | 0.625 | 0.919 | 0.875 | 0.699 |
+| gaz->eng | 36 | 0.500 | 0.444 | 0.583 | 0.556 | 0.500 |
+| ibo->eng | 350 | 0.443 | 0.423 | 0.591 | 0.523 | 0.471 |
+| yor->eng | 340 | 0.482 | 0.462 | 0.574 | 0.550 | 0.524 |
+| hau->eng | 331 | 0.450 | 0.384 | 0.577 | 0.544 | 0.471 |
+| swh->eng | 312 | 0.763 | 0.728 | 0.971 | 0.952 | 0.830 |
+| xho->eng | 350 | 0.569 | 0.537 | 0.609 | 0.557 | 0.583 |
+| zul->eng | 346 | 0.477 | 0.445 | 0.535 | 0.494 | 0.529 |
+| som->eng | 350 | 0.457 | 0.417 | 0.534 | 0.509 | 0.506 |
+| wol->eng | 239 | 0.573 | 0.573 | 0.695 | 0.619 | 0.623 |
+| lug->eng | 339 | 0.428 | 0.395 | 0.552 | 0.504 | 0.466 |
+| lin->eng | 285 | 0.523 | 0.481 | 0.684 | 0.614 | 0.572 |
+| sna->eng | 348 | 0.523 | 0.483 | 0.546 | 0.523 | 0.566 |
+
+**embeddinggemma-2** (20261014-222111-adapter-text-lora, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| amh->eng | 296 | 0.618 | 0.595 | 0.922 | 0.875 | 0.693 |
+| gaz->eng | 36 | 0.444 | 0.444 | 0.472 | 0.389 | 0.444 |
+| ibo->eng | 350 | 0.400 | 0.417 | 0.566 | 0.523 | 0.454 |
+| yor->eng | 340 | 0.450 | 0.468 | 0.565 | 0.521 | 0.509 |
+| hau->eng | 331 | 0.414 | 0.384 | 0.559 | 0.498 | 0.465 |
+| swh->eng | 312 | 0.737 | 0.712 | 0.978 | 0.965 | 0.830 |
+| xho->eng | 350 | 0.523 | 0.509 | 0.577 | 0.529 | 0.583 |
+| zul->eng | 346 | 0.425 | 0.445 | 0.523 | 0.474 | 0.526 |
+| som->eng | 350 | 0.400 | 0.397 | 0.503 | 0.483 | 0.480 |
+| wol->eng | 239 | 0.527 | 0.527 | 0.653 | 0.598 | 0.603 |
+| lug->eng | 339 | 0.401 | 0.401 | 0.534 | 0.475 | 0.478 |
+| lin->eng | 285 | 0.495 | 0.477 | 0.653 | 0.604 | 0.561 |
+| sna->eng | 348 | 0.500 | 0.474 | 0.540 | 0.511 | 0.563 |
+
+**embeddinggemma-2** (20261014-203832-allpairs, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| hau->yor | 321 | 0.305 | 0.330 | 0.477 | 0.380 | 0.358 |
+| hau->swh | 294 | 0.289 | 0.354 | 0.469 | 0.435 | 0.401 |
+| hau->amh | 278 | 0.338 | 0.353 | 0.442 | 0.457 | 0.374 |
+| hau->ibo | 331 | 0.290 | 0.299 | 0.480 | 0.353 | 0.393 |
+| hau->som | 331 | 0.284 | 0.293 | 0.523 | 0.335 | 0.350 |
+| yor->hau | 321 | 0.293 | 0.321 | 0.461 | 0.349 | 0.368 |
+| yor->swh | 304 | 0.303 | 0.355 | 0.467 | 0.428 | 0.405 |
+| yor->amh | 289 | 0.356 | 0.367 | 0.474 | 0.443 | 0.419 |
+| yor->ibo | 340 | 0.306 | 0.324 | 0.450 | 0.347 | 0.394 |
+| yor->som | 340 | 0.291 | 0.265 | 0.444 | 0.309 | 0.353 |
+| swh->hau | 294 | 0.405 | 0.384 | 0.469 | 0.408 | 0.452 |
+| swh->yor | 304 | 0.405 | 0.339 | 0.497 | 0.428 | 0.457 |
+| swh->amh | 265 | 0.630 | 0.540 | 0.853 | 0.577 | 0.702 |
+| swh->ibo | 312 | 0.388 | 0.340 | 0.532 | 0.401 | 0.468 |
+| swh->som | 312 | 0.369 | 0.381 | 0.490 | 0.433 | 0.458 |
+| amh->hau | 278 | 0.432 | 0.414 | 0.457 | 0.403 | 0.496 |
+| amh->yor | 289 | 0.426 | 0.446 | 0.478 | 0.426 | 0.464 |
+| amh->swh | 265 | 0.536 | 0.543 | 0.849 | 0.675 | 0.592 |
+| amh->ibo | 296 | 0.453 | 0.392 | 0.510 | 0.365 | 0.544 |
+| amh->som | 296 | 0.392 | 0.409 | 0.459 | 0.389 | 0.449 |
+| ibo->hau | 331 | 0.218 | 0.287 | 0.468 | 0.378 | 0.326 |
+| ibo->yor | 340 | 0.262 | 0.344 | 0.444 | 0.403 | 0.324 |
+| ibo->swh | 312 | 0.266 | 0.327 | 0.478 | 0.442 | 0.359 |
+| ibo->amh | 296 | 0.331 | 0.345 | 0.483 | 0.480 | 0.402 |
+| ibo->som | 350 | 0.240 | 0.260 | 0.454 | 0.331 | 0.314 |
+| som->hau | 331 | 0.233 | 0.278 | 0.462 | 0.323 | 0.332 |
+| som->yor | 340 | 0.274 | 0.265 | 0.412 | 0.356 | 0.321 |
+| som->swh | 312 | 0.330 | 0.349 | 0.455 | 0.391 | 0.436 |
+| som->amh | 296 | 0.345 | 0.348 | 0.459 | 0.405 | 0.416 |
+| som->ibo | 350 | 0.274 | 0.269 | 0.443 | 0.303 | 0.360 |
+
+**embeddinggemma-2** (20261014-203716, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| amh->eng | 296 | 0.625 | 0.605 | 0.909 | 0.841 | 0.696 |
+| gaz->eng | 36 | 0.417 | 0.389 | 0.389 | 0.417 | 0.444 |
+| ibo->eng | 350 | 0.337 | 0.314 | 0.543 | 0.483 | 0.426 |
+| yor->eng | 340 | 0.382 | 0.347 | 0.547 | 0.497 | 0.476 |
+| hau->eng | 331 | 0.338 | 0.302 | 0.547 | 0.489 | 0.432 |
+| swh->eng | 312 | 0.718 | 0.670 | 0.968 | 0.955 | 0.833 |
+| xho->eng | 350 | 0.443 | 0.454 | 0.571 | 0.537 | 0.529 |
+| zul->eng | 346 | 0.355 | 0.358 | 0.491 | 0.457 | 0.448 |
+| som->eng | 350 | 0.369 | 0.357 | 0.480 | 0.463 | 0.454 |
+| wol->eng | 239 | 0.498 | 0.490 | 0.632 | 0.569 | 0.590 |
+| lug->eng | 339 | 0.348 | 0.330 | 0.525 | 0.437 | 0.422 |
+| lin->eng | 285 | 0.382 | 0.316 | 0.628 | 0.551 | 0.540 |
+| sna->eng | 348 | 0.425 | 0.388 | 0.532 | 0.511 | 0.523 |
+
+## speech-text
+
+**embeddinggemma-2** (20261014-233114-adapter-audio-full, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.993 | 0.993 | 0.990 | 0.980 | 0.997 | 0.997 |
+| gaz | low | 36 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| ibo | mid | 350 | 0.991 | 0.991 | 0.989 | 0.974 | 0.974 | 0.994 |
+| yor | mid | 340 | 1.000 | 1.000 | 1.000 | 0.997 | 0.997 | 1.000 |
+| hau | high | 331 | 1.000 | 1.000 | 0.997 | 1.000 | 1.000 | 1.000 |
+| swh | high | 312 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| xho | mid | 350 | 1.000 | 1.000 | 1.000 | 0.994 | 1.000 | 1.000 |
+| zul | mid | 346 | 1.000 | 1.000 | 1.000 | 0.991 | 1.000 | 1.000 |
+| afr | high | 233 | 1.000 | 1.000 | 0.996 | 0.953 | 0.996 | 1.000 |
+| som | mid | 350 | 0.994 | 0.994 | 0.991 | 0.986 | 0.991 | 0.995 |
+| wol | low | 239 | 1.000 | 1.000 | 0.996 | 0.996 | 1.000 | 1.000 |
+| lug | low | 339 | 0.994 | 0.994 | 0.994 | 0.997 | 1.000 | 0.997 |
+| lin | low | 285 | 0.993 | 0.993 | 0.986 | 0.982 | 0.996 | 0.996 |
+| sna | mid | 348 | 1.000 | 1.000 | 1.000 | 0.994 | 1.000 | 1.000 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.998 | 1.000 |
+| 512 | 0.998 | 1.000 |
+| 256 | 0.996 | 0.998 |
+| 128 | 0.989 | 0.991 |
+
+**embeddinggemma-2** (20261014-230926-adapter-audio-lora, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.986 | 0.986 | 0.986 | 0.959 | 0.997 | 0.992 |
+| gaz | low | 36 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| ibo | mid | 350 | 0.983 | 0.980 | 0.966 | 0.937 | 0.969 | 0.988 |
+| yor | mid | 340 | 1.000 | 1.000 | 1.000 | 0.994 | 0.997 | 1.000 |
+| hau | high | 331 | 1.000 | 1.000 | 0.997 | 0.997 | 1.000 | 1.000 |
+| swh | high | 312 | 0.997 | 1.000 | 0.997 | 0.990 | 0.997 | 0.998 |
+| xho | mid | 350 | 1.000 | 1.000 | 1.000 | 0.994 | 1.000 | 1.000 |
+| zul | mid | 346 | 1.000 | 1.000 | 1.000 | 0.994 | 0.994 | 1.000 |
+| afr | high | 233 | 1.000 | 0.996 | 0.996 | 0.974 | 1.000 | 1.000 |
+| som | mid | 350 | 0.991 | 0.991 | 0.991 | 0.974 | 0.991 | 0.993 |
+| wol | low | 239 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| lug | low | 339 | 0.997 | 1.000 | 0.994 | 0.997 | 1.000 | 0.999 |
+| lin | low | 285 | 0.996 | 0.996 | 0.996 | 0.986 | 0.996 | 0.998 |
+| sna | mid | 348 | 1.000 | 1.000 | 1.000 | 0.991 | 1.000 | 1.000 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.997 | 1.000 |
+| 512 | 0.996 | 1.000 |
+| 256 | 0.995 | 0.998 |
+| 128 | 0.985 | 0.988 |
+
+**embeddinggemma-2** (20261015-070513-adapter-control, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| hau | high | 300 | 0.003 | 0.003 | 0.003 | 0.003 | 0.003 | 0.019 |
+| ibo | mid | 300 | 0.003 | 0.003 | 0.003 | 0.003 | 0.003 | 0.017 |
+| amh | mid | 296 | 0.003 | 0.003 | 0.003 | 0.003 | 0.003 | 0.025 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.003 | 1.000 |
+| 512 | 0.003 | 1.000 |
+| 256 | 0.003 | 1.000 |
+| 128 | 0.003 | 1.000 |
+
+**embeddinggemma-2** (20261015-070623-adapter-recheck, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| hau | high | 300 | 1.000 | 1.000 | 0.997 | 0.997 | 1.000 | 1.000 |
+| ibo | mid | 300 | 0.980 | 0.983 | 0.967 | 0.940 | 0.967 | 0.986 |
+| amh | mid | 296 | 0.986 | 0.986 | 0.986 | 0.959 | 0.997 | 0.993 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.989 | 1.000 |
+| 512 | 0.990 | 1.001 |
+| 256 | 0.983 | 0.994 |
+| 128 | 0.965 | 0.976 |
+
+**embeddinggemma-2** (20261015-070402-control, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| hau | high | 300 | 0.003 | 0.003 | 0.003 | 0.003 | 0.003 | 0.021 |
+| ibo | mid | 300 | 0.003 | 0.003 | 0.003 | 0.007 | 0.003 | 0.024 |
+| amh | mid | 296 | 0.003 | 0.003 | 0.003 | 0.003 | 0.003 | 0.023 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.003 | 1.000 |
+| 512 | 0.003 | 1.000 |
+| 256 | 0.003 | 1.000 |
+| 128 | 0.004 | 1.332 |
+
+**embeddinggemma-2** (20261014-203326-texttask-none, text_task=none)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.777 | 0.774 | 0.764 | 0.642 | 0.723 | 0.831 |
+| gaz | low | 36 | 1.000 | 1.000 | 0.944 | 0.833 | 0.972 | 1.000 |
+| ibo | mid | 350 | 0.660 | 0.657 | 0.620 | 0.471 | 0.663 | 0.736 |
+| yor | mid | 340 | 0.885 | 0.888 | 0.859 | 0.732 | 0.968 | 0.923 |
+| hau | high | 331 | 0.849 | 0.837 | 0.825 | 0.710 | 0.946 | 0.888 |
+| swh | high | 312 | 0.929 | 0.920 | 0.904 | 0.792 | 0.949 | 0.952 |
+| xho | mid | 350 | 0.877 | 0.883 | 0.826 | 0.729 | 0.877 | 0.914 |
+| zul | mid | 346 | 0.893 | 0.879 | 0.835 | 0.699 | 0.812 | 0.925 |
+| afr | high | 233 | 0.987 | 0.979 | 0.970 | 0.927 | 0.974 | 0.993 |
+| som | mid | 350 | 0.643 | 0.643 | 0.614 | 0.417 | 0.806 | 0.728 |
+| wol | low | 239 | 0.933 | 0.908 | 0.887 | 0.841 | 0.971 | 0.950 |
+| lug | low | 339 | 0.861 | 0.847 | 0.826 | 0.726 | 0.920 | 0.896 |
+| lin | low | 285 | 0.912 | 0.905 | 0.877 | 0.793 | 0.933 | 0.940 |
+| sna | mid | 348 | 0.862 | 0.856 | 0.830 | 0.701 | 0.856 | 0.902 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.862 | 1.000 |
+| 512 | 0.855 | 0.992 |
+| 256 | 0.827 | 0.960 |
+| 128 | 0.715 | 0.830 |
+
+**embeddinggemma-2** (20261014-203006, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.882 | 0.855 | 0.824 | 0.666 | 0.831 | 0.916 |
+| gaz | low | 36 | 1.000 | 1.000 | 1.000 | 0.889 | 1.000 | 1.000 |
+| ibo | mid | 350 | 0.786 | 0.760 | 0.714 | 0.569 | 0.791 | 0.840 |
+| yor | mid | 340 | 0.953 | 0.944 | 0.912 | 0.685 | 0.974 | 0.969 |
+| hau | high | 331 | 0.949 | 0.937 | 0.894 | 0.752 | 0.973 | 0.964 |
+| swh | high | 312 | 0.971 | 0.965 | 0.962 | 0.878 | 0.981 | 0.983 |
+| xho | mid | 350 | 0.937 | 0.931 | 0.909 | 0.780 | 0.946 | 0.958 |
+| zul | mid | 346 | 0.965 | 0.957 | 0.910 | 0.757 | 0.902 | 0.976 |
+| afr | high | 233 | 0.991 | 0.987 | 0.987 | 0.923 | 0.991 | 0.996 |
+| som | mid | 350 | 0.871 | 0.860 | 0.794 | 0.600 | 0.874 | 0.910 |
+| wol | low | 239 | 0.962 | 0.967 | 0.925 | 0.904 | 0.987 | 0.975 |
+| lug | low | 339 | 0.956 | 0.956 | 0.909 | 0.737 | 0.985 | 0.967 |
+| lin | low | 285 | 0.958 | 0.951 | 0.923 | 0.793 | 0.958 | 0.973 |
+| sna | mid | 348 | 0.945 | 0.937 | 0.905 | 0.790 | 0.960 | 0.961 |
+| nso | low | 341 | 0.933 | 0.918 | 0.894 | 0.730 | 0.941 | 0.953 |
+| nya | low | 334 | 0.937 | 0.940 | 0.898 | 0.725 | 0.946 | 0.956 |
+| umb | low | 258 | 0.806 | 0.798 | 0.748 | 0.554 | 0.849 | 0.838 |
+| fuv | low | 330 | 0.964 | 0.961 | 0.939 | 0.818 | 0.973 | 0.970 |
+| luo | low | 194 | 0.974 | 0.979 | 0.954 | 0.881 | 0.990 | 0.984 |
+| kam | low | 346 | 0.879 | 0.850 | 0.803 | 0.659 | 0.916 | 0.914 |
+| kea | low | 344 | 0.985 | 0.985 | 0.974 | 0.901 | 0.974 | 0.992 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.934 | 1.000 |
+| 512 | 0.926 | 0.991 |
+| 256 | 0.894 | 0.958 |
+| 128 | 0.762 | 0.816 |
+
+## vision
+
+**embeddinggemma-2** (20261014-195414, afri-aya)
+
+| language | n | image→local R@1 | image→english R@1 | local→image R@1 | local↔english text R@1 | gap (en−local cos) |
+|---|---|---|---|---|---|---|
+| Kinyarwanda | 300 | 0.097 | 0.803 | 0.027 | 0.107 | 0.151 |
+| Luganda (Ganda) | 300 | 0.083 | 0.760 | 0.043 | 0.073 | 0.160 |
+| Twi | 279 | 0.057 | 0.670 | 0.036 | 0.143 | 0.153 |
+| Nyankore | 239 | 0.096 | 0.883 | 0.059 | 0.138 | 0.179 |
+| Hausa | 208 | 0.101 | 0.793 | 0.082 | 0.120 | 0.156 |
+| Egyptian Arabic | 207 | 0.517 | 0.754 | 0.512 | 0.961 | 0.084 |
+| Yoruba | 186 | 0.043 | 0.478 | 0.032 | 0.086 | 0.137 |
+| Kirundi | 183 | 0.087 | 0.852 | 0.049 | 0.104 | 0.164 |
+| Zulu | 161 | 0.075 | 0.770 | 0.056 | 0.118 | 0.140 |
+| Krio | 75 | 0.373 | 0.947 | 0.387 | 0.840 | 0.096 |
+| Gishu | 70 | 0.229 | 0.829 | 0.157 | 0.186 | 0.142 |
+| Igbo | 48 | 0.229 | 0.917 | 0.250 | 0.375 | 0.143 |
+
+## vocab-trim
+
+| model | run | languages | kept | vocab | MB saved (bf16) | held-out coverage |
+|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-211531-build | amh,gaz,ibo,yor,hau,swh,kin,xho,zul,eng | 23238 | 262144 | 244.640 | 0.978 |
+
+✓ App completed. View run at 
+https://modal.com/apps/<workspace>/main/ap-WYtHOVViDeBOze2vxt2Ppu

@@ -1,0 +1,1022 @@
+✓ Initialized. View run at 
+https://modal.com/apps/<workspace>/main/ap-LqKIT7BdNOijftGKt1nmiU
+✓ Created objects.
+├── ✓ Uploaded ./modal_app.py
+├── ✓ Uploaded ./configs
+├── ✓ Uploaded PythonPackage:afriembed
+├── ✓ Created Function run.
+└── ✓ Created Function report.
+
+=== afriembed ciral --model me5-base --batch-size 256
+[10/14/26 20:55:26] INFO     Loading me5-base (intfloat/multilingual-e5-base) on
+                             cuda dtype=torch.bfloat16 towers=('text',)         
+[10/14/26 20:55:27] INFO     Loading SentenceTransformer model from             
+                             intfloat/multilingual-e5-base.                     
+
+[1ALoading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+[1ALoading weights:   3%|▎         | 5/199 [00:02<01:34,  2.06it/s]
+[1ALoading weights:  83%|████████▎ | 165/199 [00:02<00:00, 90.65it/s]
+[1ALoading weights: 100%|██████████| 199/199 [00:02<00:00, 77.82it/s]
+[10/14/26 20:55:44] WARNING  max_seq_length 2048 exceeds model limit 514;       
+                             capping                                            
+[10/14/26 20:56:03] WARNING  CIRAL hau: subsampled corpus to 50000 passages (all
+                             1369 judged docs kept)                             
+                    INFO     CIRAL hau/test-a: 80 queries, 50000 passages       
+
+[1ABatches:   0%|          | 0/196 [00:00<?, ?it/s]/__w/pytorch/pytorch/aten/src/ATen/native/cuda/ScatterGatherKernel.cu:203: operator(): block: [2,0,0], thread: [8,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "scatter gather kernel index out of bounds"` failed.
+/__w/pytorch/pytorch/aten/src/ATen/native/cuda/ScatterGatherKernel.cu:203: operator(): block: [2,0,0], thread: [9,0,0] Assertion `idx_dim >= 0 && idx_dim < index_size && "scatter gather kernel index out of bounds"` failed.
+[gpu-health] [WARN] GPU-c48c0642-75d4-e442-fd83-6d5c822fc6e3: XID: NVRM: Xid (PCI:0000:33:00): 43, pid=1532718, name=gvisor_sentry, channel 0x00000002
+
+
+[1ABatches:   0%|          | 0/196 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 43, in run
+    D = emb.encode_text(texts, task, show_progress=True)
+  File "/root/afriembed/models/embedder.py", line 219, in encode_text
+    return self.encode(list(texts), task, **kw)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/embedder.py", line 207, in encode
+    emb = self.model.encode(
+        items,
+    ...<4 lines>...
+        **kw,
+    )
+  File "/usr/local/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 941, in encode
+    out_features = self(features, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 569, in forward
+    input = module(input, **module_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/modules/transformer.py", line 1650, in forward
+    model_output = model_method(**filtered_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/utils/generic.py", line 1081, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 621, in forward
+    embedding_output = self.embeddings(
+        input_ids=input_ids,
+    ...<3 lines>...
+        past_key_values_length=past_key_values_length,
+    )
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 112, in forward
+    inputs_embeds = self.word_embeddings(input_ids)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+
+
+
+=== afriembed ciral --model embeddinggemma-300m --batch-size 256
+[10/14/26 20:56:04] INFO     Loading embeddinggemma-300m                        
+                             (google/embeddinggemma-300m) on cuda               
+                             dtype=torch.bfloat16 towers=('text',)              
+[10/14/26 20:56:05] INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-300m.                        
+
+[1ALoading weights:   0%|          | 0/314 [00:00<?, ?it/s]
+[1ALoading weights:   0%|          | 1/314 [00:00<03:35,  1.45it/s]
+[1ALoading weights: 100%|██████████| 314/314 [00:00<00:00, 448.73it/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 35, in run
+    emb = opts.load(("text",))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 67, in load_embedder
+    model = SentenceTransformer(source, **st_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 275, in __init__
+    self.to(device)
+    ~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Sticky error detected
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamIsCapturing
+
+
+
+
+=== afriembed accent --max-per-accent 20 --batch-size 64
+[10/14/26 20:56:14] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  13%|█▎        | 149/1165 [00:00<00:00, 1384.14it/s]
+[1ALoading weights:  32%|███▏      | 367/1165 [00:00<00:00, 1809.24it/s]
+[1ALoading weights:  51%|█████▏    | 598/1165 [00:00<00:00, 2030.99it/s]
+[1ALoading weights:  69%|██████▉   | 803/1165 [00:00<00:00, 1814.92it/s]
+[1ALoading weights:  85%|████████▌ | 996/1165 [00:00<00:00, 1852.44it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 1961.48it/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 589, in accent
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<3 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/accent.py", line 26, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 67, in load_embedder
+    model = SentenceTransformer(source, **st_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 275, in __init__
+    self.to(device)
+    ~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  [Previous line repeated 1 more time]
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Sticky error detected
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamIsCapturing
+
+
+
+
+=== afriembed lid --langs fleurs_all --per-lang 80 --batch-size 64
+[10/14/26 20:56:20] INFO     Loading embeddinggemma-2 (google/embeddinggemma-2) 
+                             on cuda dtype=torch.bfloat16 towers=('text',       
+                             'audio')                                           
+                    INFO     Loading SentenceTransformer model from             
+                             google/embeddinggemma-2.                           
+
+[1ALoading weights:   0%|          | 0/1165 [00:00<?, ?it/s]
+[1ALoading weights:  49%|████▉     | 570/1165 [00:00<00:00, 5679.65it/s]
+[1ALoading weights:  98%|█████████▊| 1138/1165 [00:00<00:00, 5215.72it/s]
+[1ALoading weights: 100%|██████████| 1165/1165 [00:00<00:00, 5378.77it/s]
+Traceback (most recent call last):
+  File "/root/modal_app.py", line 71, in _run_one
+    cli(argv, standalone_mode=False)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1154, in __call__
+    raise e
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1137, in __call__
+    return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 569, in lid
+    E.run(opts, L.resolve(langs, "fleurs_core"), per_lang=per_lang, k=k, tag=tag)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/experiments/lid.py", line 43, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 67, in load_embedder
+    model = SentenceTransformer(source, **st_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 275, in __init__
+    self.to(device)
+    ~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  [Previous line repeated 1 more time]
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Sticky error detected
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamIsCapturing
+
+
+
+ERR ciral --model me5-base --batch-size 256
+elf.encode(list(texts), task, **kw)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/models/embedder.py", line 207, in encode
+    emb = self.model.encode(
+        items,
+    ...<4 lines>...
+        **kw,
+    )
+  File "/usr/local/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 941, in encode
+    out_features = self(features, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 569, in forward
+    input = module(input, **module_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/modules/transformer.py", line 1650, in forward
+    model_output = model_method(**filtered_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/utils/generic.py", line 1081, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 621, in forward
+    embedding_output = self.embeddings(
+        input_ids=input_ids,
+    ...<3 lines>...
+        past_key_values_length=past_key_values_length,
+    )
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 112, in forward
+    inputs_embeds = self.word_embeddings(input_ids)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/sparse.py", line 189, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/functional.py", line 2621, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+
+
+ERR ciral --model embeddinggemma-300m --batch-size 256
+   return get_command(self)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 542, in ciral
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<4 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/ciral.py", line 35, in run
+    emb = opts.load(("text",))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 67, in load_embedder
+    model = SentenceTransformer(source, **st_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 275, in __init__
+    self.to(device)
+    ~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Sticky error detected
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamIsCapturing
+
+
+
+ERR accent --max-per-accent 20 --batch-size 64
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 589, in accent
+    E.run(
+    ~~~~~^
+        opts,
+        ^^^^^
+    ...<3 lines>...
+        tag=tag,
+        ^^^^^^^^
+    )
+    ^
+  File "/root/afriembed/experiments/accent.py", line 26, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 67, in load_embedder
+    model = SentenceTransformer(source, **st_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 275, in __init__
+    self.to(device)
+    ~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  [Previous line repeated 1 more time]
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Sticky error detected
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamIsCapturing
+
+
+
+ERR lid --langs fleurs_all --per-lang 80 --batch-size 64
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 802, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1197, in main
+    return _main(
+        self,
+    ...<6 lines>...
+        **extra,
+    )
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 187, in _main
+    rv = self.invoke(ctx)
+  File "/usr/local/lib/python3.13/site-packages/typer/core.py", line 1119, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 741, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/typer/_click/core.py", line 483, in invoke
+    return callback(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/typer/main.py", line 1524, in wrapper
+    return callback(**use_params)
+  File "/root/afriembed/cli.py", line 569, in lid
+    E.run(opts, L.resolve(langs, "fleurs_core"), per_lang=per_lang, k=k, tag=tag)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/afriembed/experiments/lid.py", line 43, in run
+    emb = opts.load(("text", "audio"))
+  File "/root/afriembed/experiments/common.py", line 24, in load
+    emb = load_embedder(
+        self.model,
+    ...<7 lines>...
+        adapter_path=self.adapter,
+    )
+  File "/root/afriembed/models/registry.py", line 67, in load_embedder
+    model = SentenceTransformer(source, **st_kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/util/decorators.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/sentence_transformer/model.py", line 194, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        model_name_or_path=model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+        default_prompt_name=default_prompt_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sentence_transformers/base/model.py", line 275, in __init__
+    self.to(device)
+    ~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1388, in to
+    return self._apply(convert)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 933, in _apply
+    module._apply(fn)
+    ~~~~~~~~~~~~~^^^^
+  [Previous line repeated 1 more time]
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 966, in _apply
+    param_applied = fn(param)
+  File "/usr/local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1374, in convert
+    return t.to(
+           ~~~~^
+        device,
+        ^^^^^^^
+        dtype if t.is_floating_point() or t.is_complex() else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        non_blocking,
+        ^^^^^^^^^^^^^
+    )
+    ^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+The CUDA driver logged these messages, which may provide useful details:
+Sticky error detected
+Returning 710 (CUDA_ERROR_ASSERT) from cuStreamIsCapturing
+
+
+
+# afriembed results
+
+## accent
+
+**embeddinggemma-2** (20261014-204458-noprompt) overall R@1=0.889 pool=1967
+
+| country | n | R@1 | R@10 | MRR |
+|---|---|---|---|---|
+| BW | 29 | 0.931 | 1.000 | 0.953 |
+| GH | 60 | 0.900 | 0.967 | 0.926 |
+| KE | 87 | 0.966 | 1.000 | 0.972 |
+| LS | 3 | 1.000 | 1.000 | 1.000 |
+| NG | 1513 | 0.877 | 0.947 | 0.902 |
+| RW | 15 | 0.933 | 1.000 | 0.942 |
+| UG | 30 | 0.900 | 0.933 | 0.908 |
+| US | 1 | 1.000 | 1.000 | 1.000 |
+| ZA | 225 | 0.924 | 0.960 | 0.937 |
+| ZW | 4 | 1.000 | 1.000 | 1.000 |
+
+| domain | n | R@1 | MRR |
+|---|---|---|---|
+| clinical | 1185 | 0.889 | 0.914 |
+| general | 782 | 0.889 | 0.906 |
+
+## afrimteb-lite
+
+| model | run | prompts | dim | macro avg | amh | gaz | hau | ibo | kin | swh | xho | yor | zul |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| afrie5-large-instruct | 20261014-204557 | True | 1024 | 0.662 | 0.871 | 0.806 | 0.865 | 0.858 | 0.834 | 0.918 | 0.880 | 0.834 | 0.882 |
+| bge-m3 | 20261014-202704 | True | 1024 | 0.575 | 0.774 | 0.657 | 0.787 | 0.709 | 0.700 | 0.847 | 0.779 | 0.667 | 0.784 |
+| embeddinggemma-2 | 20261014-205527-d512 | True | 512 | 0.445 | 0.440 | 0.310 | 0.427 | 0.432 | 0.382 | 0.506 | 0.447 | 0.405 | 0.435 |
+| embeddinggemma-2 | 20261014-195245-fullctx | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-2 | 20261014-185051-noprompt | False | 768 | 0.439 | 0.406 | 0.276 | 0.410 | 0.408 | 0.362 | 0.480 | 0.424 | 0.389 | 0.418 |
+| embeddinggemma-300m | 20261014-195419-fullctx | True | 768 | 0.453 | 0.447 | 0.337 | 0.462 | 0.451 | 0.420 | 0.524 | 0.471 | 0.424 | 0.461 |
+| embeddinggemma-300m | 20261014-185418-noprompt | False | 768 | 0.434 | 0.396 | 0.282 | 0.433 | 0.426 | 0.389 | 0.493 | 0.439 | 0.405 | 0.430 |
+| me5-base | 20261014-200425 | True | 768 | 0.573 | 0.795 | 0.653 | 0.792 | 0.779 | 0.748 | 0.857 | 0.812 | 0.744 | 0.821 |
+| me5-large-instruct | 20261014-203641 | True | 1024 | 0.647 | 0.858 | 0.795 | 0.861 | 0.854 | 0.827 | 0.919 | 0.877 | 0.828 | 0.880 |
+| me5-small | 20261014-201244 | True | 384 | 0.535 | 0.739 | 0.503 | 0.715 | 0.719 | 0.701 | 0.812 | 0.761 | 0.658 | 0.774 |
+
+| task | afrie5-large-instruct:204557 | bge-m3:202704 | embeddinggemma-2:7-d512 | embeddinggemma-2:ullctx | embeddinggemma-2:prompt | embeddinggemma-300m:ullctx | embeddinggemma-300m:prompt | me5-base:200425 | me5-large-instruct:203641 | me5-small:201244 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| AfriHateClassification | 0.509 | 0.495 | 0.478 | 0.495 | 0.495 | 0.481 | 0.490 | 0.490 | 0.511 | 0.472 |
+| AfriSentiClassification | 0.551 | 0.512 | 0.495 | 0.530 | 0.530 | 0.442 | 0.467 | 0.513 | 0.497 | 0.469 |
+| AfriXNLI | 0.688 | 0.683 | 0.597 | 0.564 | 0.564 | 0.592 | 0.570 | 0.635 | 0.642 | 0.621 |
+| BelebeleRetrieval | 0.764 | 0.699 | 0.513 | 0.505 | 0.505 | 0.549 | 0.454 | 0.629 | 0.760 | 0.530 |
+| EmotionAnalysisPlus | 0.313 | 0.280 | 0.280 | 0.274 | 0.274 | 0.265 | 0.266 | 0.293 | 0.296 | 0.280 |
+| FloresBitextMining | 0.979 | 0.850 | 0.390 | 0.353 | 0.353 | 0.421 | 0.383 | 0.913 | 0.978 | 0.828 |
+| InjongoIntent | 0.750 | 0.748 | 0.558 | 0.575 | 0.575 | 0.595 | 0.593 | 0.750 | 0.755 | 0.650 |
+| KinNewsClassification | 0.575 | 0.504 | 0.442 | 0.441 | 0.439 | 0.434 | 0.415 | 0.503 | 0.561 | 0.533 |
+| MasakhaNEWSClassification | 0.835 | 0.768 | 0.750 | 0.730 | 0.728 | 0.750 | 0.738 | 0.749 | 0.829 | 0.734 |
+| NTREXBitextMining | 0.948 | 0.828 | 0.466 | 0.442 | 0.442 | 0.490 | 0.456 | 0.886 | 0.944 | 0.817 |
+| SIB200Classification | 0.719 | 0.556 | 0.434 | 0.426 | 0.426 | 0.442 | 0.424 | 0.549 | 0.710 | 0.525 |
+| SIB200Classification.v2 | 0.523 | 0.343 | 0.246 | 0.248 | 0.248 | 0.262 | 0.242 | 0.341 | 0.491 | 0.316 |
+| SIB200ClusteringS2S | 0.457 | 0.211 | 0.141 | 0.127 | 0.127 | 0.166 | 0.143 | 0.200 | 0.437 | 0.183 |
+## ciral
+
+| model | run | split | hau nDCG@20 | som nDCG@20 | swh nDCG@20 | yor nDCG@20 | hau R@100 | som R@100 | swh R@100 | yor R@100 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-205251 | test-a | 0.352 | 0.363 | 0.452 | 0.355 | 0.636 | 0.631 | 0.859 | 0.690 |
+
+## lid
+
+| model | run | langs | audio kNN | audio NMI | audio purity | text kNN | text NMI | chance |
+|---|---|---|---|---|---|---|---|---|
+| embeddinggemma-2 | 20261014-204003-noprompt | 21 | 0.670 | 0.706 | 0.699 | 0.602 | 0.661 | 0.048 |
+
+## speech-bitext
+
+**embeddinggemma-2** (20261014-203832-allpairs, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| hau->yor | 321 | 0.305 | 0.330 | 0.477 | 0.380 | 0.358 |
+| hau->swh | 294 | 0.289 | 0.354 | 0.469 | 0.435 | 0.401 |
+| hau->amh | 278 | 0.338 | 0.353 | 0.442 | 0.457 | 0.374 |
+| hau->ibo | 331 | 0.290 | 0.299 | 0.480 | 0.353 | 0.393 |
+| hau->som | 331 | 0.284 | 0.293 | 0.523 | 0.335 | 0.350 |
+| yor->hau | 321 | 0.293 | 0.321 | 0.461 | 0.349 | 0.368 |
+| yor->swh | 304 | 0.303 | 0.355 | 0.467 | 0.428 | 0.405 |
+| yor->amh | 289 | 0.356 | 0.367 | 0.474 | 0.443 | 0.419 |
+| yor->ibo | 340 | 0.306 | 0.324 | 0.450 | 0.347 | 0.394 |
+| yor->som | 340 | 0.291 | 0.265 | 0.444 | 0.309 | 0.353 |
+| swh->hau | 294 | 0.405 | 0.384 | 0.469 | 0.408 | 0.452 |
+| swh->yor | 304 | 0.405 | 0.339 | 0.497 | 0.428 | 0.457 |
+| swh->amh | 265 | 0.630 | 0.540 | 0.853 | 0.577 | 0.702 |
+| swh->ibo | 312 | 0.388 | 0.340 | 0.532 | 0.401 | 0.468 |
+| swh->som | 312 | 0.369 | 0.381 | 0.490 | 0.433 | 0.458 |
+| amh->hau | 278 | 0.432 | 0.414 | 0.457 | 0.403 | 0.496 |
+| amh->yor | 289 | 0.426 | 0.446 | 0.478 | 0.426 | 0.464 |
+| amh->swh | 265 | 0.536 | 0.543 | 0.849 | 0.675 | 0.592 |
+| amh->ibo | 296 | 0.453 | 0.392 | 0.510 | 0.365 | 0.544 |
+| amh->som | 296 | 0.392 | 0.409 | 0.459 | 0.389 | 0.449 |
+| ibo->hau | 331 | 0.218 | 0.287 | 0.468 | 0.378 | 0.326 |
+| ibo->yor | 340 | 0.262 | 0.344 | 0.444 | 0.403 | 0.324 |
+| ibo->swh | 312 | 0.266 | 0.327 | 0.478 | 0.442 | 0.359 |
+| ibo->amh | 296 | 0.331 | 0.345 | 0.483 | 0.480 | 0.402 |
+| ibo->som | 350 | 0.240 | 0.260 | 0.454 | 0.331 | 0.314 |
+| som->hau | 331 | 0.233 | 0.278 | 0.462 | 0.323 | 0.332 |
+| som->yor | 340 | 0.274 | 0.265 | 0.412 | 0.356 | 0.321 |
+| som->swh | 312 | 0.330 | 0.349 | 0.455 | 0.391 | 0.436 |
+| som->amh | 296 | 0.345 | 0.348 | 0.459 | 0.405 | 0.416 |
+| som->ibo | 350 | 0.274 | 0.269 | 0.443 | 0.303 | 0.360 |
+
+**embeddinggemma-2** (20261014-203716, pivot=eng)
+
+| pair | n | audio→text | audio→audio | text→text | text→audio | a→t margin |
+|---|---|---|---|---|---|---|
+| amh->eng | 296 | 0.625 | 0.605 | 0.909 | 0.841 | 0.696 |
+| gaz->eng | 36 | 0.417 | 0.389 | 0.389 | 0.417 | 0.444 |
+| ibo->eng | 350 | 0.337 | 0.314 | 0.543 | 0.483 | 0.426 |
+| yor->eng | 340 | 0.382 | 0.347 | 0.547 | 0.497 | 0.476 |
+| hau->eng | 331 | 0.338 | 0.302 | 0.547 | 0.489 | 0.432 |
+| swh->eng | 312 | 0.718 | 0.670 | 0.968 | 0.955 | 0.833 |
+| xho->eng | 350 | 0.443 | 0.454 | 0.571 | 0.537 | 0.529 |
+| zul->eng | 346 | 0.355 | 0.358 | 0.491 | 0.457 | 0.448 |
+| som->eng | 350 | 0.369 | 0.357 | 0.480 | 0.463 | 0.454 |
+| wol->eng | 239 | 0.498 | 0.490 | 0.632 | 0.569 | 0.590 |
+| lug->eng | 339 | 0.348 | 0.330 | 0.525 | 0.437 | 0.422 |
+| lin->eng | 285 | 0.382 | 0.316 | 0.628 | 0.551 | 0.540 |
+| sna->eng | 348 | 0.425 | 0.388 | 0.532 | 0.511 | 0.523 |
+
+## speech-text
+
+**embeddinggemma-2** (20261014-203326-texttask-none, text_task=none)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.777 | 0.774 | 0.764 | 0.642 | 0.723 | 0.831 |
+| gaz | low | 36 | 1.000 | 1.000 | 0.944 | 0.833 | 0.972 | 1.000 |
+| ibo | mid | 350 | 0.660 | 0.657 | 0.620 | 0.471 | 0.663 | 0.736 |
+| yor | mid | 340 | 0.885 | 0.888 | 0.859 | 0.732 | 0.968 | 0.923 |
+| hau | high | 331 | 0.849 | 0.837 | 0.825 | 0.710 | 0.946 | 0.888 |
+| swh | high | 312 | 0.929 | 0.920 | 0.904 | 0.792 | 0.949 | 0.952 |
+| xho | mid | 350 | 0.877 | 0.883 | 0.826 | 0.729 | 0.877 | 0.914 |
+| zul | mid | 346 | 0.893 | 0.879 | 0.835 | 0.699 | 0.812 | 0.925 |
+| afr | high | 233 | 0.987 | 0.979 | 0.970 | 0.927 | 0.974 | 0.993 |
+| som | mid | 350 | 0.643 | 0.643 | 0.614 | 0.417 | 0.806 | 0.728 |
+| wol | low | 239 | 0.933 | 0.908 | 0.887 | 0.841 | 0.971 | 0.950 |
+| lug | low | 339 | 0.861 | 0.847 | 0.826 | 0.726 | 0.920 | 0.896 |
+| lin | low | 285 | 0.912 | 0.905 | 0.877 | 0.793 | 0.933 | 0.940 |
+| sna | mid | 348 | 0.862 | 0.856 | 0.830 | 0.701 | 0.856 | 0.902 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.862 | 1.000 |
+| 512 | 0.855 | 0.992 |
+| 256 | 0.827 | 0.960 |
+| 128 | 0.715 | 0.830 |
+
+**embeddinggemma-2** (20261014-203006, text_task=document)
+
+| lang | tier | n | a→t R@1 d768 | a→t R@1 d512 | a→t R@1 d256 | a→t R@1 d128 | t→a R@1 (full) | MRR a→t |
+|---|---|---|---|---|---|---|---|---|
+| amh | mid | 296 | 0.882 | 0.855 | 0.824 | 0.666 | 0.831 | 0.916 |
+| gaz | low | 36 | 1.000 | 1.000 | 1.000 | 0.889 | 1.000 | 1.000 |
+| ibo | mid | 350 | 0.786 | 0.760 | 0.714 | 0.569 | 0.791 | 0.840 |
+| yor | mid | 340 | 0.953 | 0.944 | 0.912 | 0.685 | 0.974 | 0.969 |
+| hau | high | 331 | 0.949 | 0.937 | 0.894 | 0.752 | 0.973 | 0.964 |
+| swh | high | 312 | 0.971 | 0.965 | 0.962 | 0.878 | 0.981 | 0.983 |
+| xho | mid | 350 | 0.937 | 0.931 | 0.909 | 0.780 | 0.946 | 0.958 |
+| zul | mid | 346 | 0.965 | 0.957 | 0.910 | 0.757 | 0.902 | 0.976 |
+| afr | high | 233 | 0.991 | 0.987 | 0.987 | 0.923 | 0.991 | 0.996 |
+| som | mid | 350 | 0.871 | 0.860 | 0.794 | 0.600 | 0.874 | 0.910 |
+| wol | low | 239 | 0.962 | 0.967 | 0.925 | 0.904 | 0.987 | 0.975 |
+| lug | low | 339 | 0.956 | 0.956 | 0.909 | 0.737 | 0.985 | 0.967 |
+| lin | low | 285 | 0.958 | 0.951 | 0.923 | 0.793 | 0.958 | 0.973 |
+| sna | mid | 348 | 0.945 | 0.937 | 0.905 | 0.790 | 0.960 | 0.961 |
+| nso | low | 341 | 0.933 | 0.918 | 0.894 | 0.730 | 0.941 | 0.953 |
+| nya | low | 334 | 0.937 | 0.940 | 0.898 | 0.725 | 0.946 | 0.956 |
+| umb | low | 258 | 0.806 | 0.798 | 0.748 | 0.554 | 0.849 | 0.838 |
+| fuv | low | 330 | 0.964 | 0.961 | 0.939 | 0.818 | 0.973 | 0.970 |
+| luo | low | 194 | 0.974 | 0.979 | 0.954 | 0.881 | 0.990 | 0.984 |
+| kam | low | 346 | 0.879 | 0.850 | 0.803 | 0.659 | 0.916 | 0.914 |
+| kea | low | 344 | 0.985 | 0.985 | 0.974 | 0.901 | 0.974 | 0.992 |
+
+| dim | mean a→t R@1 | retention |
+|---|---|---|
+| 768 | 0.934 | 1.000 |
+| 512 | 0.926 | 0.991 |
+| 256 | 0.894 | 0.958 |
+| 128 | 0.762 | 0.816 |
+
+## vision
+
+**embeddinggemma-2** (20261014-195414, afri-aya)
+
+| language | n | image→local R@1 | image→english R@1 | local→image R@1 | local↔english text R@1 | gap (en−local cos) |
+|---|---|---|---|---|---|---|
+| Kinyarwanda | 300 | 0.097 | 0.803 | 0.027 | 0.107 | 0.151 |
+| Luganda (Ganda) | 300 | 0.083 | 0.760 | 0.043 | 0.073 | 0.160 |
+| Twi | 279 | 0.057 | 0.670 | 0.036 | 0.143 | 0.153 |
+| Nyankore | 239 | 0.096 | 0.883 | 0.059 | 0.138 | 0.179 |
+| Hausa | 208 | 0.101 | 0.793 | 0.082 | 0.120 | 0.156 |
+| Egyptian Arabic | 207 | 0.517 | 0.754 | 0.512 | 0.961 | 0.084 |
+| Yoruba | 186 | 0.043 | 0.478 | 0.032 | 0.086 | 0.137 |
+| Kirundi | 183 | 0.087 | 0.852 | 0.049 | 0.104 | 0.164 |
+| Zulu | 161 | 0.075 | 0.770 | 0.056 | 0.118 | 0.140 |
+| Krio | 75 | 0.373 | 0.947 | 0.387 | 0.840 | 0.096 |
+| Gishu | 70 | 0.229 | 0.829 | 0.157 | 0.186 | 0.142 |
+| Igbo | 48 | 0.229 | 0.917 | 0.250 | 0.375 | 0.143 |
+
+Stopping app - uncaught exception raised locally: SystemExit(1).

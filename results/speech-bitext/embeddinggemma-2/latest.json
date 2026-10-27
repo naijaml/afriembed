@@ -1,0 +1,357 @@
+{
+  "experiment": "speech-bitext",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-203716",
+  "timestamp": "2026-10-14T20:37:16",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "dataset": "mteb/fleurs",
+  "split": "test",
+  "pivot": "eng",
+  "all_pairs": false,
+  "text_task": "bitext",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": null,
+    "max_seq_length": 1000000000000000019884624838656
+  },
+  "pairs": {
+    "amh->eng": {
+      "n": 296,
+      "audio->text": {
+        "accuracy": 0.625,
+        "n": 296,
+        "margin_accuracy": 0.6959459459459459
+      },
+      "audio->audio": {
+        "accuracy": 0.6047297297297297,
+        "n": 296,
+        "margin_accuracy": 0.6587837837837838
+      },
+      "text->text": {
+        "accuracy": 0.9087837837837838,
+        "n": 296,
+        "margin_accuracy": 0.956081081081081
+      },
+      "text->audio": {
+        "accuracy": 0.8412162162162162,
+        "n": 296,
+        "margin_accuracy": 0.9324324324324325
+      }
+    },
+    "gaz->eng": {
+      "n": 36,
+      "audio->text": {
+        "accuracy": 0.4166666666666667,
+        "n": 36,
+        "margin_accuracy": 0.4444444444444444
+      },
+      "audio->audio": {
+        "accuracy": 0.3888888888888889,
+        "n": 36,
+        "margin_accuracy": 0.3888888888888889
+      },
+      "text->text": {
+        "accuracy": 0.3888888888888889,
+        "n": 36,
+        "margin_accuracy": 0.4444444444444444
+      },
+      "text->audio": {
+        "accuracy": 0.4166666666666667,
+        "n": 36,
+        "margin_accuracy": 0.5
+      }
+    },
+    "ibo->eng": {
+      "n": 350,
+      "audio->text": {
+        "accuracy": 0.33714285714285713,
+        "n": 350,
+        "margin_accuracy": 0.4257142857142857
+      },
+      "audio->audio": {
+        "accuracy": 0.3142857142857143,
+        "n": 350,
+        "margin_accuracy": 0.39714285714285713
+      },
+      "text->text": {
+        "accuracy": 0.5428571428571428,
+        "n": 350,
+        "margin_accuracy": 0.5971428571428572
+      },
+      "text->audio": {
+        "accuracy": 0.4828571428571429,
+        "n": 350,
+        "margin_accuracy": 0.5571428571428572
+      }
+    },
+    "yor->eng": {
+      "n": 340,
+      "audio->text": {
+        "accuracy": 0.38235294117647056,
+        "n": 340,
+        "margin_accuracy": 0.4764705882352941
+      },
+      "audio->audio": {
+        "accuracy": 0.34705882352941175,
+        "n": 340,
+        "margin_accuracy": 0.45294117647058824
+      },
+      "text->text": {
+        "accuracy": 0.5470588235294118,
+        "n": 340,
+        "margin_accuracy": 0.6
+      },
+      "text->audio": {
+        "accuracy": 0.4970588235294118,
+        "n": 340,
+        "margin_accuracy": 0.5617647058823529
+      }
+    },
+    "hau->eng": {
+      "n": 331,
+      "audio->text": {
+        "accuracy": 0.338368580060423,
+        "n": 331,
+        "margin_accuracy": 0.43202416918429004
+      },
+      "audio->audio": {
+        "accuracy": 0.3021148036253776,
+        "n": 331,
+        "margin_accuracy": 0.38368580060422963
+      },
+      "text->text": {
+        "accuracy": 0.5468277945619335,
+        "n": 331,
+        "margin_accuracy": 0.5709969788519638
+      },
+      "text->audio": {
+        "accuracy": 0.48942598187311176,
+        "n": 331,
+        "margin_accuracy": 0.5347432024169184
+      }
+    },
+    "swh->eng": {
+      "n": 312,
+      "audio->text": {
+        "accuracy": 0.717948717948718,
+        "n": 312,
+        "margin_accuracy": 0.8333333333333334
+      },
+      "audio->audio": {
+        "accuracy": 0.6698717948717948,
+        "n": 312,
+        "margin_accuracy": 0.8012820512820513
+      },
+      "text->text": {
+        "accuracy": 0.967948717948718,
+        "n": 312,
+        "margin_accuracy": 0.9871794871794872
+      },
+      "text->audio": {
+        "accuracy": 0.9551282051282052,
+        "n": 312,
+        "margin_accuracy": 0.9647435897435898
+      }
+    },
+    "xho->eng": {
+      "n": 350,
+      "audio->text": {
+        "accuracy": 0.44285714285714284,
+        "n": 350,
+        "margin_accuracy": 0.5285714285714286
+      },
+      "audio->audio": {
+        "accuracy": 0.4542857142857143,
+        "n": 350,
+        "margin_accuracy": 0.5571428571428572
+      },
+      "text->text": {
+        "accuracy": 0.5714285714285714,
+        "n": 350,
+        "margin_accuracy": 0.6228571428571429
+      },
+      "text->audio": {
+        "accuracy": 0.5371428571428571,
+        "n": 350,
+        "margin_accuracy": 0.56
+      }
+    },
+    "zul->eng": {
+      "n": 346,
+      "audio->text": {
+        "accuracy": 0.3554913294797688,
+        "n": 346,
+        "margin_accuracy": 0.4479768786127168
+      },
+      "audio->audio": {
+        "accuracy": 0.3583815028901734,
+        "n": 346,
+        "margin_accuracy": 0.45664739884393063
+      },
+      "text->text": {
+        "accuracy": 0.4913294797687861,
+        "n": 346,
+        "margin_accuracy": 0.546242774566474
+      },
+      "text->audio": {
+        "accuracy": 0.45664739884393063,
+        "n": 346,
+        "margin_accuracy": 0.5057803468208093
+      }
+    },
+    "som->eng": {
+      "n": 350,
+      "audio->text": {
+        "accuracy": 0.36857142857142855,
+        "n": 350,
+        "margin_accuracy": 0.4542857142857143
+      },
+      "audio->audio": {
+        "accuracy": 0.35714285714285715,
+        "n": 350,
+        "margin_accuracy": 0.4657142857142857
+      },
+      "text->text": {
+        "accuracy": 0.48,
+        "n": 350,
+        "margin_accuracy": 0.5228571428571429
+      },
+      "text->audio": {
+        "accuracy": 0.46285714285714286,
+        "n": 350,
+        "margin_accuracy": 0.5114285714285715
+      }
+    },
+    "wol->eng": {
+      "n": 239,
+      "audio->text": {
+        "accuracy": 0.497907949790795,
+        "n": 239,
+        "margin_accuracy": 0.5899581589958159
+      },
+      "audio->audio": {
+        "accuracy": 0.4895397489539749,
+        "n": 239,
+        "margin_accuracy": 0.5481171548117155
+      },
+      "text->text": {
+        "accuracy": 0.6317991631799164,
+        "n": 239,
+        "margin_accuracy": 0.694560669456067
+      },
+      "text->audio": {
+        "accuracy": 0.5690376569037657,
+        "n": 239,
+        "margin_accuracy": 0.606694560669456
+      }
+    },
+    "lug->eng": {
+      "n": 339,
+      "audio->text": {
+        "accuracy": 0.3480825958702065,
+        "n": 339,
+        "margin_accuracy": 0.4218289085545723
+      },
+      "audio->audio": {
+        "accuracy": 0.3303834808259587,
+        "n": 339,
+        "margin_accuracy": 0.40707964601769914
+      },
+      "text->text": {
+        "accuracy": 0.5250737463126843,
+        "n": 339,
+        "margin_accuracy": 0.5486725663716814
+      },
+      "text->audio": {
+        "accuracy": 0.4365781710914454,
+        "n": 339,
+        "margin_accuracy": 0.49557522123893805
+      }
+    },
+    "lin->eng": {
+      "n": 285,
+      "audio->text": {
+        "accuracy": 0.3824561403508772,
+        "n": 285,
+        "margin_accuracy": 0.5403508771929825
+      },
+      "audio->audio": {
+        "accuracy": 0.3157894736842105,
+        "n": 285,
+        "margin_accuracy": 0.5052631578947369
+      },
+      "text->text": {
+        "accuracy": 0.6280701754385964,
+        "n": 285,
+        "margin_accuracy": 0.6877192982456141
+      },
+      "text->audio": {
+        "accuracy": 0.5508771929824562,
+        "n": 285,
+        "margin_accuracy": 0.6350877192982456
+      }
+    },
+    "sna->eng": {
+      "n": 348,
+      "audio->text": {
+        "accuracy": 0.42528735632183906,
+        "n": 348,
+        "margin_accuracy": 0.5229885057471264
+      },
+      "audio->audio": {
+        "accuracy": 0.3879310344827586,
+        "n": 348,
+        "margin_accuracy": 0.47988505747126436
+      },
+      "text->text": {
+        "accuracy": 0.5316091954022989,
+        "n": 348,
+        "margin_accuracy": 0.5632183908045977
+      },
+      "text->audio": {
+        "accuracy": 0.5114942528735632,
+        "n": 348,
+        "margin_accuracy": 0.5373563218390804
+      }
+    }
+  },
+  "mean_accuracy": {
+    "audio->text": 0.4337025927874763,
+    "audio->audio": 0.4092618128612742,
+    "text->text": 0.5970519602385179,
+    "text->audio": 0.5543836699204551
+  }
+}

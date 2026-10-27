@@ -1,0 +1,64 @@
+[project]
+name = "afriembed"
+version = "0.1.0"
+description = "EmbeddingGemma 2 on African languages: benchmarks, fine-tuning, and on-device search tools"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "torch>=2.6",
+  "torchvision>=0.21",
+  "transformers>=5.19",
+  "sentence-transformers>=6.1",
+  "mteb>=2.24",
+  "datasets>=3.2",
+  "peft>=0.14",
+  "accelerate>=1.0",
+  "soundfile>=0.12",
+  "librosa>=0.10",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "typer>=0.12",
+  "rich>=13.7",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "huggingface-hub>=0.30",
+  "python-dotenv>=1.0",
+  "pillow>=10.0",
+  "safetensors>=0.4",
+  "jiwer>=4.0.0",
+]
+
+[project.optional-dependencies]
+ui = ["fastapi>=0.115", "uvicorn>=0.30", "python-multipart>=0.0.9", "gradio>=5.0"]
+faiss = ["faiss-cpu>=1.8"]
+dev = ["pytest>=8.0", "ruff>=0.6", "modal>=1.0"]
+modal = ["modal>=1.0"]
+
+[project.scripts]
+afriembed = "afriembed.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["afriembed"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008", "E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.11.2",
+]

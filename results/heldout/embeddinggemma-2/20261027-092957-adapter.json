@@ -1,0 +1,483 @@
+{
+  "experiment": "heldout",
+  "model": "embeddinggemma-2",
+  "run_id": "20261027-092957-adapter",
+  "timestamp": "2026-10-27T09:29:57",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "a213b2a",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "sources": [
+    "waxal-lug",
+    "waxal-orm",
+    "waxal-sna",
+    "waxal-lin",
+    "waxal-ewe"
+  ],
+  "text_task": "document",
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "causal_attention": false,
+    "source": "google/embeddinggemma-2",
+    "adapter": "checkpoints/audio-lora-seed2/adapter",
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "per_source": {
+    "waxal-lug": {
+      "lang": "lug",
+      "kind": "conversational",
+      "n": 600,
+      "mean_duration_s": 24.21414,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.995,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9975,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9466666666666667,
+            "recall@5": 0.985,
+            "recall@10": 0.9916666666666667,
+            "mrr": 0.9642480759980759,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6923071146011353
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.9933333333333333,
+            "recall@5": 1.0,
+            "recall@10": 1.0,
+            "mrr": 0.9961111111111111,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9483333333333334,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.99,
+            "mrr": 0.9659535091814504,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6943768262863159
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.985,
+            "recall@5": 0.9983333333333333,
+            "recall@10": 0.9983333333333333,
+            "mrr": 0.9909615384615384,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.92,
+            "recall@5": 0.9783333333333334,
+            "recall@10": 0.9833333333333333,
+            "mrr": 0.9481624876789602,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7150723934173584
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9333333333333333,
+            "recall@5": 0.985,
+            "recall@10": 0.99,
+            "mrr": 0.9563610089079317,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.8216666666666667,
+            "recall@5": 0.9383333333333334,
+            "recall@10": 0.9633333333333334,
+            "mrr": 0.8720804094919433,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7324284911155701
+        }
+      }
+    },
+    "waxal-orm": {
+      "lang": "orm",
+      "kind": "conversational",
+      "n": 600,
+      "mean_duration_s": 16.98724,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9933333333333333,
+            "recall@5": 0.9983333333333333,
+            "recall@10": 0.9983333333333333,
+            "mrr": 0.9955695611577964,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9716666666666667,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 0.9983333333333333,
+            "mrr": 0.9824728248959017,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6528053283691406
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.995,
+            "recall@5": 0.9983333333333333,
+            "recall@10": 0.9983333333333333,
+            "mrr": 0.9964019097222221,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9733333333333334,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 0.9983333333333333,
+            "mrr": 0.983084175084175,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6571853756904602
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.985,
+            "recall@5": 0.9966666666666667,
+            "recall@10": 0.9983333333333333,
+            "mrr": 0.9902849616858237,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.945,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.9883333333333333,
+            "mrr": 0.9625094184365017,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.669110894203186
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9433333333333334,
+            "recall@5": 0.9866666666666667,
+            "recall@10": 0.9933333333333333,
+            "mrr": 0.9618542132500467,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.885,
+            "recall@5": 0.9583333333333334,
+            "recall@10": 0.975,
+            "mrr": 0.9197292648840872,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.714823305606842
+        }
+      }
+    },
+    "waxal-sna": {
+      "lang": "sna",
+      "kind": "conversational",
+      "n": 600,
+      "mean_duration_s": 20.72956,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.9866666666666667,
+            "recall@5": 0.9883333333333333,
+            "recall@10": 0.99,
+            "mrr": 0.987661753760802,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9733333333333334,
+            "recall@5": 0.985,
+            "recall@10": 0.9883333333333333,
+            "mrr": 0.9791039237882228,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7319081425666809
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.9866666666666667,
+            "recall@5": 0.9883333333333333,
+            "recall@10": 0.99,
+            "mrr": 0.9879289805496044,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9733333333333334,
+            "recall@5": 0.985,
+            "recall@10": 0.9883333333333333,
+            "mrr": 0.9793824515200594,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7377910614013672
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.9816666666666667,
+            "recall@5": 0.9883333333333333,
+            "recall@10": 0.99,
+            "mrr": 0.9849972148952395,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.9566666666666667,
+            "recall@5": 0.9833333333333333,
+            "recall@10": 0.985,
+            "mrr": 0.968528360616281,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7568510174751282
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.9333333333333333,
+            "recall@5": 0.98,
+            "recall@10": 0.9866666666666667,
+            "mrr": 0.9551796722671656,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.89,
+            "recall@5": 0.9533333333333334,
+            "recall@10": 0.975,
+            "mrr": 0.9192760418695336,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7646515965461731
+        }
+      }
+    },
+    "waxal-lin": {
+      "lang": "lin",
+      "kind": "conversational",
+      "n": 600,
+      "mean_duration_s": 17.84220598639456,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.8766666666666667,
+            "recall@5": 0.9066666666666666,
+            "recall@10": 0.9183333333333333,
+            "mrr": 0.8926341103795618,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.855,
+            "recall@5": 0.9033333333333333,
+            "recall@10": 0.905,
+            "mrr": 0.8771734909961155,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6924772262573242
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.8766666666666667,
+            "recall@5": 0.9066666666666666,
+            "recall@10": 0.9116666666666666,
+            "mrr": 0.8909878195317659,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.8483333333333334,
+            "recall@5": 0.8966666666666666,
+            "recall@10": 0.9033333333333333,
+            "mrr": 0.8718239402229078,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6990597248077393
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.865,
+            "recall@5": 0.9083333333333333,
+            "recall@10": 0.9133333333333333,
+            "mrr": 0.884074964034193,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.8416666666666667,
+            "recall@5": 0.895,
+            "recall@10": 0.9033333333333333,
+            "mrr": 0.8685333335314902,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7192139625549316
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.8133333333333334,
+            "recall@5": 0.8816666666666667,
+            "recall@10": 0.8983333333333333,
+            "mrr": 0.8456805264127488,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.7666666666666667,
+            "recall@5": 0.865,
+            "recall@10": 0.875,
+            "mrr": 0.8125481977498674,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.7432103753089905
+        }
+      }
+    },
+    "waxal-ewe": {
+      "lang": "ewe",
+      "kind": "conversational",
+      "n": 600,
+      "mean_duration_s": 19.112807823129252,
+      "dims": {
+        "768": {
+          "audio->text": {
+            "recall@1": 0.7866666666666666,
+            "recall@5": 0.9283333333333333,
+            "recall@10": 0.9633333333333334,
+            "mrr": 0.8464946874661066,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.5966666666666667,
+            "recall@5": 0.755,
+            "recall@10": 0.8266666666666667,
+            "mrr": 0.6706554889406342,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.5895721316337585
+        },
+        "512": {
+          "audio->text": {
+            "recall@1": 0.76,
+            "recall@5": 0.9083333333333333,
+            "recall@10": 0.9533333333333334,
+            "mrr": 0.8226588056491528,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.5883333333333334,
+            "recall@5": 0.745,
+            "recall@10": 0.8133333333333334,
+            "mrr": 0.6612852597169542,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.5945793390274048
+        },
+        "256": {
+          "audio->text": {
+            "recall@1": 0.645,
+            "recall@5": 0.8483333333333334,
+            "recall@10": 0.9016666666666666,
+            "mrr": 0.7340601642845737,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.5366666666666666,
+            "recall@5": 0.7,
+            "recall@10": 0.77,
+            "mrr": 0.6122262813392226,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6080785393714905
+        },
+        "128": {
+          "audio->text": {
+            "recall@1": 0.4766666666666667,
+            "recall@5": 0.73,
+            "recall@10": 0.8,
+            "mrr": 0.5914723217620654,
+            "n": 600,
+            "pool": 600
+          },
+          "text->audio": {
+            "recall@1": 0.4083333333333333,
+            "recall@5": 0.6433333333333333,
+            "recall@10": 0.7116666666666667,
+            "mrr": 0.5153187513915565,
+            "n": 600,
+            "pool": 600
+          },
+          "diag_cos_mean": 0.6684203147888184
+        }
+      }
+    }
+  },
+  "mean_audio->text_recall@1": {
+    "768": 0.9276666666666668,
+    "512": 0.9223333333333332,
+    "256": 0.8923333333333332,
+    "128": 0.8200000000000001
+  }
+}

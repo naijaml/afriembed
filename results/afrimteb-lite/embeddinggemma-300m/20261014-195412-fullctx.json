@@ -1,0 +1,141 @@
+{
+  "experiment": "afrimteb-lite",
+  "model": "embeddinggemma-300m",
+  "run_id": "20261014-195412-fullctx",
+  "timestamp": "2026-10-14T19:54:12",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "suite": "MTEB(Africa, v1, lite)",
+  "model_info": {
+    "name": "embeddinggemma-300m",
+    "hf_id": "google/embeddinggemma-300m",
+    "family": "embeddinggemma1",
+    "modalities": [
+      "text"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-300m",
+    "adapter": null,
+    "max_seq_length": 2048
+  },
+  "mteb_wrapper": "sentence-transformer",
+  "task_patches": {},
+  "n_tasks": 2,
+  "macro_average": 0.5920720661860771,
+  "tasks": {
+    "MasakhaNEWSClassification": {
+      "main_score": 0.7504787937267359,
+      "subsets": {
+        "test/amh": {
+          "accuracy": 0.810904255319149,
+          "f1": 0.8056233475995654,
+          "f1_weighted": 0.8093378661792492,
+          "precision": 0.8122431948924907,
+          "precision_weighted": 0.8149511984498599,
+          "recall": 0.8063477907732294,
+          "recall_weighted": 0.810904255319149,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.810904255319149
+        },
+        "test/hau": {
+          "accuracy": 0.7186813186813186,
+          "f1": 0.6992442514493654,
+          "f1_weighted": 0.7118970913690001,
+          "precision": 0.7150784110970825,
+          "precision_weighted": 0.7267649364673228,
+          "recall": 0.7053535781544257,
+          "recall_weighted": 0.7186813186813186,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.7186813186813186
+        },
+        "test/ibo": {
+          "accuracy": 0.6492307692307693,
+          "f1": 0.6217554826829839,
+          "f1_weighted": 0.6492597569286387,
+          "precision": 0.6176505760882747,
+          "precision_weighted": 0.6687062540647959,
+          "recall": 0.657708747867351,
+          "recall_weighted": 0.6492307692307693,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.6492307692307693
+        },
+        "test/xho": {
+          "accuracy": 0.7915824915824916,
+          "f1": 0.676811412209219,
+          "f1_weighted": 0.8087120772883697,
+          "precision": 0.6740195599490411,
+          "precision_weighted": 0.8433335344640384,
+          "recall": 0.7209182795698924,
+          "recall_weighted": 0.7915824915824916,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.7915824915824916
+        },
+        "test/yor": {
+          "accuracy": 0.7819951338199514,
+          "f1": 0.7817144154053242,
+          "f1_weighted": 0.7824418709170541,
+          "precision": 0.790160671007974,
+          "precision_weighted": 0.7879814817640036,
+          "recall": 0.7787054104477612,
+          "recall_weighted": 0.7819951338199514,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.7819951338199514
+        }
+      }
+    },
+    "KinNewsClassification": {
+      "main_score": 0.43366533864541834,
+      "subsets": {
+        "test/kinnews_cleaned": {
+          "accuracy": 0.43366533864541834,
+          "f1": 0.33791745405482804,
+          "f1_weighted": 0.44966846325465326,
+          "precision": 0.35328482045715603,
+          "precision_weighted": 0.5369289277491067,
+          "recall": 0.44091989959592964,
+          "recall_weighted": 0.43366533864541834,
+          "ap": NaN,
+          "ap_weighted": NaN,
+          "main_score": 0.43366533864541834
+        }
+      }
+    }
+  },
+  "per_language": {
+    "amh": 0.810904255319149,
+    "hau": 0.7186813186813186,
+    "ibo": 0.6492307692307693,
+    "xho": 0.7915824915824916,
+    "yor": 0.7819951338199514
+  },
+  "mteb_cache": "/vol/mteb_cache/embeddinggemma-300m-base"
+}

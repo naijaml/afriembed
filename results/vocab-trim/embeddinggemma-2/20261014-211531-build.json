@@ -1,0 +1,42 @@
+{
+  "experiment": "vocab-trim",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-211531-build",
+  "timestamp": "2026-10-14T21:15:31",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "kept_tokens": 23238,
+  "vocab_size": 262144,
+  "tables": [
+    "language_model.embed_tokens"
+  ],
+  "embedding_params_before": 134217728,
+  "embedding_params_after": 11897856,
+  "embedding_mb_saved_bf16": 244.639744,
+  "heldout_token_coverage": 0.9780128981661077,
+  "languages": [
+    "amh",
+    "gaz",
+    "ibo",
+    "yor",
+    "hau",
+    "swh",
+    "kin",
+    "xho",
+    "zul",
+    "eng"
+  ],
+  "out_dir": "checkpoints/trim-lite"
+}

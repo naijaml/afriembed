@@ -1,0 +1,133 @@
+{
+  "experiment": "spoken-qa",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-205745-adapter",
+  "timestamp": "2026-10-15T20:57:45",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "325ba8b",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "partial": true,
+  "n_passages": 1206,
+  "per_lang": {
+    "hau": {
+      "n": 300,
+      "typed_lang": {
+        "recall@1": 0.4066666666666667,
+        "recall@5": 0.5766666666666667,
+        "recall@10": 0.6233333333333333,
+        "mrr": 0.48262316686328177,
+        "n": 300,
+        "pool": 1206
+      },
+      "typed_english": {
+        "recall@1": 0.8233333333333334,
+        "recall@5": 0.9633333333333334,
+        "recall@10": 0.9666666666666667,
+        "mrr": 0.8839835900224151,
+        "n": 300,
+        "pool": 1206
+      },
+      "spoken_lang": {
+        "recall@1": 0.13333333333333333,
+        "recall@5": 0.26,
+        "recall@10": 0.31666666666666665,
+        "mrr": 0.19953145250054202,
+        "n": 300,
+        "pool": 1206
+      },
+      "spoken_vs_typed_agreement@1": 0.2633333333333333,
+      "generation": {
+        "generator": "google/gemma-3-1b-it",
+        "n": 50,
+        "k": 3,
+        "gold_passage_in_top_k": 0.26,
+        "token_f1": 0.011303030303030301,
+        "samples": [
+          {
+            "q": "Awane yanki jahar Anambra take a Nijeriya?",
+            "gold": [
+              "southeastern",
+              "gabas ta kudu"
+            ],
+            "answer": "Yes, Anambra is a Nigerian state.",
+            "gold_in_top_k": false
+          },
+          {
+            "q": "A wane gari babban Ofishin Al jazeera yake?",
+            "gold": [
+              "Doha",
+              "Doha"
+            ],
+            "answer": "The country’s capital is Port Moresby.",
+            "gold_in_top_k": false
+          },
+          {
+            "q": "Wanene farkon mataimakin shugaban jami'ar Lagos?",
+            "gold": [
+              "Eni Njoku",
+              "Eni Njoku"
+            ],
+            "answer": "Wanene farkon mataimakin shugaban jami'ar Lagos is Enoch Adejare Adeboye.",
+            "gold_in_top_k": false
+          },
+          {
+            "q": "Shin ƙasashe nawa ne suka raba iyaka da Saudi Arabiya?",
+            "gold": [
+              "seven",
+              "bakwai"
+            ],
+            "answer": "Seven countries and three bodies of water.",
+            "gold_in_top_k": true
+          },
+          {
+            "q": "A wace shekara aka haifi Chioma Opara?",
+            "gold": [
+              "1951",
+              "1951"
+            ],
+            "answer": "Chioma Opara",
+            "gold_in_top_k": true
+          },
+          {
+            "q": "Wace jami'a ce mafi tsufa a yankin Asia?",
+            "gold": [
+              "University of Santo Tomas",
+              "Jami'ar Santo Tomas"
+            ],
+            "answer": "Jim Iyke is a Nigerian actor.",
+            "gold_in_top_k": false
+          },
+          {
+            "q": "A wace shekara aka kirkiri wutar lantarki?",
+            "gold": [
+              "1600",
+              "Austria"
+            ],
+            "answer": "Shekara wutar lantarki was a blogger.",
+            "gold_in_top_k": false
+          },
+          {
+            "q": "A wace shekara aka wallafa littafin magana jari ce na farko?",
+            "gold": [
+              "1937",
+              "1937"
+            ],
+            "answer": "Funke Akindele is a Nigerian film actress and producer.",
+            "gold_in_top_k": false
+          }
+        ]
+      }
+    }
+  }
+}

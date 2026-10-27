@@ -1,0 +1,38 @@
+{
+  "experiment": "finetune-audio",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-230200-train",
+  "timestamp": "2026-10-14T23:02:00",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "saved": "checkpoints/audio-lora/adapter",
+  "n_pairs": 9000,
+  "languages": [
+    "hau",
+    "yor",
+    "swh",
+    "amh",
+    "ibo",
+    "som"
+  ],
+  "epochs": 1.0,
+  "lr": 2e-05,
+  "batch_size": 32,
+  "train_audio_tower": false,
+  "lora": {
+    "r": 16,
+    "alpha": 32
+  }
+}

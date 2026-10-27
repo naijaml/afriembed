@@ -1,0 +1,148 @@
+{
+  "experiment": "align",
+  "model": "embeddinggemma-2",
+  "run_id": "20261015-210942-adapter-hau",
+  "timestamp": "2026-10-15T21:09:42",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.15",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "git": "32d9d0c",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 3050 4GB Laptop GPU"
+  },
+  "lang": "hau",
+  "n_chapters": 10,
+  "verses_per_chapter": 20,
+  "gap_s": 0.4,
+  "max_group": 4,
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text",
+      "audio"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": "artifacts/audio-lora",
+    "max_seq_length": 1000000000000000019884624838656,
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b"
+  },
+  "per_chapter": [
+    {
+      "chapter": 0,
+      "duration_s": 187.1,
+      "n_segments": 106,
+      "verse_iou>=0.5": 0.2,
+      "mean_iou": 0.18684821700217755,
+      "start_within_0.5s": 0.1,
+      "mean_confidence": 0.46750499999999995
+    },
+    {
+      "chapter": 1,
+      "duration_s": 156.4,
+      "n_segments": 87,
+      "verse_iou>=0.5": 0.45,
+      "mean_iou": 0.44277998013263675,
+      "start_within_0.5s": 0.2,
+      "mean_confidence": 0.4937349999999999
+    },
+    {
+      "chapter": 2,
+      "duration_s": 154.4,
+      "n_segments": 96,
+      "verse_iou>=0.5": 0.2,
+      "mean_iou": 0.2902351363475698,
+      "start_within_0.5s": 0.15,
+      "mean_confidence": 0.48389499999999996
+    },
+    {
+      "chapter": 3,
+      "duration_s": 142.0,
+      "n_segments": 82,
+      "verse_iou>=0.5": 0.05,
+      "mean_iou": 0.08498613967461142,
+      "start_within_0.5s": 0.05,
+      "mean_confidence": 0.446845
+    },
+    {
+      "chapter": 4,
+      "duration_s": 137.9,
+      "n_segments": 83,
+      "verse_iou>=0.5": 0.15,
+      "mean_iou": 0.17502845172745402,
+      "start_within_0.5s": 0.05,
+      "mean_confidence": 0.47069
+    },
+    {
+      "chapter": 5,
+      "duration_s": 116.2,
+      "n_segments": 68,
+      "verse_iou>=0.5": 0.75,
+      "mean_iou": 0.6606185617387381,
+      "start_within_0.5s": 0.45,
+      "mean_confidence": 0.574065
+    },
+    {
+      "chapter": 6,
+      "duration_s": 178.1,
+      "n_segments": 106,
+      "verse_iou>=0.5": 0.25,
+      "mean_iou": 0.3220954702701305,
+      "start_within_0.5s": 0.15,
+      "mean_confidence": 0.481645
+    },
+    {
+      "chapter": 7,
+      "duration_s": 158.6,
+      "n_segments": 95,
+      "verse_iou>=0.5": 0.35,
+      "mean_iou": 0.3737570393966943,
+      "start_within_0.5s": 0.15,
+      "mean_confidence": 0.49382000000000004
+    },
+    {
+      "chapter": 8,
+      "duration_s": 146.1,
+      "n_segments": 89,
+      "verse_iou>=0.5": 0.35,
+      "mean_iou": 0.40991310971585015,
+      "start_within_0.5s": 0.2,
+      "mean_confidence": 0.51344
+    },
+    {
+      "chapter": 9,
+      "duration_s": 144.6,
+      "n_segments": 87,
+      "verse_iou>=0.5": 0.3,
+      "mean_iou": 0.36471373138359126,
+      "start_within_0.5s": 0.15,
+      "mean_confidence": 0.5205649999999998
+    }
+  ],
+  "mean": {
+    "verse_iou>=0.5": 0.305,
+    "mean_iou": 0.3310975837389454,
+    "start_within_0.5s": 0.16499999999999998
+  }
+}

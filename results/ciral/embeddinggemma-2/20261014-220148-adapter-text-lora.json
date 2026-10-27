@@ -1,0 +1,81 @@
+{
+  "experiment": "ciral",
+  "model": "embeddinggemma-2",
+  "run_id": "20261014-220148-adapter-text-lora",
+  "timestamp": "2026-10-14T22:01:48",
+  "env": {
+    "afriembed": "0.1.0",
+    "python": "3.13.3",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "git": null,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "sentence_transformers": "6.1.0",
+    "mteb": "2.24.14",
+    "datasets": "5.1.0",
+    "peft": "0.21.2",
+    "cuda": "13.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "split": "test-a",
+  "translated_passages": false,
+  "model_info": {
+    "name": "embeddinggemma-2",
+    "hf_id": "google/embeddinggemma-2",
+    "family": "embeddinggemma2",
+    "modalities": [
+      "text"
+    ],
+    "dim": 768,
+    "truncate_dim": null,
+    "use_prompts": true,
+    "prompts": {
+      "query": "task: search result | query: ",
+      "document": "title: none | text: ",
+      "classification": "task: classification | query: ",
+      "clustering": "task: clustering | query: ",
+      "sts": "task: sentence similarity | query: ",
+      "bitext": "task: search result | query: "
+    },
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "source": "google/embeddinggemma-2",
+    "adapter": "checkpoints/text-lora/adapter",
+    "max_seq_length": 2048
+  },
+  "per_language": {
+    "hau": {
+      "ndcg@20": 0.3383395920505787,
+      "ndcg@10": 0.30534513784589895,
+      "recall@100": 0.6297961780866193,
+      "n_queries": 80,
+      "n_passages": 50000,
+      "subsampled": true
+    },
+    "som": {
+      "ndcg@20": 0.3564138619786651,
+      "ndcg@10": 0.31496114588952384,
+      "recall@100": 0.6349812101148999,
+      "n_queries": 99,
+      "n_passages": 50000,
+      "subsampled": true
+    },
+    "swh": {
+      "ndcg@20": 0.4573382000248254,
+      "ndcg@10": 0.3996145203288426,
+      "recall@100": 0.8616181857358329,
+      "n_queries": 85,
+      "n_passages": 50000,
+      "subsampled": true
+    },
+    "yor": {
+      "ndcg@20": 0.33556727325324526,
+      "ndcg@10": 0.3012639423177706,
+      "recall@100": 0.6932057387057386,
+      "n_queries": 100,
+      "n_passages": 50000,
+      "subsampled": true
+    }
+  },
+  "mean_ndcg@20": 0.3719147318268286
+}
